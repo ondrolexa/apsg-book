@@ -421,19 +421,6 @@ title="Print to PDF"
               <div>
                 
   <div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">from</span> <span class="nn">apsg</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">from</span> <span class="nn">strain2d</span> <span class="kn">import</span> <span class="n">plot_defgrad</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;apsg&#39;
-</pre></div>
-</div>
-</div>
 </div>
 <section class="tex2jax_ignore mathjax_ignore" id="superposition-of-deformation">
 <h1>Superposition of deformation<a class="headerlink" href="#superposition-of-deformation" title="Permalink to this headline">#</a></h1>
@@ -460,12 +447,18 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<img alt="../../_images/03-superposition_2_0.png" src="../../_images/03-superposition_2_0.png" />
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plot_defgrad</span><span class="p">(</span><span class="n">F1</span> <span class="o">@</span> <span class="n">F2</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;F1⋅F2&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/03-superposition_3_0.png" src="../../_images/03-superposition_3_0.png" />
 </div>
 </div>
 </section>

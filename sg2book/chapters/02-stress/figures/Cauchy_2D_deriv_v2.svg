@@ -1,0 +1,2074 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="297mm"
+   height="210mm"
+   viewBox="0 0 297 210"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.1.1 (1:1.1+202109281949+c3084ef5ed)"
+   sodipodi:docname="Cauchy_2D_deriv_v2.svg"
+   inkscape:export-filename="/home/ondro/Vyuka/Beamer_Sources/AdvancedSG/StressModelling/figures/Cauchy_2D_deriv_v2.png"
+   inkscape:export-xdpi="150.04509"
+   inkscape:export-ydpi="150.04509"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="654.07378"
+     inkscape:cy="327.7945"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1862"
+     inkscape:window-height="1016"
+     inkscape:window-x="58"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:snap-object-midpoints="true"
+     inkscape:pagecheckerboard="0" />
+  <defs
+     id="defs2">
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="marker8231"
+       style="overflow:visible;"
+       inkscape:isstock="true">
+      <path
+         id="path8229"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         transform="scale(0.4) rotate(180) translate(10,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="marker8185"
+       style="overflow:visible;"
+       inkscape:isstock="true">
+      <path
+         id="path8183"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         transform="scale(0.4) rotate(180) translate(10,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker4534"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path4532"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker3737"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path3735"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:collect="always"
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker3131"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path3129"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker2605"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path2603"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker2355"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path2353"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:collect="always"
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker2265"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path2263"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker1656"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path1654"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:collect="always"
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker1618"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path1616"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker1161"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path1159"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mend"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path878"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow2Lend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow2Lend"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path890"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.625;stroke-linejoin:round;stroke-opacity:1"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker3737-2"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path3735-9"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:collect="always"
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker3131-0"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path3129-3"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker2355-3"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path2353-7"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <g
+       id="g5980">
+      <symbol
+         overflow="visible"
+         id="symbol9814">
+        <path
+           style="stroke:none;"
+           d=""
+           id="path1476" />
+      </symbol>
+      <symbol
+         overflow="visible"
+         id="symbol3531">
+        <path
+           style="stroke:none;"
+           d="M 7.34375 -6.734375 L 0.625 -6.734375 L 0.421875 -4.328125 L 0.890625 -4.328125 C 0.984375 -5.453125 1.078125 -6.265625 2.515625 -6.265625 L 3.28125 -6.265625 L 3.28125 -0.46875 L 1.75 -0.46875 L 1.75 0 C 2.296875 -0.03125 3.40625 -0.03125 3.984375 -0.03125 C 4.578125 -0.03125 5.6875 -0.03125 6.21875 0 L 6.21875 -0.46875 L 4.6875 -0.46875 L 4.6875 -6.265625 L 5.453125 -6.265625 C 6.875 -6.265625 6.984375 -5.46875 7.078125 -4.328125 L 7.546875 -4.328125 Z M 7.34375 -6.734375 "
+           id="path4091" />
+      </symbol>
+      <symbol
+         overflow="visible"
+         id="symbol9592">
+        <path
+           style="stroke:none;"
+           d=""
+           id="path2272" />
+      </symbol>
+      <symbol
+         overflow="visible"
+         id="symbol8435">
+        <path
+           style="stroke:none;"
+           d="M 2.46875 -5.21875 C 1.15625 -4.296875 0.796875 -2.8125 0.796875 -1.75 C 0.796875 -0.765625 1.09375 0.765625 2.46875 1.734375 C 2.53125 1.734375 2.609375 1.734375 2.609375 1.65625 C 2.609375 1.609375 2.59375 1.59375 2.546875 1.546875 C 1.609375 0.703125 1.28125 -0.46875 1.28125 -1.734375 C 1.28125 -3.625 2 -4.546875 2.5625 -5.0625 C 2.59375 -5.09375 2.609375 -5.109375 2.609375 -5.140625 C 2.609375 -5.21875 2.53125 -5.21875 2.46875 -5.21875 Z M 2.46875 -5.21875 "
+           id="path1729" />
+      </symbol>
+      <symbol
+         overflow="visible"
+         id="symbol8114">
+        <path
+           style="stroke:none;"
+           d="M 2.328125 -4.4375 C 2.328125 -4.625 2.328125 -4.625 2.125 -4.625 C 1.671875 -4.1875 1.046875 -4.1875 0.765625 -4.1875 L 0.765625 -3.9375 C 0.921875 -3.9375 1.390625 -3.9375 1.765625 -4.125 L 1.765625 -0.578125 C 1.765625 -0.34375 1.765625 -0.25 1.078125 -0.25 L 0.8125 -0.25 L 0.8125 0 C 0.9375 0 1.796875 -0.03125 2.046875 -0.03125 C 2.265625 -0.03125 3.140625 0 3.296875 0 L 3.296875 -0.25 L 3.03125 -0.25 C 2.328125 -0.25 2.328125 -0.34375 2.328125 -0.578125 Z M 2.328125 -4.4375 "
+           id="path3913" />
+      </symbol>
+      <symbol
+         overflow="visible"
+         id="symbol7455">
+        <path
+           style="stroke:none;"
+           d="M 0.625 -5.21875 C 0.578125 -5.21875 0.5 -5.21875 0.5 -5.140625 C 0.5 -5.109375 0.515625 -5.09375 0.5625 -5.03125 C 1.15625 -4.484375 1.828125 -3.546875 1.828125 -1.75 C 1.828125 -0.296875 1.375 0.8125 0.625 1.484375 C 0.5 1.609375 0.5 1.609375 0.5 1.65625 C 0.5 1.6875 0.515625 1.734375 0.578125 1.734375 C 0.671875 1.734375 1.328125 1.28125 1.796875 0.40625 C 2.09375 -0.171875 2.296875 -0.921875 2.296875 -1.734375 C 2.296875 -2.71875 2 -4.25 0.625 -5.21875 Z M 0.625 -5.21875 "
+           id="path8270" />
+      </symbol>
+    </g>
+    <g
+       id="g4895">
+      <symbol
+         overflow="visible"
+         id="symbol6549">
+        <path
+           style="stroke:none;"
+           d=""
+           id="path3315" />
+      </symbol>
+      <symbol
+         overflow="visible"
+         id="symbol8736">
+        <path
+           style="stroke:none;"
+           d="M 7.34375 -6.734375 L 0.625 -6.734375 L 0.421875 -4.328125 L 0.890625 -4.328125 C 0.984375 -5.453125 1.078125 -6.265625 2.515625 -6.265625 L 3.28125 -6.265625 L 3.28125 -0.46875 L 1.75 -0.46875 L 1.75 0 C 2.296875 -0.03125 3.40625 -0.03125 3.984375 -0.03125 C 4.578125 -0.03125 5.6875 -0.03125 6.21875 0 L 6.21875 -0.46875 L 4.6875 -0.46875 L 4.6875 -6.265625 L 5.453125 -6.265625 C 6.875 -6.265625 6.984375 -5.46875 7.078125 -4.328125 L 7.546875 -4.328125 Z M 7.34375 -6.734375 "
+           id="path7605" />
+      </symbol>
+      <symbol
+         overflow="visible"
+         id="symbol8817">
+        <path
+           style="stroke:none;"
+           d=""
+           id="path4675" />
+      </symbol>
+      <symbol
+         overflow="visible"
+         id="symbol8918">
+        <path
+           style="stroke:none;"
+           d="M 2.46875 -5.21875 C 1.15625 -4.296875 0.796875 -2.8125 0.796875 -1.75 C 0.796875 -0.765625 1.09375 0.765625 2.46875 1.734375 C 2.53125 1.734375 2.609375 1.734375 2.609375 1.65625 C 2.609375 1.609375 2.59375 1.59375 2.546875 1.546875 C 1.609375 0.703125 1.28125 -0.46875 1.28125 -1.734375 C 1.28125 -3.625 2 -4.546875 2.5625 -5.0625 C 2.59375 -5.09375 2.609375 -5.109375 2.609375 -5.140625 C 2.609375 -5.21875 2.53125 -5.21875 2.46875 -5.21875 Z M 2.46875 -5.21875 "
+           id="path3212" />
+      </symbol>
+      <symbol
+         overflow="visible"
+         id="symbol4848">
+        <path
+           style="stroke:none;"
+           d="M 3.515625 -1.265625 L 3.28125 -1.265625 C 3.265625 -1.109375 3.1875 -0.703125 3.09375 -0.640625 C 3.046875 -0.59375 2.515625 -0.59375 2.40625 -0.59375 L 1.125 -0.59375 C 1.859375 -1.234375 2.109375 -1.4375 2.515625 -1.765625 C 3.03125 -2.171875 3.515625 -2.609375 3.515625 -3.265625 C 3.515625 -4.109375 2.78125 -4.625 1.890625 -4.625 C 1.03125 -4.625 0.4375 -4.015625 0.4375 -3.375 C 0.4375 -3.03125 0.734375 -2.984375 0.8125 -2.984375 C 0.96875 -2.984375 1.171875 -3.109375 1.171875 -3.359375 C 1.171875 -3.484375 1.125 -3.734375 0.765625 -3.734375 C 0.984375 -4.21875 1.453125 -4.375 1.78125 -4.375 C 2.484375 -4.375 2.84375 -3.828125 2.84375 -3.265625 C 2.84375 -2.65625 2.40625 -2.1875 2.1875 -1.9375 L 0.515625 -0.265625 C 0.4375 -0.203125 0.4375 -0.1875 0.4375 0 L 3.3125 0 Z M 3.515625 -1.265625 "
+           id="path4315" />
+      </symbol>
+      <symbol
+         overflow="visible"
+         id="symbol752">
+        <path
+           style="stroke:none;"
+           d="M 0.625 -5.21875 C 0.578125 -5.21875 0.5 -5.21875 0.5 -5.140625 C 0.5 -5.109375 0.515625 -5.09375 0.5625 -5.03125 C 1.15625 -4.484375 1.828125 -3.546875 1.828125 -1.75 C 1.828125 -0.296875 1.375 0.8125 0.625 1.484375 C 0.5 1.609375 0.5 1.609375 0.5 1.65625 C 0.5 1.6875 0.515625 1.734375 0.578125 1.734375 C 0.671875 1.734375 1.328125 1.28125 1.796875 0.40625 C 2.09375 -0.171875 2.296875 -0.921875 2.296875 -1.734375 C 2.296875 -2.71875 2 -4.25 0.625 -5.21875 Z M 0.625 -5.21875 "
+           id="path8892" />
+      </symbol>
+    </g>
+    <g
+       id="g5855">
+      <symbol
+         overflow="visible"
+         id="symbol3188">
+        <path
+           style="stroke:none;"
+           d=""
+           id="path7676" />
+      </symbol>
+      <symbol
+         overflow="visible"
+         id="symbol18">
+        <path
+           style="stroke:none;"
+           d="M 0.875 -0.59375 C 0.84375 -0.4375 0.78125 -0.203125 0.78125 -0.15625 C 0.78125 0.015625 0.921875 0.109375 1.078125 0.109375 C 1.203125 0.109375 1.375 0.03125 1.453125 -0.171875 C 1.453125 -0.1875 1.578125 -0.65625 1.640625 -0.90625 L 1.859375 -1.796875 C 1.90625 -2.03125 1.96875 -2.25 2.03125 -2.46875 C 2.0625 -2.640625 2.140625 -2.9375 2.15625 -2.96875 C 2.296875 -3.28125 2.828125 -4.1875 3.78125 -4.1875 C 4.234375 -4.1875 4.3125 -3.8125 4.3125 -3.484375 C 4.3125 -2.875 3.828125 -1.59375 3.671875 -1.171875 C 3.578125 -0.9375 3.5625 -0.8125 3.5625 -0.703125 C 3.5625 -0.234375 3.921875 0.109375 4.390625 0.109375 C 5.328125 0.109375 5.6875 -1.34375 5.6875 -1.421875 C 5.6875 -1.53125 5.609375 -1.53125 5.578125 -1.53125 C 5.46875 -1.53125 5.46875 -1.5 5.421875 -1.34375 C 5.21875 -0.671875 4.890625 -0.109375 4.40625 -0.109375 C 4.234375 -0.109375 4.171875 -0.203125 4.171875 -0.4375 C 4.171875 -0.6875 4.25 -0.921875 4.34375 -1.140625 C 4.53125 -1.671875 4.953125 -2.765625 4.953125 -3.34375 C 4.953125 -4 4.53125 -4.40625 3.8125 -4.40625 C 2.90625 -4.40625 2.421875 -3.765625 2.25 -3.53125 C 2.203125 -4.09375 1.796875 -4.40625 1.328125 -4.40625 C 0.875 -4.40625 0.6875 -4.015625 0.59375 -3.84375 C 0.421875 -3.5 0.296875 -2.90625 0.296875 -2.875 C 0.296875 -2.765625 0.390625 -2.765625 0.40625 -2.765625 C 0.515625 -2.765625 0.515625 -2.78125 0.578125 -3 C 0.75 -3.703125 0.953125 -4.1875 1.3125 -4.1875 C 1.5 -4.1875 1.609375 -4.0625 1.609375 -3.734375 C 1.609375 -3.515625 1.578125 -3.40625 1.453125 -2.890625 Z M 0.875 -0.59375 "
+           id="path9748" />
+      </symbol>
+      <symbol
+         overflow="visible"
+         id="symbol7827">
+        <path
+           style="stroke:none;"
+           d=""
+           id="path5404" />
+      </symbol>
+      <symbol
+         overflow="visible"
+         id="symbol8799">
+        <path
+           style="stroke:none;"
+           d="M 2.328125 -4.4375 C 2.328125 -4.625 2.328125 -4.625 2.125 -4.625 C 1.671875 -4.1875 1.046875 -4.1875 0.765625 -4.1875 L 0.765625 -3.9375 C 0.921875 -3.9375 1.390625 -3.9375 1.765625 -4.125 L 1.765625 -0.578125 C 1.765625 -0.34375 1.765625 -0.25 1.078125 -0.25 L 0.8125 -0.25 L 0.8125 0 C 0.9375 0 1.796875 -0.03125 2.046875 -0.03125 C 2.265625 -0.03125 3.140625 0 3.296875 0 L 3.296875 -0.25 L 3.03125 -0.25 C 2.328125 -0.25 2.328125 -0.34375 2.328125 -0.578125 Z M 2.328125 -4.4375 "
+           id="path5063" />
+      </symbol>
+    </g>
+    <g
+       id="g1781">
+      <symbol
+         overflow="visible"
+         id="symbol425">
+        <path
+           style="stroke:none;"
+           d=""
+           id="path930" />
+      </symbol>
+      <symbol
+         overflow="visible"
+         id="symbol4774">
+        <path
+           style="stroke:none;"
+           d="M 0.875 -0.59375 C 0.84375 -0.4375 0.78125 -0.203125 0.78125 -0.15625 C 0.78125 0.015625 0.921875 0.109375 1.078125 0.109375 C 1.203125 0.109375 1.375 0.03125 1.453125 -0.171875 C 1.453125 -0.1875 1.578125 -0.65625 1.640625 -0.90625 L 1.859375 -1.796875 C 1.90625 -2.03125 1.96875 -2.25 2.03125 -2.46875 C 2.0625 -2.640625 2.140625 -2.9375 2.15625 -2.96875 C 2.296875 -3.28125 2.828125 -4.1875 3.78125 -4.1875 C 4.234375 -4.1875 4.3125 -3.8125 4.3125 -3.484375 C 4.3125 -2.875 3.828125 -1.59375 3.671875 -1.171875 C 3.578125 -0.9375 3.5625 -0.8125 3.5625 -0.703125 C 3.5625 -0.234375 3.921875 0.109375 4.390625 0.109375 C 5.328125 0.109375 5.6875 -1.34375 5.6875 -1.421875 C 5.6875 -1.53125 5.609375 -1.53125 5.578125 -1.53125 C 5.46875 -1.53125 5.46875 -1.5 5.421875 -1.34375 C 5.21875 -0.671875 4.890625 -0.109375 4.40625 -0.109375 C 4.234375 -0.109375 4.171875 -0.203125 4.171875 -0.4375 C 4.171875 -0.6875 4.25 -0.921875 4.34375 -1.140625 C 4.53125 -1.671875 4.953125 -2.765625 4.953125 -3.34375 C 4.953125 -4 4.53125 -4.40625 3.8125 -4.40625 C 2.90625 -4.40625 2.421875 -3.765625 2.25 -3.53125 C 2.203125 -4.09375 1.796875 -4.40625 1.328125 -4.40625 C 0.875 -4.40625 0.6875 -4.015625 0.59375 -3.84375 C 0.421875 -3.5 0.296875 -2.90625 0.296875 -2.875 C 0.296875 -2.765625 0.390625 -2.765625 0.40625 -2.765625 C 0.515625 -2.765625 0.515625 -2.78125 0.578125 -3 C 0.75 -3.703125 0.953125 -4.1875 1.3125 -4.1875 C 1.5 -4.1875 1.609375 -4.0625 1.609375 -3.734375 C 1.609375 -3.515625 1.578125 -3.40625 1.453125 -2.890625 Z M 0.875 -0.59375 "
+           id="path8385" />
+      </symbol>
+      <symbol
+         overflow="visible"
+         id="symbol8723">
+        <path
+           style="stroke:none;"
+           d=""
+           id="path4547" />
+      </symbol>
+      <symbol
+         overflow="visible"
+         id="symbol4719">
+        <path
+           style="stroke:none;"
+           d="M 3.515625 -1.265625 L 3.28125 -1.265625 C 3.265625 -1.109375 3.1875 -0.703125 3.09375 -0.640625 C 3.046875 -0.59375 2.515625 -0.59375 2.40625 -0.59375 L 1.125 -0.59375 C 1.859375 -1.234375 2.109375 -1.4375 2.515625 -1.765625 C 3.03125 -2.171875 3.515625 -2.609375 3.515625 -3.265625 C 3.515625 -4.109375 2.78125 -4.625 1.890625 -4.625 C 1.03125 -4.625 0.4375 -4.015625 0.4375 -3.375 C 0.4375 -3.03125 0.734375 -2.984375 0.8125 -2.984375 C 0.96875 -2.984375 1.171875 -3.109375 1.171875 -3.359375 C 1.171875 -3.484375 1.125 -3.734375 0.765625 -3.734375 C 0.984375 -4.21875 1.453125 -4.375 1.78125 -4.375 C 2.484375 -4.375 2.84375 -3.828125 2.84375 -3.265625 C 2.84375 -2.65625 2.40625 -2.1875 2.1875 -1.9375 L 0.515625 -0.265625 C 0.4375 -0.203125 0.4375 -0.1875 0.4375 0 L 3.3125 0 Z M 3.515625 -1.265625 "
+           id="path9646" />
+      </symbol>
+    </g>
+    <g
+       id="g9615">
+      <symbol
+         overflow="visible"
+         id="symbol6175">
+        <path
+           style="stroke:none;"
+           d=""
+           id="path4549" />
+      </symbol>
+      <symbol
+         overflow="visible"
+         id="symbol160">
+        <path
+           style="stroke:none;"
+           d="M 1.78125 -1.140625 C 1.390625 -0.484375 1 -0.34375 0.5625 -0.3125 C 0.4375 -0.296875 0.34375 -0.296875 0.34375 -0.109375 C 0.34375 -0.046875 0.40625 0 0.484375 0 C 0.75 0 1.0625 -0.03125 1.328125 -0.03125 C 1.671875 -0.03125 2.015625 0 2.328125 0 C 2.390625 0 2.515625 0 2.515625 -0.1875 C 2.515625 -0.296875 2.4375 -0.3125 2.359375 -0.3125 C 2.140625 -0.328125 1.890625 -0.40625 1.890625 -0.65625 C 1.890625 -0.78125 1.953125 -0.890625 2.03125 -1.03125 L 2.796875 -2.296875 L 5.296875 -2.296875 C 5.3125 -2.09375 5.453125 -0.734375 5.453125 -0.640625 C 5.453125 -0.34375 4.9375 -0.3125 4.734375 -0.3125 C 4.59375 -0.3125 4.5 -0.3125 4.5 -0.109375 C 4.5 0 4.609375 0 4.640625 0 C 5.046875 0 5.46875 -0.03125 5.875 -0.03125 C 6.125 -0.03125 6.765625 0 7.015625 0 C 7.0625 0 7.1875 0 7.1875 -0.203125 C 7.1875 -0.3125 7.09375 -0.3125 6.953125 -0.3125 C 6.34375 -0.3125 6.34375 -0.375 6.3125 -0.671875 L 5.703125 -6.890625 C 5.6875 -7.09375 5.6875 -7.140625 5.515625 -7.140625 C 5.359375 -7.140625 5.3125 -7.0625 5.25 -6.96875 Z M 2.984375 -2.609375 L 4.9375 -5.90625 L 5.265625 -2.609375 Z M 2.984375 -2.609375 "
+           id="path4322" />
+      </symbol>
+      <symbol
+         overflow="visible"
+         id="symbol2810">
+        <path
+           style="stroke:none;"
+           d="M 0.875 -0.59375 C 0.84375 -0.4375 0.78125 -0.203125 0.78125 -0.15625 C 0.78125 0.015625 0.921875 0.109375 1.078125 0.109375 C 1.203125 0.109375 1.375 0.03125 1.453125 -0.171875 C 1.453125 -0.1875 1.578125 -0.65625 1.640625 -0.90625 L 1.859375 -1.796875 C 1.90625 -2.03125 1.96875 -2.25 2.03125 -2.46875 C 2.0625 -2.640625 2.140625 -2.9375 2.15625 -2.96875 C 2.296875 -3.28125 2.828125 -4.1875 3.78125 -4.1875 C 4.234375 -4.1875 4.3125 -3.8125 4.3125 -3.484375 C 4.3125 -2.875 3.828125 -1.59375 3.671875 -1.171875 C 3.578125 -0.9375 3.5625 -0.8125 3.5625 -0.703125 C 3.5625 -0.234375 3.921875 0.109375 4.390625 0.109375 C 5.328125 0.109375 5.6875 -1.34375 5.6875 -1.421875 C 5.6875 -1.53125 5.609375 -1.53125 5.578125 -1.53125 C 5.46875 -1.53125 5.46875 -1.5 5.421875 -1.34375 C 5.21875 -0.671875 4.890625 -0.109375 4.40625 -0.109375 C 4.234375 -0.109375 4.171875 -0.203125 4.171875 -0.4375 C 4.171875 -0.6875 4.25 -0.921875 4.34375 -1.140625 C 4.53125 -1.671875 4.953125 -2.765625 4.953125 -3.34375 C 4.953125 -4 4.53125 -4.40625 3.8125 -4.40625 C 2.90625 -4.40625 2.421875 -3.765625 2.25 -3.53125 C 2.203125 -4.09375 1.796875 -4.40625 1.328125 -4.40625 C 0.875 -4.40625 0.6875 -4.015625 0.59375 -3.84375 C 0.421875 -3.5 0.296875 -2.90625 0.296875 -2.875 C 0.296875 -2.765625 0.390625 -2.765625 0.40625 -2.765625 C 0.515625 -2.765625 0.515625 -2.78125 0.578125 -3 C 0.75 -3.703125 0.953125 -4.1875 1.3125 -4.1875 C 1.5 -4.1875 1.609375 -4.0625 1.609375 -3.734375 C 1.609375 -3.515625 1.578125 -3.40625 1.453125 -2.890625 Z M 0.875 -0.59375 "
+           id="path2312" />
+      </symbol>
+      <symbol
+         overflow="visible"
+         id="symbol8068">
+        <path
+           style="stroke:none;"
+           d=""
+           id="path4489" />
+      </symbol>
+      <symbol
+         overflow="visible"
+         id="symbol7909">
+        <path
+           style="stroke:none;"
+           d="M 1.90625 -2.5 C 1.90625 -2.78125 1.671875 -3.015625 1.390625 -3.015625 C 1.09375 -3.015625 0.859375 -2.78125 0.859375 -2.5 C 0.859375 -2.203125 1.09375 -1.96875 1.390625 -1.96875 C 1.671875 -1.96875 1.90625 -2.203125 1.90625 -2.5 Z M 1.90625 -2.5 "
+           id="path1797" />
+      </symbol>
+      <symbol
+         overflow="visible"
+         id="symbol2004">
+        <path
+           style="stroke:none;"
+           d=""
+           id="path4932" />
+      </symbol>
+      <symbol
+         overflow="visible"
+         id="symbol1915">
+        <path
+           style="stroke:none;"
+           d="M 2.328125 -4.4375 C 2.328125 -4.625 2.328125 -4.625 2.125 -4.625 C 1.671875 -4.1875 1.046875 -4.1875 0.765625 -4.1875 L 0.765625 -3.9375 C 0.921875 -3.9375 1.390625 -3.9375 1.765625 -4.125 L 1.765625 -0.578125 C 1.765625 -0.34375 1.765625 -0.25 1.078125 -0.25 L 0.8125 -0.25 L 0.8125 0 C 0.9375 0 1.796875 -0.03125 2.046875 -0.03125 C 2.265625 -0.03125 3.140625 0 3.296875 0 L 3.296875 -0.25 L 3.03125 -0.25 C 2.328125 -0.25 2.328125 -0.34375 2.328125 -0.578125 Z M 2.328125 -4.4375 "
+           id="path3310" />
+      </symbol>
+    </g>
+    <g
+       id="g7374">
+      <symbol
+         overflow="visible"
+         id="symbol1791">
+        <path
+           style="stroke:none;"
+           d=""
+           id="path2161" />
+      </symbol>
+      <symbol
+         overflow="visible"
+         id="symbol507">
+        <path
+           style="stroke:none;"
+           d="M 1.78125 -1.140625 C 1.390625 -0.484375 1 -0.34375 0.5625 -0.3125 C 0.4375 -0.296875 0.34375 -0.296875 0.34375 -0.109375 C 0.34375 -0.046875 0.40625 0 0.484375 0 C 0.75 0 1.0625 -0.03125 1.328125 -0.03125 C 1.671875 -0.03125 2.015625 0 2.328125 0 C 2.390625 0 2.515625 0 2.515625 -0.1875 C 2.515625 -0.296875 2.4375 -0.3125 2.359375 -0.3125 C 2.140625 -0.328125 1.890625 -0.40625 1.890625 -0.65625 C 1.890625 -0.78125 1.953125 -0.890625 2.03125 -1.03125 L 2.796875 -2.296875 L 5.296875 -2.296875 C 5.3125 -2.09375 5.453125 -0.734375 5.453125 -0.640625 C 5.453125 -0.34375 4.9375 -0.3125 4.734375 -0.3125 C 4.59375 -0.3125 4.5 -0.3125 4.5 -0.109375 C 4.5 0 4.609375 0 4.640625 0 C 5.046875 0 5.46875 -0.03125 5.875 -0.03125 C 6.125 -0.03125 6.765625 0 7.015625 0 C 7.0625 0 7.1875 0 7.1875 -0.203125 C 7.1875 -0.3125 7.09375 -0.3125 6.953125 -0.3125 C 6.34375 -0.3125 6.34375 -0.375 6.3125 -0.671875 L 5.703125 -6.890625 C 5.6875 -7.09375 5.6875 -7.140625 5.515625 -7.140625 C 5.359375 -7.140625 5.3125 -7.0625 5.25 -6.96875 Z M 2.984375 -2.609375 L 4.9375 -5.90625 L 5.265625 -2.609375 Z M 2.984375 -2.609375 "
+           id="path6756" />
+      </symbol>
+      <symbol
+         overflow="visible"
+         id="symbol3325">
+        <path
+           style="stroke:none;"
+           d="M 0.875 -0.59375 C 0.84375 -0.4375 0.78125 -0.203125 0.78125 -0.15625 C 0.78125 0.015625 0.921875 0.109375 1.078125 0.109375 C 1.203125 0.109375 1.375 0.03125 1.453125 -0.171875 C 1.453125 -0.1875 1.578125 -0.65625 1.640625 -0.90625 L 1.859375 -1.796875 C 1.90625 -2.03125 1.96875 -2.25 2.03125 -2.46875 C 2.0625 -2.640625 2.140625 -2.9375 2.15625 -2.96875 C 2.296875 -3.28125 2.828125 -4.1875 3.78125 -4.1875 C 4.234375 -4.1875 4.3125 -3.8125 4.3125 -3.484375 C 4.3125 -2.875 3.828125 -1.59375 3.671875 -1.171875 C 3.578125 -0.9375 3.5625 -0.8125 3.5625 -0.703125 C 3.5625 -0.234375 3.921875 0.109375 4.390625 0.109375 C 5.328125 0.109375 5.6875 -1.34375 5.6875 -1.421875 C 5.6875 -1.53125 5.609375 -1.53125 5.578125 -1.53125 C 5.46875 -1.53125 5.46875 -1.5 5.421875 -1.34375 C 5.21875 -0.671875 4.890625 -0.109375 4.40625 -0.109375 C 4.234375 -0.109375 4.171875 -0.203125 4.171875 -0.4375 C 4.171875 -0.6875 4.25 -0.921875 4.34375 -1.140625 C 4.53125 -1.671875 4.953125 -2.765625 4.953125 -3.34375 C 4.953125 -4 4.53125 -4.40625 3.8125 -4.40625 C 2.90625 -4.40625 2.421875 -3.765625 2.25 -3.53125 C 2.203125 -4.09375 1.796875 -4.40625 1.328125 -4.40625 C 0.875 -4.40625 0.6875 -4.015625 0.59375 -3.84375 C 0.421875 -3.5 0.296875 -2.90625 0.296875 -2.875 C 0.296875 -2.765625 0.390625 -2.765625 0.40625 -2.765625 C 0.515625 -2.765625 0.515625 -2.78125 0.578125 -3 C 0.75 -3.703125 0.953125 -4.1875 1.3125 -4.1875 C 1.5 -4.1875 1.609375 -4.0625 1.609375 -3.734375 C 1.609375 -3.515625 1.578125 -3.40625 1.453125 -2.890625 Z M 0.875 -0.59375 "
+           id="path7749" />
+      </symbol>
+      <symbol
+         overflow="visible"
+         id="symbol3081">
+        <path
+           style="stroke:none;"
+           d=""
+           id="path2800" />
+      </symbol>
+      <symbol
+         overflow="visible"
+         id="symbol8871">
+        <path
+           style="stroke:none;"
+           d="M 1.90625 -2.5 C 1.90625 -2.78125 1.671875 -3.015625 1.390625 -3.015625 C 1.09375 -3.015625 0.859375 -2.78125 0.859375 -2.5 C 0.859375 -2.203125 1.09375 -1.96875 1.390625 -1.96875 C 1.671875 -1.96875 1.90625 -2.203125 1.90625 -2.5 Z M 1.90625 -2.5 "
+           id="path6663" />
+      </symbol>
+      <symbol
+         overflow="visible"
+         id="symbol9735">
+        <path
+           style="stroke:none;"
+           d=""
+           id="path6564" />
+      </symbol>
+      <symbol
+         overflow="visible"
+         id="symbol9977">
+        <path
+           style="stroke:none;"
+           d="M 3.515625 -1.265625 L 3.28125 -1.265625 C 3.265625 -1.109375 3.1875 -0.703125 3.09375 -0.640625 C 3.046875 -0.59375 2.515625 -0.59375 2.40625 -0.59375 L 1.125 -0.59375 C 1.859375 -1.234375 2.109375 -1.4375 2.515625 -1.765625 C 3.03125 -2.171875 3.515625 -2.609375 3.515625 -3.265625 C 3.515625 -4.109375 2.78125 -4.625 1.890625 -4.625 C 1.03125 -4.625 0.4375 -4.015625 0.4375 -3.375 C 0.4375 -3.03125 0.734375 -2.984375 0.8125 -2.984375 C 0.96875 -2.984375 1.171875 -3.109375 1.171875 -3.359375 C 1.171875 -3.484375 1.125 -3.734375 0.765625 -3.734375 C 0.984375 -4.21875 1.453125 -4.375 1.78125 -4.375 C 2.484375 -4.375 2.84375 -3.828125 2.84375 -3.265625 C 2.84375 -2.65625 2.40625 -2.1875 2.1875 -1.9375 L 0.515625 -0.265625 C 0.4375 -0.203125 0.4375 -0.1875 0.4375 0 L 3.3125 0 Z M 3.515625 -1.265625 "
+           id="path3634" />
+      </symbol>
+    </g>
+  </defs>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:groupmode="layer"
+     inkscape:label="Layer 1"
+     transform="translate(0, -87)">
+    <path
+       sodipodi:nodetypes="cscsssc"
+       inkscape:connector-curvature="0"
+       id="path857"
+       d="m 74.594728,120.87595 c -0.205565,3.42571 0.02728,7.45624 0.105821,10.96131 0.201796,9.00549 0.46182,24.42071 -1.587323,31.56101 -1.569889,1.40185 -24.335317,0.36131 -27.619433,0.37798 -2.99915,0.0152 -10.632733,1.04361 -12.063661,-1.51191 -1.120491,-2.00109 -0.322558,-11.67178 -10e-7,-14.55208 0.963685,-8.60528 0.283703,-17.3023 0.952395,-26.83631"
+       style="vector-effect:none;fill:#f2f2f2;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path851"
+       d="M 34.382526,120.87595 H 74.594728"
+       style="vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none" />
+    <rect
+       y="132.47984"
+       x="57.658855"
+       height="2.6458333"
+       width="2.6458333"
+       id="rect859"
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#e6e6e6;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+    <text
+       id="text863"
+       y="126.6884"
+       x="38.841682"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:100%;font-family:Karumbi;-inkscape-font-specification:Karumbi;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.198967;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;stroke-width:0.198967"
+         y="126.6884"
+         x="38.841682"
+         id="tspan861"
+         sodipodi:role="line">surrounding rock</tspan></text>
+    <text
+       id="text867"
+       y="134.93669"
+       x="41.972847"
+       style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;line-height:100%;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       xml:space="preserve"><tspan
+         style="fill:#000000;stroke:none;stroke-width:0.5"
+         y="134.93669"
+         x="41.972847"
+         id="tspan865"
+         sodipodi:role="line">element</tspan></text>
+    <path
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#e6e6e6;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       d="m 112.77962,122.54169 h 37.41965 v 37.41964 h -37.41965 z"
+       id="rect831"
+       inkscape:connector-curvature="0" />
+    <path
+       style="opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.5, 1.5;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none"
+       d="m 112.64327,122.35739 25.0451,37.59925"
+       id="path834"
+       inkscape:connector-curvature="0" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path843"
+       d="m 125.08164,141.16619 12.47294,-8.27001"
+       style="opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:url(#Arrow1Mend)" />
+    <g
+       style="stroke-width:2.08333349"
+       transform="matrix(0.47999999,0,0,0.47999999,117.59312,96.796278)"
+       id="g1284">
+      <g
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:3.47222233;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         word-spacing="normal"
+         letter-spacing="normal"
+         font-size-adjust="none"
+         font-stretch="normal"
+         font-weight="normal"
+         font-variant="normal"
+         font-style="normal"
+         stroke-miterlimit="10.433"
+         xml:space="preserve"
+         transform="matrix(0.3,0,0,-0.3,-52.5,222.75)"
+         id="g1282"><path
+           style="fill:#000000;stroke-width:0"
+           inkscape:connector-curvature="0"
+           id="path1276"
+           d="m 481.33,424.78 h 0.07 0.07 0.07 0.08 0.09 l 0.09,0.01 h 0.09 l 0.09,0.01 0.1,0.01 0.1,0.02 0.1,0.02 0.11,0.02 0.1,0.02 0.1,0.03 0.1,0.03 0.1,0.04 0.1,0.04 0.1,0.05 0.09,0.05 0.09,0.06 0.08,0.07 0.08,0.07 0.04,0.04 0.04,0.04 0.03,0.04 0.04,0.05 0.03,0.04 0.03,0.05 0.03,0.05 0.03,0.05 0.03,0.05 0.02,0.06 0.02,0.06 0.02,0.06 0.02,0.06 0.02,0.06 0.01,0.07 0.01,0.07 0.01,0.07 v 0.08 l 0.01,0.07 v 0.08 c 0,1.19 -1.05,1.19 -1.94,1.19 h -11.36 c -7.53,0 -13.06,-8.22 -13.06,-14.14 0,-4.39 2.94,-7.88 7.47,-7.88 l 0.06,1.1 c -2.45,0 -4.44,1.79 -4.44,5.37 0,1.5 0.6,5.59 2.35,8.53 2.09,3.44 5.08,4.13 6.76,4.13 4.19,0 4.6,-3.28 4.6,-4.83 0,-2.34 -1,-6.42 -2.69,-8.97 -1.95,-2.94 -4.64,-4.23 -6.58,-4.23 v 0 l -0.06,-1.1 c 5.89,0 12.51,6.03 12.51,13.71 0,0.84 0,3.23 -1.54,5.42 z" /><path
+           style="fill:#000000;stroke-width:0"
+           inkscape:connector-curvature="0"
+           id="path1278"
+           d="m 495.63,420.92 v 0.04 0.04 0.05 0.04 0.03 0.04 0.04 0.03 0.04 0.03 l -0.01,0.03 v 0.03 0.03 l -0.01,0.03 v 0.03 0.02 l -0.01,0.03 v 0.02 l -0.01,0.03 v 0.02 l -0.01,0.04 -0.02,0.04 -0.02,0.03 -0.02,0.03 -0.02,0.03 -0.02,0.03 -0.03,0.02 -0.03,0.02 -0.03,0.02 -0.04,0.01 -0.04,0.01 -0.05,0.02 h -0.02 -0.02 l -0.03,0.01 h -0.03 l -0.02,0.01 h -0.03 -0.03 -0.03 -0.03 l -0.04,0.01 h -0.03 -0.04 -0.03 -0.04 -0.04 -0.04 -0.04 -0.04 -0.05 -0.04 c -2.24,-2.2 -5.39,-2.23 -6.83,-2.23 v -1.25 c 0.84,0 3.14,0 5.04,0.97 v -17.77 c 0,-1.16 0,-1.61 -3.48,-1.61 h -1.31 v -1.25 c 0.62,0.03 4.9,0.14 6.2,0.14 1.08,0 5.47,-0.11 6.24,-0.14 v 1.25 h -1.33 c -3.49,0 -3.49,0.45 -3.49,1.61 z" /><path
+           style="fill:#000000;stroke-width:0"
+           inkscape:connector-curvature="0"
+           id="path1280"
+           d="m 515.43,420.92 v 0.04 0.04 0.05 0.04 0.03 0.04 0.04 0.03 l -0.01,0.04 v 0.03 0.03 0.03 0.03 l -0.01,0.03 v 0.03 l -0.01,0.02 v 0.03 0.02 l -0.01,0.03 v 0.02 l -0.02,0.04 -0.01,0.04 -0.02,0.03 -0.02,0.03 -0.02,0.03 -0.02,0.03 -0.03,0.02 -0.03,0.02 -0.04,0.02 -0.03,0.01 -0.04,0.01 -0.05,0.02 h -0.02 -0.03 l -0.02,0.01 h -0.03 l -0.03,0.01 h -0.02 -0.03 -0.03 -0.04 l -0.03,0.01 h -0.03 -0.04 -0.04 -0.03 -0.04 -0.04 -0.04 -0.05 -0.04 -0.05 c -2.23,-2.2 -5.39,-2.23 -6.83,-2.23 v -1.25 c 0.85,0 3.15,0 5.05,0.97 v -17.77 c 0,-1.16 0,-1.61 -3.48,-1.61 h -1.32 v -1.25 c 0.63,0.03 4.91,0.14 6.21,0.14 1.08,0 5.47,-0.11 6.23,-0.14 v 1.25 h -1.33 c -3.48,0 -3.48,0.45 -3.48,1.61 z" /></g>
+    </g>
+    <g
+       style="stroke-width:2.08333"
+       transform="matrix(0.47999999,0,0,0.47999999,112.4798,80.603085)"
+       id="g1366">
+      <g
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:3.47222;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.433;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="g1364"
+         transform="matrix(0.3,0,0,-0.3,-52.5,222.75)"
+         xml:space="preserve"
+         stroke-miterlimit="10.433"
+         font-style="normal"
+         font-variant="normal"
+         font-weight="normal"
+         font-stretch="normal"
+         font-size-adjust="none"
+         letter-spacing="normal"
+         word-spacing="normal"><path
+           style="fill:#000000;stroke-width:0"
+           inkscape:connector-curvature="0"
+           d="m 481.33,424.78 h 0.07 0.07 0.07 0.08 0.09 l 0.09,0.01 h 0.09 l 0.09,0.01 0.1,0.01 0.1,0.02 0.1,0.02 0.11,0.02 0.1,0.02 0.1,0.03 0.1,0.03 0.1,0.04 0.1,0.04 0.1,0.05 0.09,0.05 0.09,0.06 0.08,0.07 0.08,0.07 0.04,0.04 0.04,0.04 0.03,0.04 0.04,0.05 0.03,0.04 0.03,0.05 0.03,0.05 0.03,0.05 0.03,0.05 0.02,0.06 0.02,0.06 0.02,0.06 0.02,0.06 0.02,0.06 0.01,0.07 0.01,0.07 0.01,0.07 v 0.08 l 0.01,0.07 v 0.08 c 0,1.19 -1.05,1.19 -1.94,1.19 h -11.36 c -7.53,0 -13.06,-8.22 -13.06,-14.14 0,-4.39 2.94,-7.88 7.47,-7.88 l 0.06,1.1 c -2.45,0 -4.44,1.79 -4.44,5.37 0,1.5 0.6,5.59 2.35,8.53 2.09,3.44 5.08,4.13 6.76,4.13 4.19,0 4.6,-3.28 4.6,-4.83 0,-2.34 -1,-6.42 -2.69,-8.97 -1.95,-2.94 -4.64,-4.23 -6.58,-4.23 v 0 l -0.06,-1.1 c 5.89,0 12.51,6.03 12.51,13.71 0,0.84 0,3.23 -1.54,5.42 z"
+           id="path1358" /><path
+           style="fill:#000000;stroke-width:0"
+           inkscape:connector-curvature="0"
+           d="m 495.63,420.92 v 0.04 0.04 0.05 0.04 0.03 0.04 0.04 0.03 0.04 0.03 l -0.01,0.03 v 0.03 0.03 l -0.01,0.03 v 0.03 0.02 l -0.01,0.03 v 0.02 l -0.01,0.03 v 0.02 l -0.01,0.04 -0.02,0.04 -0.02,0.03 -0.02,0.03 -0.02,0.03 -0.02,0.03 -0.03,0.02 -0.03,0.02 -0.03,0.02 -0.04,0.01 -0.04,0.01 -0.05,0.02 h -0.02 -0.02 l -0.03,0.01 h -0.03 l -0.02,0.01 h -0.03 -0.03 -0.03 -0.03 l -0.04,0.01 h -0.03 -0.04 -0.03 -0.04 -0.04 -0.04 -0.04 -0.04 -0.05 -0.04 c -2.24,-2.2 -5.39,-2.23 -6.83,-2.23 v -1.25 c 0.84,0 3.14,0 5.04,0.97 v -17.77 c 0,-1.16 0,-1.61 -3.48,-1.61 h -1.31 v -1.25 c 0.62,0.03 4.9,0.14 6.2,0.14 1.08,0 5.47,-0.11 6.24,-0.14 v 1.25 h -1.33 c -3.49,0 -3.49,0.45 -3.49,1.61 z"
+           id="path1360" /><path
+           style="fill:#000000;stroke-width:0"
+           inkscape:connector-curvature="0"
+           d="m 521.35,405.11 h -1.19 c -0.09,-0.77 -0.45,-2.83 -0.9,-3.18 -0.27,-0.2 -2.96,-0.2 -3.44,-0.2 h -6.42 c 3.65,3.23 4.87,4.2 6.97,5.84 2.58,2.07 4.98,4.22 4.98,7.54 0,4.21 -3.69,6.79 -8.15,6.79 -4.32,0 -7.25,-3.03 -7.25,-6.23 0,-1.78 1.5,-1.96 1.85,-1.96 0.83,0 1.85,0.6 1.85,1.85 0,0.62 -0.25,1.84 -2.06,1.84 1.07,2.47 3.45,3.24 5.09,3.24 3.48,0 5.3,-2.71 5.3,-5.53 0,-3.04 -2.16,-5.44 -3.28,-6.69 l -8.4,-8.3 c -0.35,-0.31 -0.35,-0.39 -0.35,-1.36 h 14.35 z"
+           id="path1362" /></g>
+    </g>
+    <g
+       style="stroke-width:2.08333349"
+       transform="matrix(0.47999999,0,0,0.47999999,79.970817,65.611102)"
+       id="g1458">
+      <g
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:3.47222233;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         word-spacing="normal"
+         letter-spacing="normal"
+         font-size-adjust="none"
+         font-stretch="normal"
+         font-weight="normal"
+         font-variant="normal"
+         font-style="normal"
+         stroke-miterlimit="10.433"
+         xml:space="preserve"
+         transform="matrix(0.3,0,0,-0.3,-52.5,222.75)"
+         id="g1456"><path
+           style="fill:#000000;stroke-width:0"
+           inkscape:connector-curvature="0"
+           id="path1450"
+           d="m 481.33,424.78 h 0.07 0.07 0.07 0.08 0.09 l 0.09,0.01 h 0.09 l 0.09,0.01 0.1,0.01 0.1,0.02 0.1,0.02 0.11,0.02 0.1,0.02 0.1,0.03 0.1,0.03 0.1,0.04 0.1,0.04 0.1,0.05 0.09,0.05 0.09,0.06 0.08,0.07 0.08,0.07 0.04,0.04 0.04,0.04 0.03,0.04 0.04,0.05 0.03,0.04 0.03,0.05 0.03,0.05 0.03,0.05 0.03,0.05 0.02,0.06 0.02,0.06 0.02,0.06 0.02,0.06 0.02,0.06 0.01,0.07 0.01,0.07 0.01,0.07 v 0.08 l 0.01,0.07 v 0.08 c 0,1.19 -1.05,1.19 -1.94,1.19 h -11.36 c -7.53,0 -13.06,-8.22 -13.06,-14.14 0,-4.39 2.94,-7.88 7.47,-7.88 l 0.06,1.1 c -2.45,0 -4.44,1.79 -4.44,5.37 0,1.5 0.6,5.59 2.35,8.53 2.09,3.44 5.08,4.13 6.76,4.13 4.19,0 4.6,-3.28 4.6,-4.83 0,-2.34 -1,-6.42 -2.69,-8.97 -1.95,-2.94 -4.64,-4.23 -6.58,-4.23 v 0 l -0.06,-1.1 c 5.89,0 12.51,6.03 12.51,13.71 0,0.84 0,3.23 -1.54,5.42 z" /><path
+           style="fill:#000000;stroke-width:0"
+           inkscape:connector-curvature="0"
+           id="path1452"
+           d="m 501.55,405.11 h -1.18 c -0.1,-0.77 -0.46,-2.83 -0.91,-3.18 -0.26,-0.2 -2.95,-0.2 -3.44,-0.2 h -6.42 c 3.66,3.23 4.88,4.2 6.97,5.84 2.58,2.07 4.98,4.22 4.98,7.54 0,4.21 -3.68,6.79 -8.15,6.79 -4.31,0 -7.25,-3.03 -7.25,-6.23 0,-1.78 1.5,-1.96 1.86,-1.96 0.83,0 1.84,0.6 1.84,1.85 0,0.62 -0.25,1.84 -2.06,1.84 1.08,2.47 3.45,3.24 5.09,3.24 3.49,0 5.3,-2.71 5.3,-5.53 0,-3.04 -2.16,-5.44 -3.28,-6.69 l -8.39,-8.3 c -0.36,-0.31 -0.36,-0.39 -0.36,-1.36 h 14.36 z" /><path
+           style="fill:#000000;stroke-width:0"
+           inkscape:connector-curvature="0"
+           id="path1454"
+           d="m 521.35,405.11 h -1.19 c -0.09,-0.77 -0.45,-2.83 -0.9,-3.18 -0.27,-0.2 -2.96,-0.2 -3.44,-0.2 h -6.42 c 3.65,3.23 4.87,4.2 6.97,5.84 2.58,2.07 4.98,4.22 4.98,7.54 0,4.21 -3.69,6.79 -8.15,6.79 -4.32,0 -7.25,-3.03 -7.25,-6.23 0,-1.78 1.5,-1.96 1.85,-1.96 0.83,0 1.85,0.6 1.85,1.85 0,0.62 -0.25,1.84 -2.06,1.84 1.07,2.47 3.45,3.24 5.09,3.24 3.48,0 5.3,-2.71 5.3,-5.53 0,-3.04 -2.16,-5.44 -3.28,-6.69 l -8.4,-8.3 c -0.35,-0.31 -0.35,-0.39 -0.35,-1.36 h 14.35 z" /></g>
+    </g>
+    <g
+       style="stroke-width:2.08333"
+       transform="matrix(0.47999999,0,0,0.47999999,100.7499,71.545286)"
+       id="g1560">
+      <g
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:3.47222;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.433;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="g1558"
+         transform="matrix(0.3,0,0,-0.3,-52.5,222.75)"
+         xml:space="preserve"
+         stroke-miterlimit="10.433"
+         font-style="normal"
+         font-variant="normal"
+         font-weight="normal"
+         font-stretch="normal"
+         font-size-adjust="none"
+         letter-spacing="normal"
+         word-spacing="normal"><path
+           style="fill:#000000;stroke-width:0"
+           inkscape:connector-curvature="0"
+           d="m 481.33,424.78 h 0.07 0.07 0.07 0.08 0.09 l 0.09,0.01 h 0.09 l 0.09,0.01 0.1,0.01 0.1,0.02 0.1,0.02 0.11,0.02 0.1,0.02 0.1,0.03 0.1,0.03 0.1,0.04 0.1,0.04 0.1,0.05 0.09,0.05 0.09,0.06 0.08,0.07 0.08,0.07 0.04,0.04 0.04,0.04 0.03,0.04 0.04,0.05 0.03,0.04 0.03,0.05 0.03,0.05 0.03,0.05 0.03,0.05 0.02,0.06 0.02,0.06 0.02,0.06 0.02,0.06 0.02,0.06 0.01,0.07 0.01,0.07 0.01,0.07 v 0.08 l 0.01,0.07 v 0.08 c 0,1.19 -1.05,1.19 -1.94,1.19 h -11.36 c -7.53,0 -13.06,-8.22 -13.06,-14.14 0,-4.39 2.94,-7.88 7.47,-7.88 l 0.06,1.1 c -2.45,0 -4.44,1.79 -4.44,5.37 0,1.5 0.6,5.59 2.35,8.53 2.09,3.44 5.08,4.13 6.76,4.13 4.19,0 4.6,-3.28 4.6,-4.83 0,-2.34 -1,-6.42 -2.69,-8.97 -1.95,-2.94 -4.64,-4.23 -6.58,-4.23 v 0 l -0.06,-1.1 c 5.89,0 12.51,6.03 12.51,13.71 0,0.84 0,3.23 -1.54,5.42 z"
+           id="path1552" /><path
+           style="fill:#000000;stroke-width:0"
+           inkscape:connector-curvature="0"
+           d="m 501.55,405.11 h -1.18 c -0.1,-0.77 -0.46,-2.83 -0.91,-3.18 -0.26,-0.2 -2.95,-0.2 -3.44,-0.2 h -6.42 c 3.66,3.23 4.88,4.2 6.97,5.84 2.58,2.07 4.98,4.22 4.98,7.54 0,4.21 -3.68,6.79 -8.15,6.79 -4.31,0 -7.25,-3.03 -7.25,-6.23 0,-1.78 1.5,-1.96 1.86,-1.96 0.83,0 1.84,0.6 1.84,1.85 0,0.62 -0.25,1.84 -2.06,1.84 1.08,2.47 3.45,3.24 5.09,3.24 3.49,0 5.3,-2.71 5.3,-5.53 0,-3.04 -2.16,-5.44 -3.28,-6.69 l -8.39,-8.3 c -0.36,-0.31 -0.36,-0.39 -0.36,-1.36 h 14.36 z"
+           id="path1554" /><path
+           style="fill:#000000;stroke-width:0"
+           inkscape:connector-curvature="0"
+           d="m 515.43,420.92 v 0.04 0.04 0.05 0.04 0.03 0.04 0.04 0.03 l -0.01,0.04 v 0.03 0.03 0.03 0.03 l -0.01,0.03 v 0.03 l -0.01,0.02 v 0.03 0.02 l -0.01,0.03 v 0.02 l -0.02,0.04 -0.01,0.04 -0.02,0.03 -0.02,0.03 -0.02,0.03 -0.02,0.03 -0.03,0.02 -0.03,0.02 -0.04,0.02 -0.03,0.01 -0.04,0.01 -0.05,0.02 h -0.02 -0.03 l -0.02,0.01 h -0.03 l -0.03,0.01 h -0.02 -0.03 -0.03 -0.04 l -0.03,0.01 h -0.03 -0.04 -0.04 -0.03 -0.04 -0.04 -0.04 -0.05 -0.04 -0.05 c -2.23,-2.2 -5.39,-2.23 -6.83,-2.23 v -1.25 c 0.85,0 3.15,0 5.05,0.97 v -17.77 c 0,-1.16 0,-1.61 -3.48,-1.61 h -1.32 v -1.25 c 0.63,0.03 4.91,0.14 6.21,0.14 1.08,0 5.47,-0.11 6.23,-0.14 v 1.25 h -1.33 c -3.48,0 -3.48,0.45 -3.48,1.61 z"
+           id="path1556" /></g>
+    </g>
+    <g
+       id="g4069"
+       transform="translate(22.343406,65.381751)">
+      <g
+         style="stroke-width:1.44969"
+         id="g1982"
+         transform="matrix(0.68980391,0,0,0.68980391,1.3906784,25.0697)">
+        <path
+           inkscape:connector-curvature="0"
+           id="path1614"
+           d="M 30.238094,97.239573 H 56.318451"
+           style="opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.724844;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:url(#marker1618)" />
+        <path
+           style="opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.724844;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:url(#marker1656)"
+           d="M 30.238094,97.239573 V 71.159217"
+           id="path1652"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="g2047"
+         transform="matrix(0.41388234,0,0,0.41388234,-0.50076422,55.05803)"
+         style="stroke-width:2.41615">
+        <g
+           id="g2045"
+           transform="matrix(0.3,0,0,-0.3,-52.5,222.75)"
+           xml:space="preserve"
+           stroke-miterlimit="10.433"
+           font-style="normal"
+           font-variant="normal"
+           font-weight="normal"
+           font-stretch="normal"
+           font-size-adjust="none"
+           letter-spacing="normal"
+           word-spacing="normal"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:4.02691;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.433;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"><path
+             d="m 472.16,421.25 0.03,0.13 0.04,0.15 0.04,0.16 0.04,0.18 0.06,0.19 0.06,0.21 0.06,0.22 0.07,0.22 0.08,0.23 0.09,0.24 0.1,0.25 0.1,0.24 0.11,0.25 0.12,0.25 0.13,0.25 0.14,0.25 0.15,0.24 0.15,0.24 0.17,0.23 0.18,0.22 0.18,0.22 0.2,0.2 0.21,0.19 0.22,0.18 0.23,0.16 0.25,0.14 0.12,0.07 0.13,0.06 0.14,0.05 0.13,0.05 0.14,0.05 0.14,0.04 0.15,0.03 0.15,0.03 0.15,0.02 0.16,0.02 0.16,0.01 h 0.16 c 0.25,0 1.44,0 2.48,-0.64 -1.39,-0.25 -2.39,-1.5 -2.39,-2.69 0,-0.79 0.55,-1.75 1.89,-1.75 1.1,0 2.69,0.89 2.69,2.89 0,2.6 -2.94,3.28 -4.63,3.28 -2.89,0 -4.64,-2.64 -5.23,-3.78 -1.25,3.28 -3.94,3.78 -5.37,3.78 -5.19,0 -8.04,-6.42 -8.04,-7.67 0,-0.5 0.5,-0.5 0.61,-0.5 0.39,0 0.55,0.11 0.64,0.55 1.69,5.28 4.99,6.53 6.68,6.53 0.95,0 2.68,-0.44 2.68,-3.33 0,-1.54 -0.84,-4.89 -2.68,-11.86 -0.8,-3.09 -2.54,-5.18 -4.74,-5.18 -0.3,0 -1.44,0 -2.48,0.65 1.25,0.24 2.34,1.28 2.34,2.69 0,1.34 -1.09,1.73 -1.84,1.73 -1.5,0 -2.75,-1.29 -2.75,-2.89 0,-2.28 2.5,-3.28 4.68,-3.28 3.3,0 5.08,3.49 5.24,3.78 0.59,-1.84 2.39,-3.78 5.37,-3.78 5.14,0 7.99,6.42 7.99,7.67 0,0.5 -0.45,0.5 -0.61,0.5 -0.44,0 -0.55,-0.2 -0.64,-0.54 -1.64,-5.33 -5.03,-6.53 -6.63,-6.53 -1.95,0 -2.75,1.59 -2.75,3.29 0,1.1 0.3,2.19 0.86,4.38 z"
+             id="path2041"
+             inkscape:connector-curvature="0"
+             style="fill:#000000;stroke-width:0" /><path
+             d="m 495.63,420.92 v 0.04 0.04 0.05 0.04 0.03 0.04 0.04 0.03 0.04 0.03 l -0.01,0.03 v 0.03 0.03 l -0.01,0.03 v 0.03 0.02 l -0.01,0.03 v 0.02 l -0.01,0.03 v 0.02 l -0.01,0.04 -0.02,0.04 -0.02,0.03 -0.02,0.03 -0.02,0.03 -0.02,0.03 -0.03,0.02 -0.03,0.02 -0.03,0.02 -0.04,0.01 -0.04,0.01 -0.05,0.02 h -0.02 -0.02 l -0.03,0.01 h -0.03 l -0.02,0.01 h -0.03 -0.03 -0.03 -0.03 l -0.04,0.01 h -0.03 -0.04 -0.03 -0.04 -0.04 -0.04 -0.04 -0.04 -0.05 -0.04 c -2.24,-2.2 -5.39,-2.23 -6.83,-2.23 v -1.25 c 0.84,0 3.14,0 5.04,0.97 v -17.77 c 0,-1.16 0,-1.61 -3.48,-1.61 h -1.31 v -1.25 c 0.62,0.03 4.9,0.14 6.2,0.14 1.08,0 5.47,-0.11 6.24,-0.14 v 1.25 h -1.33 c -3.49,0 -3.49,0.45 -3.49,1.61 z"
+             id="path2043"
+             inkscape:connector-curvature="0"
+             style="fill:#000000;stroke-width:0" /></g>
+      </g>
+      <g
+         id="g2179"
+         transform="matrix(0.41388234,0,0,0.41388234,-20.128519,37.849332)"
+         style="stroke-width:2.41615">
+        <g
+           word-spacing="normal"
+           letter-spacing="normal"
+           font-size-adjust="none"
+           font-stretch="normal"
+           font-weight="normal"
+           font-variant="normal"
+           font-style="normal"
+           stroke-miterlimit="10.433"
+           xml:space="preserve"
+           transform="matrix(0.3,0,0,-0.3,-52.5,222.75)"
+           id="g2177"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:4.02691;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.433;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"><path
+             id="path2173"
+             d="m 472.16,421.25 0.03,0.13 0.04,0.15 0.04,0.16 0.04,0.18 0.06,0.19 0.06,0.21 0.06,0.22 0.07,0.22 0.08,0.23 0.09,0.24 0.1,0.25 0.1,0.24 0.11,0.25 0.12,0.25 0.13,0.25 0.14,0.25 0.15,0.24 0.15,0.24 0.17,0.23 0.18,0.22 0.18,0.22 0.2,0.2 0.21,0.19 0.22,0.18 0.23,0.16 0.25,0.14 0.12,0.07 0.13,0.06 0.14,0.05 0.13,0.05 0.14,0.05 0.14,0.04 0.15,0.03 0.15,0.03 0.15,0.02 0.16,0.02 0.16,0.01 h 0.16 c 0.25,0 1.44,0 2.48,-0.64 -1.39,-0.25 -2.39,-1.5 -2.39,-2.69 0,-0.79 0.55,-1.75 1.89,-1.75 1.1,0 2.69,0.89 2.69,2.89 0,2.6 -2.94,3.28 -4.63,3.28 -2.89,0 -4.64,-2.64 -5.23,-3.78 -1.25,3.28 -3.94,3.78 -5.37,3.78 -5.19,0 -8.04,-6.42 -8.04,-7.67 0,-0.5 0.5,-0.5 0.61,-0.5 0.39,0 0.55,0.11 0.64,0.55 1.69,5.28 4.99,6.53 6.68,6.53 0.95,0 2.68,-0.44 2.68,-3.33 0,-1.54 -0.84,-4.89 -2.68,-11.86 -0.8,-3.09 -2.54,-5.18 -4.74,-5.18 -0.3,0 -1.44,0 -2.48,0.65 1.25,0.24 2.34,1.28 2.34,2.69 0,1.34 -1.09,1.73 -1.84,1.73 -1.5,0 -2.75,-1.29 -2.75,-2.89 0,-2.28 2.5,-3.28 4.68,-3.28 3.3,0 5.08,3.49 5.24,3.78 0.59,-1.84 2.39,-3.78 5.37,-3.78 5.14,0 7.99,6.42 7.99,7.67 0,0.5 -0.45,0.5 -0.61,0.5 -0.44,0 -0.55,-0.2 -0.64,-0.54 -1.64,-5.33 -5.03,-6.53 -6.63,-6.53 -1.95,0 -2.75,1.59 -2.75,3.29 0,1.1 0.3,2.19 0.86,4.38 z"
+             inkscape:connector-curvature="0"
+             style="fill:#000000;stroke-width:0" /><path
+             id="path2175"
+             d="m 501.55,405.11 h -1.18 c -0.1,-0.77 -0.46,-2.83 -0.91,-3.18 -0.26,-0.2 -2.95,-0.2 -3.44,-0.2 h -6.42 c 3.66,3.23 4.88,4.2 6.97,5.84 2.58,2.07 4.98,4.22 4.98,7.54 0,4.21 -3.68,6.79 -8.15,6.79 -4.31,0 -7.25,-3.03 -7.25,-6.23 0,-1.78 1.5,-1.96 1.86,-1.96 0.83,0 1.84,0.6 1.84,1.85 0,0.62 -0.25,1.84 -2.06,1.84 1.08,2.47 3.45,3.24 5.09,3.24 3.49,0 5.3,-2.71 5.3,-5.53 0,-3.04 -2.16,-5.44 -3.28,-6.69 l -8.39,-8.3 c -0.36,-0.31 -0.36,-0.39 -0.36,-1.36 h 14.36 z"
+             inkscape:connector-curvature="0"
+             style="fill:#000000;stroke-width:0" /></g>
+      </g>
+    </g>
+    <path
+       inkscape:connector-curvature="0"
+       id="path2261"
+       d="m 151.0403,141.25151 h 21.69187"
+       style="opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:url(#marker2265)" />
+    <path
+       style="opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:url(#marker2355)"
+       d="M 111.83602,141.25151 H 90.144139"
+       id="path2351"
+       inkscape:connector-curvature="0" />
+    <g
+       transform="matrix(0,-1,-1,0,221.01841,226.34628)"
+       id="g3023">
+      <path
+         inkscape:connector-curvature="0"
+         id="path2601"
+         d="M 85.094773,69.978115 H 97.298574"
+         style="opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none" />
+      <path
+         style="opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.25;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none"
+         d="m 93.83518,68.803826 4.464843,1.299292 -3.260044,-0.02362 z"
+         id="path2785"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cccc" />
+    </g>
+    <g
+       transform="translate(45.911396,51.538676)"
+       id="g3029">
+      <path
+         style="opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none"
+         d="M 85.094773,69.978115 H 97.298574"
+         id="path3025"
+         inkscape:connector-curvature="0" />
+      <path
+         sodipodi:nodetypes="cccc"
+         inkscape:connector-curvature="0"
+         id="path3027"
+         d="m 93.83518,68.803826 4.464843,1.299292 -3.260044,-0.02362 z"
+         style="opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.25;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none" />
+    </g>
+    <g
+       id="g3035"
+       transform="rotate(180,109.22094,115.49533)">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3031"
+         d="M 85.094773,69.978115 H 97.298574"
+         style="opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none" />
+      <path
+         style="opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.25;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none"
+         d="m 93.83518,68.803826 4.464843,1.299292 -3.260044,-0.02362 z"
+         id="path3033"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cccc" />
+    </g>
+    <g
+       id="g3041"
+       transform="matrix(0,1,1,0,41.857899,56.156737)">
+      <path
+         style="opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none"
+         d="M 85.094773,69.978115 H 97.298574"
+         id="path3037"
+         inkscape:connector-curvature="0" />
+      <path
+         sodipodi:nodetypes="cccc"
+         inkscape:connector-curvature="0"
+         id="path3039"
+         d="m 93.83518,68.803826 4.464843,1.299292 -3.260044,-0.02362 z"
+         style="opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.25;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none" />
+    </g>
+    <path
+       style="opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:url(#marker3131)"
+       d="m 133.34702,161.01254 v 12.47107"
+       id="path3127"
+       inkscape:connector-curvature="0" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path3733"
+       d="M 131.00617,121.51679 V 109.04571"
+       style="opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:url(#marker3737)" />
+    <path
+       style="opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.09999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none"
+       d="M 152.09864,141.25151 H 125.30009"
+       id="path5200"
+       inkscape:connector-curvature="0" />
+    <path
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.25;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       d="m 134.13448,135.23197 c 1.1193,1.70405 1.7704,3.7431 1.7704,5.93422"
+       id="path5322"
+       inkscape:connector-curvature="0" />
+    <path
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.25;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       d="m 118.77306,131.55535 c -1.71593,1.14326 -3.77688,1.80957 -5.99344,1.80957"
+       id="path5356"
+       inkscape:connector-curvature="0" />
+    <g
+       id="g5689"
+       transform="matrix(0.35999999,0,0,0.35999999,101.62586,104.08284)"
+       style="stroke-width:2.77777791">
+      <g
+         word-spacing="normal"
+         letter-spacing="normal"
+         font-size-adjust="none"
+         font-stretch="normal"
+         font-weight="normal"
+         font-variant="normal"
+         font-style="normal"
+         stroke-miterlimit="10.433"
+         xml:space="preserve"
+         transform="matrix(0.3,0,0,-0.3,-52.5,222.75)"
+         id="g5687"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:4.62962961;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"><path
+           id="path5685"
+           d="m 478.19,431.11 v 0.31 l -0.01,0.34 -0.02,0.36 -0.02,0.37 -0.03,0.39 -0.04,0.39 -0.04,0.41 -0.06,0.41 -0.07,0.42 -0.07,0.43 -0.09,0.42 -0.1,0.43 -0.12,0.42 -0.12,0.42 -0.14,0.41 -0.16,0.41 -0.17,0.4 -0.18,0.38 -0.2,0.37 -0.22,0.36 -0.23,0.34 -0.25,0.32 -0.28,0.3 -0.29,0.27 -0.31,0.25 -0.16,0.12 -0.17,0.1 -0.17,0.1 -0.18,0.1 -0.18,0.08 -0.19,0.08 -0.19,0.07 -0.2,0.06 -0.21,0.05 -0.21,0.05 -0.22,0.03 -0.22,0.02 -0.23,0.02 h -0.23 l -0.05,-1.09 c 2.44,0 2.73,-3.19 2.73,-6.03 0,-2.44 -0.39,-4.99 -1.59,-9.92 h -10.41 c 0.85,3.2 1.85,7.18 3.83,10.72 1.36,2.43 3.19,5.23 5.44,5.23 l 0.05,1.09 c -6.92,0 -14.6,-14.04 -14.6,-25.45 0,-4.69 1.44,-10.22 5.99,-10.22 v 1.1 c -1.66,0 -2.71,1.45 -2.71,6.07 0,2.1 0.3,4.99 1.6,9.86 h 10.37 c -0.54,-2.28 -1.59,-6.51 -3.5,-10.11 -1.73,-3.39 -3.62,-5.82 -5.76,-5.82 v -1.1 c 7.01,0 14.59,14.3 14.59,25.46 z"
+           inkscape:connector-curvature="0"
+           style="fill:#000000;stroke-width:0" /></g>
+    </g>
+    <g
+       id="g5695"
+       transform="matrix(0.35999999,0,0,0.35999999,83.044218,95.645793)"
+       style="stroke-width:2.77777791">
+      <g
+         word-spacing="normal"
+         letter-spacing="normal"
+         font-size-adjust="none"
+         font-stretch="normal"
+         font-weight="normal"
+         font-variant="normal"
+         font-style="normal"
+         stroke-miterlimit="10.433"
+         xml:space="preserve"
+         transform="matrix(0.3,0,0,-0.3,-52.5,222.75)"
+         id="g5693"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:4.62962961;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"><path
+           id="path5691"
+           d="m 478.19,431.11 v 0.31 l -0.01,0.34 -0.02,0.36 -0.02,0.37 -0.03,0.39 -0.04,0.39 -0.04,0.41 -0.06,0.41 -0.07,0.42 -0.07,0.43 -0.09,0.42 -0.1,0.43 -0.12,0.42 -0.12,0.42 -0.14,0.41 -0.16,0.41 -0.17,0.4 -0.18,0.38 -0.2,0.37 -0.22,0.36 -0.23,0.34 -0.25,0.32 -0.28,0.3 -0.29,0.27 -0.31,0.25 -0.16,0.12 -0.17,0.1 -0.17,0.1 -0.18,0.1 -0.18,0.08 -0.19,0.08 -0.19,0.07 -0.2,0.06 -0.21,0.05 -0.21,0.05 -0.22,0.03 -0.22,0.02 -0.23,0.02 h -0.23 l -0.05,-1.09 c 2.44,0 2.73,-3.19 2.73,-6.03 0,-2.44 -0.39,-4.99 -1.59,-9.92 h -10.41 c 0.85,3.2 1.85,7.18 3.83,10.72 1.36,2.43 3.19,5.23 5.44,5.23 l 0.05,1.09 c -6.92,0 -14.6,-14.04 -14.6,-25.45 0,-4.69 1.44,-10.22 5.99,-10.22 v 1.1 c -1.66,0 -2.71,1.45 -2.71,6.07 0,2.1 0.3,4.99 1.6,9.86 h 10.37 c -0.54,-2.28 -1.59,-6.51 -3.5,-10.11 -1.73,-3.39 -3.62,-5.82 -5.76,-5.82 v -1.1 c 7.01,0 14.59,14.3 14.59,25.46 z"
+           inkscape:connector-curvature="0"
+           style="fill:#000000;stroke-width:0" /></g>
+    </g>
+    <path
+       inkscape:connector-curvature="0"
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#e6e6e6;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       d="m 212.72088,117.39333 v 37.38583 h 24.93232 z"
+       id="path841"
+       inkscape:export-xdpi="150.04509"
+       inkscape:export-ydpi="150.04509"
+       inkscape:export-filename="/home/ondro/Vyuka/Beamer_Sources/AdvancedSG/StressModelling/figures/Cauchy_2D_triangle_v2.png" />
+    <path
+       style="opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:url(#marker1161)"
+       d="m 219.92213,128.13804 12.47293,-8.27001"
+       id="path847"
+       inkscape:connector-curvature="0"
+       inkscape:export-xdpi="150.04509"
+       inkscape:export-ydpi="150.04509"
+       inkscape:export-filename="/home/ondro/Vyuka/Beamer_Sources/AdvancedSG/StressModelling/figures/Cauchy_2D_triangle_v2.png" />
+    <path
+       style="opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:url(#marker2355-3)"
+       d="M 211.87176,136.06934 H 190.17989"
+       id="path2351-9"
+       inkscape:connector-curvature="0"
+       inkscape:export-xdpi="150.04509"
+       inkscape:export-ydpi="150.04509"
+       inkscape:export-filename="/home/ondro/Vyuka/Beamer_Sources/AdvancedSG/StressModelling/figures/Cauchy_2D_triangle_v2.png" />
+    <g
+       id="g3035-6"
+       transform="rotate(180,157.60408,112.90424)"
+       inkscape:export-xdpi="150.04509"
+       inkscape:export-ydpi="150.04509"
+       inkscape:export-filename="/home/ondro/Vyuka/Beamer_Sources/AdvancedSG/StressModelling/figures/Cauchy_2D_triangle_v2.png">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3031-5"
+         d="M 85.094773,69.978115 H 97.298574"
+         style="opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none" />
+      <path
+         style="opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.25;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none"
+         d="m 93.83518,68.803826 4.464843,1.299292 -3.260044,-0.02362 z"
+         id="path3033-9"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cccc" />
+    </g>
+    <g
+       id="g3041-5"
+       transform="matrix(0,1,1,0,141.89364,50.974567)"
+       inkscape:export-xdpi="150.04509"
+       inkscape:export-ydpi="150.04509"
+       inkscape:export-filename="/home/ondro/Vyuka/Beamer_Sources/AdvancedSG/StressModelling/figures/Cauchy_2D_triangle_v2.png">
+      <path
+         style="opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none"
+         d="M 85.094773,69.978115 H 97.298574"
+         id="path3037-6"
+         inkscape:connector-curvature="0" />
+      <path
+         sodipodi:nodetypes="cccc"
+         inkscape:connector-curvature="0"
+         id="path3039-1"
+         d="m 93.83518,68.803826 4.464843,1.299292 -3.260044,-0.02362 z"
+         style="opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.25;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none" />
+    </g>
+    <path
+       style="opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:url(#marker3131-0)"
+       d="m 230.11324,155.83037 v 12.47107"
+       id="path3127-1"
+       inkscape:connector-curvature="0"
+       inkscape:export-xdpi="150.04509"
+       inkscape:export-ydpi="150.04509"
+       inkscape:export-filename="/home/ondro/Vyuka/Beamer_Sources/AdvancedSG/StressModelling/figures/Cauchy_2D_triangle_v2.png" />
+    <g
+       id="g4224"
+       transform="matrix(0.47999999,0,0,0.47999999,155.62181,85.26392)"
+       style="stroke-width:2.08333349"
+       inkscape:export-xdpi="150.04509"
+       inkscape:export-ydpi="150.04509"
+       inkscape:export-filename="/home/ondro/Vyuka/Beamer_Sources/AdvancedSG/StressModelling/figures/Cauchy_2D_triangle_v2.png">
+      <g
+         id="g4222"
+         transform="matrix(0.3,0,0,-0.3,-52.5,222.75)"
+         xml:space="preserve"
+         stroke-miterlimit="10.433"
+         font-style="normal"
+         font-variant="normal"
+         font-weight="normal"
+         font-stretch="normal"
+         font-size-adjust="none"
+         letter-spacing="normal"
+         word-spacing="normal"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:3.47222233;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"><path
+           d="m 481.33,424.78 h 0.07 0.07 0.07 0.08 0.09 l 0.09,0.01 h 0.09 l 0.09,0.01 0.1,0.01 0.1,0.02 0.1,0.02 0.11,0.02 0.1,0.02 0.1,0.03 0.1,0.03 0.1,0.04 0.1,0.04 0.1,0.05 0.09,0.05 0.09,0.06 0.08,0.07 0.08,0.07 0.04,0.04 0.04,0.04 0.03,0.04 0.04,0.05 0.03,0.04 0.03,0.05 0.03,0.05 0.03,0.05 0.03,0.05 0.02,0.06 0.02,0.06 0.02,0.06 0.02,0.06 0.02,0.06 0.01,0.07 0.01,0.07 0.01,0.07 v 0.08 l 0.01,0.07 v 0.08 c 0,1.19 -1.05,1.19 -1.94,1.19 h -11.36 c -7.53,0 -13.06,-8.22 -13.06,-14.14 0,-4.39 2.94,-7.88 7.47,-7.88 l 0.06,1.1 c -2.45,0 -4.44,1.79 -4.44,5.37 0,1.5 0.6,5.59 2.35,8.53 2.09,3.44 5.08,4.13 6.76,4.13 4.19,0 4.6,-3.28 4.6,-4.83 0,-2.34 -1,-6.42 -2.69,-8.97 -1.95,-2.94 -4.64,-4.23 -6.58,-4.23 v 0 l -0.06,-1.1 c 5.89,0 12.51,6.03 12.51,13.71 0,0.84 0,3.23 -1.54,5.42 z"
+           id="path4216"
+           inkscape:connector-curvature="0"
+           style="fill:#000000;stroke-width:0" /><path
+           d="m 495.63,420.92 v 0.04 0.04 0.05 0.04 0.03 0.04 0.04 0.03 0.04 0.03 l -0.01,0.03 v 0.03 0.03 l -0.01,0.03 v 0.03 0.02 l -0.01,0.03 v 0.02 l -0.01,0.03 v 0.02 l -0.01,0.04 -0.02,0.04 -0.02,0.03 -0.02,0.03 -0.02,0.03 -0.02,0.03 -0.03,0.02 -0.03,0.02 -0.03,0.02 -0.04,0.01 -0.04,0.01 -0.05,0.02 h -0.02 -0.02 l -0.03,0.01 h -0.03 l -0.02,0.01 h -0.03 -0.03 -0.03 -0.03 l -0.04,0.01 h -0.03 -0.04 -0.03 -0.04 -0.04 -0.04 -0.04 -0.04 -0.05 -0.04 c -2.24,-2.2 -5.39,-2.23 -6.83,-2.23 v -1.25 c 0.84,0 3.14,0 5.04,0.97 v -17.77 c 0,-1.16 0,-1.61 -3.48,-1.61 h -1.31 v -1.25 c 0.62,0.03 4.9,0.14 6.2,0.14 1.08,0 5.47,-0.11 6.24,-0.14 v 1.25 h -1.33 c -3.49,0 -3.49,0.45 -3.49,1.61 z"
+           id="path4218"
+           inkscape:connector-curvature="0"
+           style="fill:#000000;stroke-width:0" /><path
+           d="m 515.43,420.92 v 0.04 0.04 0.05 0.04 0.03 0.04 0.04 0.03 l -0.01,0.04 v 0.03 0.03 0.03 0.03 l -0.01,0.03 v 0.03 l -0.01,0.02 v 0.03 0.02 l -0.01,0.03 v 0.02 l -0.02,0.04 -0.01,0.04 -0.02,0.03 -0.02,0.03 -0.02,0.03 -0.02,0.03 -0.03,0.02 -0.03,0.02 -0.04,0.02 -0.03,0.01 -0.04,0.01 -0.05,0.02 h -0.02 -0.03 l -0.02,0.01 h -0.03 l -0.03,0.01 h -0.02 -0.03 -0.03 -0.04 l -0.03,0.01 h -0.03 -0.04 -0.04 -0.03 -0.04 -0.04 -0.04 -0.05 -0.04 -0.05 c -2.23,-2.2 -5.39,-2.23 -6.83,-2.23 v -1.25 c 0.85,0 3.15,0 5.05,0.97 v -17.77 c 0,-1.16 0,-1.61 -3.48,-1.61 h -1.32 v -1.25 c 0.63,0.03 4.91,0.14 6.21,0.14 1.08,0 5.47,-0.11 6.23,-0.14 v 1.25 h -1.33 c -3.48,0 -3.48,0.45 -3.48,1.61 z"
+           id="path4220"
+           inkscape:connector-curvature="0"
+           style="fill:#000000;stroke-width:0" /></g>
+    </g>
+    <g
+       id="g4234"
+       transform="matrix(0.47999999,0,0,0.47999999,159.74383,98.42703)"
+       style="stroke-width:2.08333"
+       inkscape:export-xdpi="150.04509"
+       inkscape:export-ydpi="150.04509"
+       inkscape:export-filename="/home/ondro/Vyuka/Beamer_Sources/AdvancedSG/StressModelling/figures/Cauchy_2D_triangle_v2.png">
+      <g
+         word-spacing="normal"
+         letter-spacing="normal"
+         font-size-adjust="none"
+         font-stretch="normal"
+         font-weight="normal"
+         font-variant="normal"
+         font-style="normal"
+         stroke-miterlimit="10.433"
+         xml:space="preserve"
+         transform="matrix(0.3,0,0,-0.3,-52.5,222.75)"
+         id="g4232"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:3.47222;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.433;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"><path
+           id="path4226"
+           d="m 481.33,424.78 h 0.07 0.07 0.07 0.08 0.09 l 0.09,0.01 h 0.09 l 0.09,0.01 0.1,0.01 0.1,0.02 0.1,0.02 0.11,0.02 0.1,0.02 0.1,0.03 0.1,0.03 0.1,0.04 0.1,0.04 0.1,0.05 0.09,0.05 0.09,0.06 0.08,0.07 0.08,0.07 0.04,0.04 0.04,0.04 0.03,0.04 0.04,0.05 0.03,0.04 0.03,0.05 0.03,0.05 0.03,0.05 0.03,0.05 0.02,0.06 0.02,0.06 0.02,0.06 0.02,0.06 0.02,0.06 0.01,0.07 0.01,0.07 0.01,0.07 v 0.08 l 0.01,0.07 v 0.08 c 0,1.19 -1.05,1.19 -1.94,1.19 h -11.36 c -7.53,0 -13.06,-8.22 -13.06,-14.14 0,-4.39 2.94,-7.88 7.47,-7.88 l 0.06,1.1 c -2.45,0 -4.44,1.79 -4.44,5.37 0,1.5 0.6,5.59 2.35,8.53 2.09,3.44 5.08,4.13 6.76,4.13 4.19,0 4.6,-3.28 4.6,-4.83 0,-2.34 -1,-6.42 -2.69,-8.97 -1.95,-2.94 -4.64,-4.23 -6.58,-4.23 v 0 l -0.06,-1.1 c 5.89,0 12.51,6.03 12.51,13.71 0,0.84 0,3.23 -1.54,5.42 z"
+           inkscape:connector-curvature="0"
+           style="fill:#000000;stroke-width:0" /><path
+           id="path4228"
+           d="m 495.63,420.92 v 0.04 0.04 0.05 0.04 0.03 0.04 0.04 0.03 0.04 0.03 l -0.01,0.03 v 0.03 0.03 l -0.01,0.03 v 0.03 0.02 l -0.01,0.03 v 0.02 l -0.01,0.03 v 0.02 l -0.01,0.04 -0.02,0.04 -0.02,0.03 -0.02,0.03 -0.02,0.03 -0.02,0.03 -0.03,0.02 -0.03,0.02 -0.03,0.02 -0.04,0.01 -0.04,0.01 -0.05,0.02 h -0.02 -0.02 l -0.03,0.01 h -0.03 l -0.02,0.01 h -0.03 -0.03 -0.03 -0.03 l -0.04,0.01 h -0.03 -0.04 -0.03 -0.04 -0.04 -0.04 -0.04 -0.04 -0.05 -0.04 c -2.24,-2.2 -5.39,-2.23 -6.83,-2.23 v -1.25 c 0.84,0 3.14,0 5.04,0.97 v -17.77 c 0,-1.16 0,-1.61 -3.48,-1.61 h -1.31 v -1.25 c 0.62,0.03 4.9,0.14 6.2,0.14 1.08,0 5.47,-0.11 6.24,-0.14 v 1.25 h -1.33 c -3.49,0 -3.49,0.45 -3.49,1.61 z"
+           inkscape:connector-curvature="0"
+           style="fill:#000000;stroke-width:0" /><path
+           id="path4230"
+           d="m 521.35,405.11 h -1.19 c -0.09,-0.77 -0.45,-2.83 -0.9,-3.18 -0.27,-0.2 -2.96,-0.2 -3.44,-0.2 h -6.42 c 3.65,3.23 4.87,4.2 6.97,5.84 2.58,2.07 4.98,4.22 4.98,7.54 0,4.21 -3.69,6.79 -8.15,6.79 -4.32,0 -7.25,-3.03 -7.25,-6.23 0,-1.78 1.5,-1.96 1.85,-1.96 0.83,0 1.85,0.6 1.85,1.85 0,0.62 -0.25,1.84 -2.06,1.84 1.07,2.47 3.45,3.24 5.09,3.24 3.48,0 5.3,-2.71 5.3,-5.53 0,-3.04 -2.16,-5.44 -3.28,-6.69 l -8.4,-8.3 c -0.35,-0.31 -0.35,-0.39 -0.35,-1.36 h 14.35 z"
+           inkscape:connector-curvature="0"
+           style="fill:#000000;stroke-width:0" /></g>
+    </g>
+    <g
+       id="g4244"
+       transform="matrix(0.47999999,0,0,0.47999999,190.49531,114.93291)"
+       style="stroke-width:2.08333"
+       inkscape:export-xdpi="150.04509"
+       inkscape:export-ydpi="150.04509"
+       inkscape:export-filename="/home/ondro/Vyuka/Beamer_Sources/AdvancedSG/StressModelling/figures/Cauchy_2D_triangle_v2.png">
+      <g
+         id="g4242"
+         transform="matrix(0.3,0,0,-0.3,-52.5,222.75)"
+         xml:space="preserve"
+         stroke-miterlimit="10.433"
+         font-style="normal"
+         font-variant="normal"
+         font-weight="normal"
+         font-stretch="normal"
+         font-size-adjust="none"
+         letter-spacing="normal"
+         word-spacing="normal"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:3.47222;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.433;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"><path
+           d="m 481.33,424.78 h 0.07 0.07 0.07 0.08 0.09 l 0.09,0.01 h 0.09 l 0.09,0.01 0.1,0.01 0.1,0.02 0.1,0.02 0.11,0.02 0.1,0.02 0.1,0.03 0.1,0.03 0.1,0.04 0.1,0.04 0.1,0.05 0.09,0.05 0.09,0.06 0.08,0.07 0.08,0.07 0.04,0.04 0.04,0.04 0.03,0.04 0.04,0.05 0.03,0.04 0.03,0.05 0.03,0.05 0.03,0.05 0.03,0.05 0.02,0.06 0.02,0.06 0.02,0.06 0.02,0.06 0.02,0.06 0.01,0.07 0.01,0.07 0.01,0.07 v 0.08 l 0.01,0.07 v 0.08 c 0,1.19 -1.05,1.19 -1.94,1.19 h -11.36 c -7.53,0 -13.06,-8.22 -13.06,-14.14 0,-4.39 2.94,-7.88 7.47,-7.88 l 0.06,1.1 c -2.45,0 -4.44,1.79 -4.44,5.37 0,1.5 0.6,5.59 2.35,8.53 2.09,3.44 5.08,4.13 6.76,4.13 4.19,0 4.6,-3.28 4.6,-4.83 0,-2.34 -1,-6.42 -2.69,-8.97 -1.95,-2.94 -4.64,-4.23 -6.58,-4.23 v 0 l -0.06,-1.1 c 5.89,0 12.51,6.03 12.51,13.71 0,0.84 0,3.23 -1.54,5.42 z"
+           id="path4236"
+           inkscape:connector-curvature="0"
+           style="fill:#000000;stroke-width:0" /><path
+           d="m 501.55,405.11 h -1.18 c -0.1,-0.77 -0.46,-2.83 -0.91,-3.18 -0.26,-0.2 -2.95,-0.2 -3.44,-0.2 h -6.42 c 3.66,3.23 4.88,4.2 6.97,5.84 2.58,2.07 4.98,4.22 4.98,7.54 0,4.21 -3.68,6.79 -8.15,6.79 -4.31,0 -7.25,-3.03 -7.25,-6.23 0,-1.78 1.5,-1.96 1.86,-1.96 0.83,0 1.84,0.6 1.84,1.85 0,0.62 -0.25,1.84 -2.06,1.84 1.08,2.47 3.45,3.24 5.09,3.24 3.49,0 5.3,-2.71 5.3,-5.53 0,-3.04 -2.16,-5.44 -3.28,-6.69 l -8.39,-8.3 c -0.36,-0.31 -0.36,-0.39 -0.36,-1.36 h 14.36 z"
+           id="path4238"
+           inkscape:connector-curvature="0"
+           style="fill:#000000;stroke-width:0" /><path
+           d="m 521.35,405.11 h -1.19 c -0.09,-0.77 -0.45,-2.83 -0.9,-3.18 -0.27,-0.2 -2.96,-0.2 -3.44,-0.2 h -6.42 c 3.65,3.23 4.87,4.2 6.97,5.84 2.58,2.07 4.98,4.22 4.98,7.54 0,4.21 -3.69,6.79 -8.15,6.79 -4.32,0 -7.25,-3.03 -7.25,-6.23 0,-1.78 1.5,-1.96 1.85,-1.96 0.83,0 1.85,0.6 1.85,1.85 0,0.62 -0.25,1.84 -2.06,1.84 1.07,2.47 3.45,3.24 5.09,3.24 3.48,0 5.3,-2.71 5.3,-5.53 0,-3.04 -2.16,-5.44 -3.28,-6.69 l -8.4,-8.3 c -0.35,-0.31 -0.35,-0.39 -0.35,-1.36 h 14.35 z"
+           id="path4240"
+           inkscape:connector-curvature="0"
+           style="fill:#000000;stroke-width:0" /></g>
+    </g>
+    <g
+       id="g4254"
+       transform="matrix(0.47999999,0,0,0.47999999,172.54027,111.73513)"
+       style="stroke-width:2.08333"
+       inkscape:export-xdpi="150.04509"
+       inkscape:export-ydpi="150.04509"
+       inkscape:export-filename="/home/ondro/Vyuka/Beamer_Sources/AdvancedSG/StressModelling/figures/Cauchy_2D_triangle_v2.png">
+      <g
+         word-spacing="normal"
+         letter-spacing="normal"
+         font-size-adjust="none"
+         font-stretch="normal"
+         font-weight="normal"
+         font-variant="normal"
+         font-style="normal"
+         stroke-miterlimit="10.433"
+         xml:space="preserve"
+         transform="matrix(0.3,0,0,-0.3,-52.5,222.75)"
+         id="g4252"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:3.47222;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.433;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"><path
+           id="path4246"
+           d="m 481.33,424.78 h 0.07 0.07 0.07 0.08 0.09 l 0.09,0.01 h 0.09 l 0.09,0.01 0.1,0.01 0.1,0.02 0.1,0.02 0.11,0.02 0.1,0.02 0.1,0.03 0.1,0.03 0.1,0.04 0.1,0.04 0.1,0.05 0.09,0.05 0.09,0.06 0.08,0.07 0.08,0.07 0.04,0.04 0.04,0.04 0.03,0.04 0.04,0.05 0.03,0.04 0.03,0.05 0.03,0.05 0.03,0.05 0.03,0.05 0.02,0.06 0.02,0.06 0.02,0.06 0.02,0.06 0.02,0.06 0.01,0.07 0.01,0.07 0.01,0.07 v 0.08 l 0.01,0.07 v 0.08 c 0,1.19 -1.05,1.19 -1.94,1.19 h -11.36 c -7.53,0 -13.06,-8.22 -13.06,-14.14 0,-4.39 2.94,-7.88 7.47,-7.88 l 0.06,1.1 c -2.45,0 -4.44,1.79 -4.44,5.37 0,1.5 0.6,5.59 2.35,8.53 2.09,3.44 5.08,4.13 6.76,4.13 4.19,0 4.6,-3.28 4.6,-4.83 0,-2.34 -1,-6.42 -2.69,-8.97 -1.95,-2.94 -4.64,-4.23 -6.58,-4.23 v 0 l -0.06,-1.1 c 5.89,0 12.51,6.03 12.51,13.71 0,0.84 0,3.23 -1.54,5.42 z"
+           inkscape:connector-curvature="0"
+           style="fill:#000000;stroke-width:0" /><path
+           id="path4248"
+           d="m 501.55,405.11 h -1.18 c -0.1,-0.77 -0.46,-2.83 -0.91,-3.18 -0.26,-0.2 -2.95,-0.2 -3.44,-0.2 h -6.42 c 3.66,3.23 4.88,4.2 6.97,5.84 2.58,2.07 4.98,4.22 4.98,7.54 0,4.21 -3.68,6.79 -8.15,6.79 -4.31,0 -7.25,-3.03 -7.25,-6.23 0,-1.78 1.5,-1.96 1.86,-1.96 0.83,0 1.84,0.6 1.84,1.85 0,0.62 -0.25,1.84 -2.06,1.84 1.08,2.47 3.45,3.24 5.09,3.24 3.49,0 5.3,-2.71 5.3,-5.53 0,-3.04 -2.16,-5.44 -3.28,-6.69 l -8.39,-8.3 c -0.36,-0.31 -0.36,-0.39 -0.36,-1.36 h 14.36 z"
+           inkscape:connector-curvature="0"
+           style="fill:#000000;stroke-width:0" /><path
+           id="path4250"
+           d="m 515.43,420.92 v 0.04 0.04 0.05 0.04 0.03 0.04 0.04 0.03 l -0.01,0.04 v 0.03 0.03 0.03 0.03 l -0.01,0.03 v 0.03 l -0.01,0.02 v 0.03 0.02 l -0.01,0.03 v 0.02 l -0.02,0.04 -0.01,0.04 -0.02,0.03 -0.02,0.03 -0.02,0.03 -0.02,0.03 -0.03,0.02 -0.03,0.02 -0.04,0.02 -0.03,0.01 -0.04,0.01 -0.05,0.02 h -0.02 -0.03 l -0.02,0.01 h -0.03 l -0.03,0.01 h -0.02 -0.03 -0.03 -0.04 l -0.03,0.01 h -0.03 -0.04 -0.04 -0.03 -0.04 -0.04 -0.04 -0.05 -0.04 -0.05 c -2.23,-2.2 -5.39,-2.23 -6.83,-2.23 v -1.25 c 0.85,0 3.15,0 5.05,0.97 v -17.77 c 0,-1.16 0,-1.61 -3.48,-1.61 h -1.32 v -1.25 c 0.63,0.03 4.91,0.14 6.21,0.14 1.08,0 5.47,-0.11 6.23,-0.14 v 1.25 h -1.33 c -3.48,0 -3.48,0.45 -3.48,1.61 z"
+           inkscape:connector-curvature="0"
+           style="fill:#000000;stroke-width:0" /></g>
+    </g>
+    <path
+       sodipodi:nodetypes="cc"
+       inkscape:connector-curvature="0"
+       id="path4256"
+       d="m 225.58247,136.64758 31.73952,-11.35075"
+       style="opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:url(#marker4534)"
+       inkscape:export-xdpi="150.04509"
+       inkscape:export-ydpi="150.04509"
+       inkscape:export-filename="/home/ondro/Vyuka/Beamer_Sources/AdvancedSG/StressModelling/figures/Cauchy_2D_triangle_v2.png" />
+    <g
+       id="g4395"
+       transform="matrix(0.48,0,0,0.47999999,208.52805,76.01591)"
+       style="stroke-width:2.08333325"
+       inkscape:export-xdpi="150.04509"
+       inkscape:export-ydpi="150.04509"
+       inkscape:export-filename="/home/ondro/Vyuka/Beamer_Sources/AdvancedSG/StressModelling/figures/Cauchy_2D_triangle_v2.png">
+      <g
+         word-spacing="normal"
+         letter-spacing="normal"
+         font-size-adjust="none"
+         font-stretch="normal"
+         font-weight="normal"
+         font-variant="normal"
+         font-style="normal"
+         stroke-miterlimit="10.433"
+         xml:space="preserve"
+         transform="matrix(0.3,0,0,-0.3,-52.5,222.75)"
+         id="g4393"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:3.47222209;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"><path
+           id="path4385"
+           d="m 492.19,439.82 h -33.53 l -1.05,-12 h 2.35 c 0.43,5.63 0.93,9.66 8.12,9.66 h 3.83 v -28.94 h -7.62 v -2.34 c 2.68,0.16 8.21,0.16 11.15,0.16 2.95,0 8.47,0 11.17,-0.16 v 2.34 h -7.62 v 28.94 h 3.78 c 7.12,0 7.62,-3.98 8.12,-9.66 h 2.35 z"
+           inkscape:connector-curvature="0"
+           style="fill:#000000;stroke-width:0" /><path
+           id="path4387"
+           d="m 507.73,450.34 -0.6,-0.45 -0.58,-0.46 -0.55,-0.47 -0.53,-0.49 -0.5,-0.5 -0.47,-0.51 -0.45,-0.53 -0.42,-0.53 -0.4,-0.54 -0.37,-0.55 -0.36,-0.56 -0.33,-0.56 -0.31,-0.57 -0.28,-0.57 -0.27,-0.58 -0.25,-0.58 -0.23,-0.58 -0.2,-0.58 -0.2,-0.59 -0.17,-0.58 -0.15,-0.58 -0.14,-0.58 -0.13,-0.57 -0.1,-0.57 -0.1,-0.57 -0.08,-0.56 -0.06,-0.55 -0.05,-0.55 -0.04,-0.53 -0.03,-0.53 -0.02,-0.52 v -0.5 c 0,-4.92 1.47,-12.55 8.37,-17.42 0.29,0 0.69,0 0.69,0.4 0,0.22 -0.09,0.28 -0.34,0.53 -4.64,4.19 -6.35,10.11 -6.35,16.46 0,9.4 3.6,14 6.46,16.58 0.14,0.14 0.23,0.25 0.23,0.42 0,0.42 -0.4,0.42 -0.69,0.42 z"
+           inkscape:connector-curvature="0"
+           style="fill:#000000;stroke-width:0" /><path
+           id="path4389"
+           d="m 532.28,434.68 v 0.2 0.2 l -0.01,0.19 -0.02,0.18 -0.01,0.18 -0.03,0.17 -0.05,0.34 -0.07,0.32 -0.08,0.3 -0.1,0.28 -0.11,0.27 -0.12,0.25 -0.13,0.23 -0.15,0.22 -0.15,0.21 -0.17,0.19 -0.18,0.17 -0.19,0.17 -0.2,0.15 -0.21,0.13 -0.22,0.13 -0.23,0.11 -0.23,0.1 -0.24,0.09 -0.25,0.09 -0.26,0.07 -0.26,0.06 -0.27,0.05 -0.28,0.04 -0.28,0.04 -0.28,0.03 -0.29,0.02 -0.3,0.02 h -0.29 l -0.3,0.01 c -4.21,0 -6.16,-2.52 -6.83,-3.63 v 3.63 l -6.3,-0.28 v -1.96 c 2.05,0 2.33,0 2.33,-1.36 v -10.14 h -2.33 v -1.95 c 0.03,0 2.86,0.14 4.53,0.14 1.71,0 4.53,-0.14 4.56,-0.14 v 1.95 h -2.34 v 6.72 c 0,4.05 3.63,5.41 5.72,5.41 1.53,0 2.2,-0.8 2.2,-3.32 v -8.81 h -2.34 v -1.95 c 0.03,0 2.86,0.14 4.53,0.14 1.7,0 4.53,-0.14 4.56,-0.14 v 1.95 h -2.33 z"
+           inkscape:connector-curvature="0"
+           style="fill:#000000;stroke-width:0" /><path
+           id="path4391"
+           d="m 539.18,450.34 h -0.03 -0.02 -0.03 -0.02 -0.03 -0.03 -0.03 l -0.02,-0.01 h -0.03 -0.03 l -0.03,-0.01 h -0.03 l -0.02,-0.01 -0.03,-0.01 h -0.03 l -0.02,-0.01 -0.03,-0.01 -0.02,-0.02 -0.03,-0.01 -0.02,-0.01 -0.02,-0.02 -0.02,-0.02 -0.02,-0.02 -0.01,-0.01 -0.01,-0.01 v -0.01 l -0.01,-0.01 -0.01,-0.01 -0.01,-0.02 v -0.01 l -0.01,-0.01 v -0.02 l -0.01,-0.01 v -0.02 l -0.01,-0.01 v -0.02 -0.02 -0.02 -0.01 l -0.01,-0.02 v -0.02 c 0,-0.17 0.11,-0.28 0.32,-0.53 3,-2.75 6.34,-7.46 6.34,-16.44 0,-7.28 -2.26,-12.8 -6.03,-16.2 -0.58,-0.6 -0.63,-0.63 -0.63,-0.82 0,-0.17 0.11,-0.4 0.46,-0.4 0.42,0 3.73,2.29 6.03,6.65 1.53,2.89 2.54,6.66 2.54,10.74 0,4.9 -1.46,12.53 -8.35,17.42 z"
+           inkscape:connector-curvature="0"
+           style="fill:#000000;stroke-width:0" /></g>
+    </g>
+    <path
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.75, 0.75;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:"
+       d="m 225.58247,136.64758 h 32.23562"
+       id="path4576"
+       inkscape:connector-curvature="0"
+       inkscape:export-xdpi="150.04509"
+       inkscape:export-ydpi="150.04509"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/ondro/Vyuka/Beamer_Sources/AdvancedSG/StressModelling/figures/Cauchy_2D_triangle_v2.png" />
+    <path
+       style="opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.24999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.74999997, 0.74999997;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:"
+       d="M 258.19606,136.65631 V 125.43277"
+       id="path4578"
+       inkscape:connector-curvature="0"
+       inkscape:export-xdpi="150.04509"
+       inkscape:export-ydpi="150.04509"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/ondro/Vyuka/Beamer_Sources/AdvancedSG/StressModelling/figures/Cauchy_2D_triangle_v2.png" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path4580"
+       d="M 219.92691,128.11129 H 233.2718"
+       style="opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.24999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.74999996, 0.74999996;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none"
+       inkscape:export-xdpi="150.04509"
+       inkscape:export-ydpi="150.04509"
+       inkscape:export-filename="/home/ondro/Vyuka/Beamer_Sources/AdvancedSG/StressModelling/figures/Cauchy_2D_triangle_v2.png" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path4582"
+       d="m 233.13005,119.5461 v 8.69664"
+       style="opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.74999997, 0.74999997;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none"
+       inkscape:export-xdpi="150.04509"
+       inkscape:export-ydpi="150.04509"
+       inkscape:export-filename="/home/ondro/Vyuka/Beamer_Sources/AdvancedSG/StressModelling/figures/Cauchy_2D_triangle_v2.png" />
+    <g
+       id="g4735"
+       transform="matrix(0.36,0,0,0.35999999,210.57782,106.55513)"
+       style="stroke-width:2.77777767"
+       inkscape:export-xdpi="150.04509"
+       inkscape:export-ydpi="150.04509"
+       inkscape:export-filename="/home/ondro/Vyuka/Beamer_Sources/AdvancedSG/StressModelling/figures/Cauchy_2D_triangle_v2.png">
+      <g
+         id="g4733"
+         transform="matrix(0.3,0,0,-0.3,-52.5,222.75)"
+         xml:space="preserve"
+         stroke-miterlimit="10.433"
+         font-style="normal"
+         font-variant="normal"
+         font-weight="normal"
+         font-stretch="normal"
+         font-size-adjust="none"
+         letter-spacing="normal"
+         word-spacing="normal"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:4.62962961;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"><path
+           d="m 476.8,434.16 0.02,0.06 0.01,0.06 0.03,0.13 0.03,0.11 0.03,0.11 0.03,0.11 0.03,0.1 0.03,0.09 0.03,0.09 0.03,0.08 0.03,0.08 0.03,0.07 0.03,0.07 0.03,0.06 0.03,0.06 0.03,0.06 0.03,0.05 0.03,0.05 0.03,0.05 0.04,0.04 0.03,0.04 0.04,0.03 0.03,0.03 0.04,0.03 0.04,0.03 0.04,0.03 0.05,0.02 0.04,0.02 0.05,0.02 0.04,0.02 0.05,0.01 0.06,0.02 0.05,0.01 c 0.45,0.11 2.1,0.11 3.14,0.11 5.03,0 7.27,-0.2 7.27,-4.09 0,-0.74 -0.19,-2.69 -0.39,-3.99 -0.05,-0.19 -0.16,-0.8 -0.16,-0.94 0,-0.29 0.16,-0.65 0.59,-0.65 0.57,0 0.66,0.4 0.75,1.15 l 1.35,8.66 c 0.06,0.2 0.11,0.7 0.11,0.86 0,0.55 -0.5,0.55 -1.35,0.55 H 461.6 c -1.21,0 -1.25,-0.07 -1.6,-1 l -2.98,-8.77 c -0.06,-0.11 -0.3,-0.8 -0.3,-0.91 0,-0.29 0.24,-0.54 0.6,-0.54 0.5,0 0.54,0.25 0.84,1.04 2.69,7.72 3.98,8.63 11.36,8.63 h 1.94 c 1.4,0 1.4,-0.2 1.4,-0.59 0,-0.32 -0.15,-0.91 -0.2,-1.05 l -6.67,-26.61 c -0.45,-1.84 -0.61,-2.39 -5.94,-2.39 -1.8,0 -2.09,0 -2.09,-0.95 0,-0.6 0.54,-0.6 0.84,-0.6 1.36,0 2.75,0.1 4.09,0.1 1.4,0 2.85,0.06 4.24,0.06 1.39,0 2.78,-0.06 4.14,-0.06 1.44,0 2.94,-0.1 4.33,-0.1 0.5,0 1.09,0 1.09,1 0,0.55 -0.39,0.55 -1.69,0.55 -1.25,0 -1.89,0 -3.18,0.09 -1.46,0.16 -1.85,0.3 -1.85,1.1 0,0.06 0,0.31 0.19,1.04 z"
+           id="path4723"
+           inkscape:connector-curvature="0"
+           style="fill:#000000;stroke-width:0" /><path
+           d="m 504.02,455.98 -0.61,-0.45 -0.58,-0.46 -0.55,-0.47 -0.53,-0.49 -0.49,-0.5 -0.48,-0.51 -0.44,-0.53 -0.43,-0.53 -0.4,-0.54 -0.37,-0.55 -0.35,-0.56 -0.34,-0.56 -0.3,-0.57 -0.29,-0.57 -0.27,-0.58 -0.25,-0.58 -0.22,-0.58 -0.21,-0.58 -0.19,-0.59 -0.18,-0.58 -0.15,-0.58 -0.14,-0.58 -0.12,-0.57 -0.11,-0.57 -0.1,-0.57 -0.07,-0.56 -0.07,-0.55 -0.05,-0.54 -0.04,-0.54 -0.03,-0.53 -0.01,-0.51 -0.01,-0.51 c 0,-4.92 1.47,-12.55 8.38,-17.42 0.28,0 0.68,0 0.68,0.4 0,0.22 -0.09,0.29 -0.34,0.54 -4.64,4.18 -6.34,10.1 -6.34,16.45 0,9.4 3.59,14 6.45,16.58 0.14,0.14 0.23,0.25 0.23,0.42 0,0.42 -0.4,0.42 -0.68,0.42 z"
+           id="path4725"
+           inkscape:connector-curvature="0"
+           style="fill:#000000;stroke-width:0" /><path
+           d="m 511.37,432.03 -0.02,-0.05 -0.01,-0.04 -0.01,-0.05 -0.02,-0.05 -0.01,-0.05 -0.02,-0.05 -0.01,-0.05 -0.02,-0.05 -0.02,-0.11 -0.03,-0.12 -0.03,-0.11 -0.03,-0.11 -0.01,-0.05 -0.01,-0.05 -0.01,-0.05 -0.02,-0.05 -0.01,-0.05 -0.01,-0.04 v -0.05 l -0.01,-0.04 -0.01,-0.04 -0.01,-0.03 v -0.03 l -0.01,-0.03 v -0.02 -0.03 h -0.01 v -0.01 -0.01 0 c 0,-0.77 0.63,-1.11 1.19,-1.11 0.63,0 1.17,0.45 1.36,0.76 0.17,0.31 0.45,1.42 0.63,2.16 0.17,0.65 0.54,2.26 0.76,3.14 0.2,0.76 0.42,1.53 0.59,2.33 0.38,1.43 0.46,1.7 1.46,3.14 0.98,1.39 2.62,3.2 5.23,3.2 2.02,0 2.05,-1.78 2.05,-2.44 0,-2.09 -1.49,-5.95 -2.05,-7.42 -0.39,-0.98 -0.53,-1.3 -0.53,-1.89 0,-1.84 1.55,-2.98 3.31,-2.98 3.49,0 5.02,4.79 5.02,5.32 0,0.46 -0.45,0.46 -0.55,0.46 -0.5,0 -0.53,-0.21 -0.67,-0.6 -0.8,-2.78 -2.3,-4.22 -3.69,-4.22 -0.73,0 -0.87,0.49 -0.87,1.22 0,0.8 0.17,1.25 0.79,2.83 0.43,1.08 1.86,4.77 1.86,6.72 0,3.39 -2.68,3.97 -4.53,3.97 -2.89,0 -4.84,-1.77 -5.89,-3.16 -0.25,2.39 -2.29,3.16 -3.73,3.16 -1.5,0 -2.3,-1.08 -2.75,-1.88 -0.77,-1.28 -1.25,-3.28 -1.25,-3.45 0,-0.45 0.48,-0.45 0.59,-0.45 0.49,0 0.52,0.11 0.77,1.04 0.51,2.07 1.18,3.77 2.54,3.77 0.91,0 1.14,-0.77 1.14,-1.7 0,-0.67 -0.31,-1.96 -0.56,-2.89 -0.23,-0.96 -0.58,-2.38 -0.76,-3.14 z"
+           id="path4727"
+           inkscape:connector-curvature="0"
+           style="fill:#000000;stroke-width:0" /><path
+           d="m 534.85,455.98 h -0.02 -0.02 -0.03 -0.03 -0.02 -0.03 -0.03 l -0.03,-0.01 h -0.02 -0.03 l -0.03,-0.01 h -0.03 l -0.02,-0.01 -0.03,-0.01 h -0.03 l -0.02,-0.01 -0.03,-0.01 -0.02,-0.01 -0.03,-0.02 -0.02,-0.01 -0.02,-0.02 -0.02,-0.02 -0.02,-0.02 -0.01,-0.01 -0.01,-0.01 v -0.01 l -0.01,-0.01 -0.01,-0.01 -0.01,-0.02 v -0.01 l -0.01,-0.01 v -0.02 l -0.01,-0.01 v -0.02 l -0.01,-0.01 v -0.02 -0.02 -0.01 -0.02 l -0.01,-0.02 v -0.02 c 0,-0.17 0.11,-0.28 0.32,-0.53 3,-2.75 6.34,-7.46 6.34,-16.44 0,-7.28 -2.27,-12.8 -6.03,-16.2 -0.58,-0.6 -0.63,-0.63 -0.63,-0.82 0,-0.17 0.11,-0.4 0.46,-0.4 0.42,0 3.73,2.29 6.03,6.65 1.53,2.89 2.55,6.66 2.55,10.74 0,4.9 -1.47,12.53 -8.37,17.42 z"
+           id="path4729"
+           inkscape:connector-curvature="0"
+           style="fill:#000000;stroke-width:0" /><path
+           d="m 496.35,412.88 v 0.04 0.04 0.04 0.04 0.04 0.04 0.04 0.03 0.03 l -0.01,0.04 v 0.03 0.03 0.03 l -0.01,0.03 v 0.02 0.03 l -0.01,0.03 v 0.02 l -0.01,0.02 v 0.03 l -0.02,0.04 -0.01,0.04 -0.02,0.03 -0.02,0.03 -0.02,0.03 -0.02,0.02 -0.03,0.03 -0.03,0.02 -0.03,0.01 -0.04,0.02 -0.04,0.01 -0.05,0.01 -0.02,0.01 h -0.02 l -0.03,0.01 h -0.03 -0.02 l -0.03,0.01 h -0.03 -0.03 -0.03 -0.04 -0.03 l -0.04,0.01 h -0.03 -0.04 -0.04 -0.04 -0.04 -0.05 -0.04 -0.05 c -2.23,-2.2 -5.39,-2.24 -6.82,-2.24 v -1.24 c 0.84,0 3.14,0 5.04,0.96 v -17.76 c 0,-1.16 0,-1.61 -3.48,-1.61 h -1.31 v -1.25 c 0.62,0.03 4.9,0.14 6.2,0.14 1.08,0 5.47,-0.11 6.23,-0.14 v 1.25 h -1.32 c -3.49,0 -3.49,0.45 -3.49,1.61 z"
+           id="path4731"
+           inkscape:connector-curvature="0"
+           style="fill:#000000;stroke-width:0" /></g>
+    </g>
+    <g
+       id="g5043"
+       transform="matrix(0.36,0,0,0.35999999,228.73177,95.925057)"
+       style="stroke-width:2.77777767"
+       inkscape:export-xdpi="150.04509"
+       inkscape:export-ydpi="150.04509"
+       inkscape:export-filename="/home/ondro/Vyuka/Beamer_Sources/AdvancedSG/StressModelling/figures/Cauchy_2D_triangle_v2.png">
+      <g
+         word-spacing="normal"
+         letter-spacing="normal"
+         font-size-adjust="none"
+         font-stretch="normal"
+         font-weight="normal"
+         font-variant="normal"
+         font-style="normal"
+         stroke-miterlimit="10.433"
+         xml:space="preserve"
+         transform="matrix(0.3,0,0,-0.3,-52.5,222.75)"
+         id="g5041"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:4.62962961;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"><path
+           id="path5031"
+           d="m 476.8,434.16 0.02,0.06 0.01,0.06 0.03,0.13 0.03,0.11 0.03,0.11 0.03,0.11 0.03,0.1 0.03,0.09 0.03,0.09 0.03,0.08 0.03,0.08 0.03,0.07 0.03,0.07 0.03,0.06 0.03,0.06 0.03,0.06 0.03,0.05 0.03,0.05 0.03,0.05 0.04,0.04 0.03,0.04 0.04,0.03 0.03,0.03 0.04,0.03 0.04,0.03 0.04,0.03 0.05,0.02 0.04,0.02 0.05,0.02 0.04,0.02 0.05,0.01 0.06,0.02 0.05,0.01 c 0.45,0.11 2.1,0.11 3.14,0.11 5.03,0 7.27,-0.2 7.27,-4.09 0,-0.74 -0.19,-2.69 -0.39,-3.99 -0.05,-0.19 -0.16,-0.8 -0.16,-0.94 0,-0.29 0.16,-0.65 0.59,-0.65 0.57,0 0.66,0.4 0.75,1.15 l 1.35,8.66 c 0.06,0.2 0.11,0.7 0.11,0.86 0,0.55 -0.5,0.55 -1.35,0.55 H 461.6 c -1.21,0 -1.25,-0.07 -1.6,-1 l -2.98,-8.77 c -0.06,-0.11 -0.3,-0.8 -0.3,-0.91 0,-0.29 0.24,-0.54 0.6,-0.54 0.5,0 0.54,0.25 0.84,1.04 2.69,7.72 3.98,8.63 11.36,8.63 h 1.94 c 1.4,0 1.4,-0.2 1.4,-0.59 0,-0.32 -0.15,-0.91 -0.2,-1.05 l -6.67,-26.61 c -0.45,-1.84 -0.61,-2.39 -5.94,-2.39 -1.8,0 -2.09,0 -2.09,-0.95 0,-0.6 0.54,-0.6 0.84,-0.6 1.36,0 2.75,0.1 4.09,0.1 1.4,0 2.85,0.06 4.24,0.06 1.39,0 2.78,-0.06 4.14,-0.06 1.44,0 2.94,-0.1 4.33,-0.1 0.5,0 1.09,0 1.09,1 0,0.55 -0.39,0.55 -1.69,0.55 -1.25,0 -1.89,0 -3.18,0.09 -1.46,0.16 -1.85,0.3 -1.85,1.1 0,0.06 0,0.31 0.19,1.04 z"
+           inkscape:connector-curvature="0"
+           style="fill:#000000;stroke-width:0" /><path
+           id="path5033"
+           d="m 504.02,455.98 -0.61,-0.45 -0.58,-0.46 -0.55,-0.47 -0.53,-0.49 -0.49,-0.5 -0.48,-0.51 -0.44,-0.53 -0.43,-0.53 -0.4,-0.54 -0.37,-0.55 -0.35,-0.56 -0.34,-0.56 -0.3,-0.57 -0.29,-0.57 -0.27,-0.58 -0.25,-0.58 -0.22,-0.58 -0.21,-0.58 -0.19,-0.59 -0.18,-0.58 -0.15,-0.58 -0.14,-0.58 -0.12,-0.57 -0.11,-0.57 -0.1,-0.57 -0.07,-0.56 -0.07,-0.55 -0.05,-0.54 -0.04,-0.54 -0.03,-0.53 -0.01,-0.51 -0.01,-0.51 c 0,-4.92 1.47,-12.55 8.38,-17.42 0.28,0 0.68,0 0.68,0.4 0,0.22 -0.09,0.29 -0.34,0.54 -4.64,4.18 -6.34,10.1 -6.34,16.45 0,9.4 3.59,14 6.45,16.58 0.14,0.14 0.23,0.25 0.23,0.42 0,0.42 -0.4,0.42 -0.68,0.42 z"
+           inkscape:connector-curvature="0"
+           style="fill:#000000;stroke-width:0" /><path
+           id="path5035"
+           d="m 511.37,432.03 -0.02,-0.05 -0.01,-0.04 -0.01,-0.05 -0.02,-0.05 -0.01,-0.05 -0.02,-0.05 -0.01,-0.05 -0.02,-0.05 -0.02,-0.11 -0.03,-0.12 -0.03,-0.11 -0.03,-0.11 -0.01,-0.05 -0.01,-0.05 -0.01,-0.05 -0.02,-0.05 -0.01,-0.05 -0.01,-0.04 v -0.05 l -0.01,-0.04 -0.01,-0.04 -0.01,-0.03 v -0.03 l -0.01,-0.03 v -0.02 -0.03 h -0.01 v -0.01 -0.01 0 c 0,-0.77 0.63,-1.11 1.19,-1.11 0.63,0 1.17,0.45 1.36,0.76 0.17,0.31 0.45,1.42 0.63,2.16 0.17,0.65 0.54,2.26 0.76,3.14 0.2,0.76 0.42,1.53 0.59,2.33 0.38,1.43 0.46,1.7 1.46,3.14 0.98,1.39 2.62,3.2 5.23,3.2 2.02,0 2.05,-1.78 2.05,-2.44 0,-2.09 -1.49,-5.95 -2.05,-7.42 -0.39,-0.98 -0.53,-1.3 -0.53,-1.89 0,-1.84 1.55,-2.98 3.31,-2.98 3.49,0 5.02,4.79 5.02,5.32 0,0.46 -0.45,0.46 -0.55,0.46 -0.5,0 -0.53,-0.21 -0.67,-0.6 -0.8,-2.78 -2.3,-4.22 -3.69,-4.22 -0.73,0 -0.87,0.49 -0.87,1.22 0,0.8 0.17,1.25 0.79,2.83 0.43,1.08 1.86,4.77 1.86,6.72 0,3.39 -2.68,3.97 -4.53,3.97 -2.89,0 -4.84,-1.77 -5.89,-3.16 -0.25,2.39 -2.29,3.16 -3.73,3.16 -1.5,0 -2.3,-1.08 -2.75,-1.88 -0.77,-1.28 -1.25,-3.28 -1.25,-3.45 0,-0.45 0.48,-0.45 0.59,-0.45 0.49,0 0.52,0.11 0.77,1.04 0.51,2.07 1.18,3.77 2.54,3.77 0.91,0 1.14,-0.77 1.14,-1.7 0,-0.67 -0.31,-1.96 -0.56,-2.89 -0.23,-0.96 -0.58,-2.38 -0.76,-3.14 z"
+           inkscape:connector-curvature="0"
+           style="fill:#000000;stroke-width:0" /><path
+           id="path5037"
+           d="m 534.85,455.98 h -0.02 -0.02 -0.03 -0.03 -0.02 -0.03 -0.03 l -0.03,-0.01 h -0.02 -0.03 l -0.03,-0.01 h -0.03 l -0.02,-0.01 -0.03,-0.01 h -0.03 l -0.02,-0.01 -0.03,-0.01 -0.02,-0.01 -0.03,-0.02 -0.02,-0.01 -0.02,-0.02 -0.02,-0.02 -0.02,-0.02 -0.01,-0.01 -0.01,-0.01 v -0.01 l -0.01,-0.01 -0.01,-0.01 -0.01,-0.02 v -0.01 l -0.01,-0.01 v -0.02 l -0.01,-0.01 v -0.02 l -0.01,-0.01 v -0.02 -0.02 -0.01 -0.02 l -0.01,-0.02 v -0.02 c 0,-0.17 0.11,-0.28 0.32,-0.53 3,-2.75 6.34,-7.46 6.34,-16.44 0,-7.28 -2.27,-12.8 -6.03,-16.2 -0.58,-0.6 -0.63,-0.63 -0.63,-0.82 0,-0.17 0.11,-0.4 0.46,-0.4 0.42,0 3.73,2.29 6.03,6.65 1.53,2.89 2.55,6.66 2.55,10.74 0,4.9 -1.47,12.53 -8.37,17.42 z"
+           inkscape:connector-curvature="0"
+           style="fill:#000000;stroke-width:0" /><path
+           id="path5039"
+           d="m 502.27,397.06 h -1.18 c -0.1,-0.76 -0.46,-2.83 -0.91,-3.17 -0.27,-0.2 -2.95,-0.2 -3.44,-0.2 h -6.42 c 3.66,3.23 4.88,4.2 6.97,5.84 2.58,2.06 4.98,4.22 4.98,7.53 0,4.22 -3.68,6.8 -8.15,6.8 -4.32,0 -7.25,-3.03 -7.25,-6.24 0,-1.78 1.5,-1.95 1.86,-1.95 0.82,0 1.84,0.6 1.84,1.85 0,0.62 -0.25,1.84 -2.06,1.84 1.08,2.47 3.45,3.23 5.09,3.23 3.49,0 5.3,-2.7 5.3,-5.53 0,-3.03 -2.16,-5.44 -3.28,-6.68 l -8.39,-8.3 c -0.36,-0.31 -0.36,-0.39 -0.36,-1.36 h 14.36 z"
+           inkscape:connector-curvature="0"
+           style="fill:#000000;stroke-width:0" /></g>
+    </g>
+    <path
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.25;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       d="m 228.93297,122.14037 c 1.14498,1.71679 1.81239,3.77929 1.81239,5.99767"
+       id="circle5326"
+       inkscape:connector-curvature="0"
+       inkscape:export-xdpi="150.04509"
+       inkscape:export-ydpi="150.04509"
+       inkscape:export-filename="/home/ondro/Vyuka/Beamer_Sources/AdvancedSG/StressModelling/figures/Cauchy_2D_triangle_v2.png" />
+    <path
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.25;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       d="m 218.73635,126.39228 c -1.72032,1.15225 -3.78941,1.82429 -6.01547,1.82429"
+       id="path5346"
+       inkscape:connector-curvature="0"
+       inkscape:export-xdpi="150.04509"
+       inkscape:export-ydpi="150.04509"
+       inkscape:export-filename="/home/ondro/Vyuka/Beamer_Sources/AdvancedSG/StressModelling/figures/Cauchy_2D_triangle_v2.png" />
+    <g
+       id="g5701"
+       transform="matrix(0.35999999,0,0,0.35999999,183.12706,90.710323)"
+       style="stroke-width:2.77777791"
+       inkscape:export-xdpi="150.04509"
+       inkscape:export-ydpi="150.04509"
+       inkscape:export-filename="/home/ondro/Vyuka/Beamer_Sources/AdvancedSG/StressModelling/figures/Cauchy_2D_triangle_v2.png">
+      <g
+         word-spacing="normal"
+         letter-spacing="normal"
+         font-size-adjust="none"
+         font-stretch="normal"
+         font-weight="normal"
+         font-variant="normal"
+         font-style="normal"
+         stroke-miterlimit="10.433"
+         xml:space="preserve"
+         transform="matrix(0.3,0,0,-0.3,-52.5,222.75)"
+         id="g5699"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:4.62962961;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"><path
+           id="path5697"
+           d="m 478.19,431.11 v 0.31 l -0.01,0.34 -0.02,0.36 -0.02,0.37 -0.03,0.39 -0.04,0.39 -0.04,0.41 -0.06,0.41 -0.07,0.42 -0.07,0.43 -0.09,0.42 -0.1,0.43 -0.12,0.42 -0.12,0.42 -0.14,0.41 -0.16,0.41 -0.17,0.4 -0.18,0.38 -0.2,0.37 -0.22,0.36 -0.23,0.34 -0.25,0.32 -0.28,0.3 -0.29,0.27 -0.31,0.25 -0.16,0.12 -0.17,0.1 -0.17,0.1 -0.18,0.1 -0.18,0.08 -0.19,0.08 -0.19,0.07 -0.2,0.06 -0.21,0.05 -0.21,0.05 -0.22,0.03 -0.22,0.02 -0.23,0.02 h -0.23 l -0.05,-1.09 c 2.44,0 2.73,-3.19 2.73,-6.03 0,-2.44 -0.39,-4.99 -1.59,-9.92 h -10.41 c 0.85,3.2 1.85,7.18 3.83,10.72 1.36,2.43 3.19,5.23 5.44,5.23 l 0.05,1.09 c -6.92,0 -14.6,-14.04 -14.6,-25.45 0,-4.69 1.44,-10.22 5.99,-10.22 v 1.1 c -1.66,0 -2.71,1.45 -2.71,6.07 0,2.1 0.3,4.99 1.6,9.86 h 10.37 c -0.54,-2.28 -1.59,-6.51 -3.5,-10.11 -1.73,-3.39 -3.62,-5.82 -5.76,-5.82 v -1.1 c 7.01,0 14.59,14.3 14.59,25.46 z"
+           inkscape:connector-curvature="0"
+           style="fill:#000000;stroke-width:0" /></g>
+    </g>
+    <g
+       style="stroke-width:2.77777791"
+       transform="matrix(0.35999999,0,0,0.35999999,196.41417,90.982274)"
+       id="g5520"
+       inkscape:export-xdpi="150.04509"
+       inkscape:export-ydpi="150.04509"
+       inkscape:export-filename="/home/ondro/Vyuka/Beamer_Sources/AdvancedSG/StressModelling/figures/Cauchy_2D_triangle_v2.png">
+      <g
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:4.62962961;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="g5518"
+         transform="matrix(0.3,0,0,-0.3,-52.5,222.75)"
+         xml:space="preserve"
+         stroke-miterlimit="10.433"
+         font-style="normal"
+         font-variant="normal"
+         font-weight="normal"
+         font-stretch="normal"
+         font-size-adjust="none"
+         letter-spacing="normal"
+         word-spacing="normal"><path
+           style="fill:#000000;stroke-width:0"
+           inkscape:connector-curvature="0"
+           d="m 478.19,431.11 v 0.31 l -0.01,0.34 -0.02,0.36 -0.02,0.37 -0.03,0.39 -0.04,0.39 -0.04,0.41 -0.06,0.41 -0.07,0.42 -0.07,0.43 -0.09,0.42 -0.1,0.43 -0.12,0.42 -0.12,0.42 -0.14,0.41 -0.16,0.41 -0.17,0.4 -0.18,0.38 -0.2,0.37 -0.22,0.36 -0.23,0.34 -0.25,0.32 -0.28,0.3 -0.29,0.27 -0.31,0.25 -0.16,0.12 -0.17,0.1 -0.17,0.1 -0.18,0.1 -0.18,0.08 -0.19,0.08 -0.19,0.07 -0.2,0.06 -0.21,0.05 -0.21,0.05 -0.22,0.03 -0.22,0.02 -0.23,0.02 h -0.23 l -0.05,-1.09 c 2.44,0 2.73,-3.19 2.73,-6.03 0,-2.44 -0.39,-4.99 -1.59,-9.92 h -10.41 c 0.85,3.2 1.85,7.18 3.83,10.72 1.36,2.43 3.19,5.23 5.44,5.23 l 0.05,1.09 c -6.92,0 -14.6,-14.04 -14.6,-25.45 0,-4.69 1.44,-10.22 5.99,-10.22 v 1.1 c -1.66,0 -2.71,1.45 -2.71,6.07 0,2.1 0.3,4.99 1.6,9.86 h 10.37 c -0.54,-2.28 -1.59,-6.51 -3.5,-10.11 -1.73,-3.39 -3.62,-5.82 -5.76,-5.82 v -1.1 c 7.01,0 14.59,14.3 14.59,25.46 z"
+           id="path5516" /></g>
+    </g>
+    <g
+       id="g6657"
+       transform="matrix(0.39088088,0,0,0.39088087,188.73039,102.78758)"
+       style="stroke-width:2.55832"
+       inkscape:export-xdpi="150.04509"
+       inkscape:export-ydpi="150.04509"
+       inkscape:export-filename="/home/ondro/Vyuka/Beamer_Sources/AdvancedSG/StressModelling/figures/Cauchy_2D_triangle_v2.png">
+      <g
+         word-spacing="normal"
+         letter-spacing="normal"
+         font-size-adjust="none"
+         font-stretch="normal"
+         font-weight="normal"
+         font-variant="normal"
+         font-style="normal"
+         stroke-miterlimit="10.433"
+         xml:space="preserve"
+         transform="matrix(0.3,0,0,-0.3,-52.5,222.75)"
+         id="g6655"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:4.26387;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.433;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"><path
+           id="path6653"
+           d="m 464.44,411.93 -0.19,-0.3 -0.18,-0.29 -0.19,-0.28 -0.19,-0.26 -0.18,-0.25 -0.19,-0.23 -0.19,-0.22 -0.18,-0.21 -0.19,-0.2 -0.19,-0.18 -0.18,-0.17 -0.19,-0.16 -0.19,-0.15 -0.18,-0.14 -0.19,-0.13 -0.19,-0.12 -0.19,-0.11 -0.19,-0.1 -0.19,-0.09 -0.19,-0.09 -0.19,-0.07 -0.2,-0.07 -0.19,-0.07 -0.2,-0.05 -0.19,-0.05 -0.2,-0.04 -0.2,-0.04 -0.19,-0.03 -0.41,-0.05 -0.4,-0.03 c -0.61,-0.05 -1.05,-0.05 -1.05,-1 0,-0.3 0.25,-0.55 0.64,-0.55 1.34,0 2.89,0.16 4.28,0.16 1.64,0 3.39,-0.16 4.99,-0.16 0.29,0 0.95,0 0.95,0.95 0,0.55 -0.45,0.6 -0.8,0.6 -1.15,0.09 -2.34,0.5 -2.34,1.73 0,0.61 0.3,1.16 0.69,1.84 l 3.79,6.39 h 12.5 l -0.14,1.54 h -11.42 l 9.83,16.45 1.59,-16.45 0.14,-1.54 c 0.11,-1.04 0.8,-7.82 0.8,-8.32 0,-1.5 -2.59,-1.64 -3.58,-1.64 -0.7,0 -1.2,0 -1.2,-1 0,-0.55 0.59,-0.55 0.7,-0.55 2.03,0 4.19,0.16 6.22,0.16 1.25,0 4.39,-0.16 5.64,-0.16 0.3,0 0.89,0 0.89,1 0,0.55 -0.5,0.55 -1.14,0.55 -3.09,0 -3.09,0.34 -3.25,1.79 l -3.03,31.13 c -0.11,1 -0.11,1.2 -0.95,1.2 -0.8,0 -0.99,-0.34 -1.3,-0.84 z"
+           inkscape:connector-curvature="0"
+           style="fill:#000000;stroke-width:0" /></g>
+    </g>
+    <g
+       id="g9140"
+       transform="matrix(0.47999999,0,0,0.47999998,91.689207,83.939815)"
+       style="stroke-width:2.08333349">
+      <g
+         word-spacing="normal"
+         letter-spacing="normal"
+         font-size-adjust="none"
+         font-stretch="normal"
+         font-weight="normal"
+         font-variant="normal"
+         font-style="normal"
+         stroke-miterlimit="10.433"
+         xml:space="preserve"
+         transform="matrix(0.3,0,0,-0.3,-52.5,222.75)"
+         id="g9138"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:2.08333349;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"><path
+           id="path9136"
+           d="m 461.19,423.93 v -15.39 h -3.44 v -2.34 c 1.41,0.05 4.39,0.16 6.29,0.16 1.95,0 4.89,-0.11 6.28,-0.16 v 2.34 h -3.44 v 10.41 c 0,5.44 4.28,7.87 7.42,7.87 1.7,0 2.74,-1.04 2.74,-4.82 v -13.46 h -3.44 v -2.34 c 1.4,0.05 4.39,0.16 6.28,0.16 1.95,0 4.89,-0.11 6.28,-0.16 v 2.34 h -3.44 v 12.91 c 0,5.23 -2.68,7.17 -7.67,7.17 -4.78,0 -7.42,-2.84 -8.72,-5.39 v 5.39 l -8.58,-0.41 v -2.34 c 3.1,0 3.44,0 3.44,-1.94 z"
+           inkscape:connector-curvature="0"
+           style="fill:#000000;stroke-width:0" /></g>
+    </g>
+    <g
+       id="g9140-3"
+       transform="matrix(0.47999999,0,0,0.47999999,185.88219,71.028152)"
+       style="stroke-width:2.08333349"
+       inkscape:export-xdpi="150.04509"
+       inkscape:export-ydpi="150.04509"
+       inkscape:export-filename="/home/ondro/Vyuka/Beamer_Sources/AdvancedSG/StressModelling/figures/Cauchy_2D_triangle_v2.png">
+      <g
+         word-spacing="normal"
+         letter-spacing="normal"
+         font-size-adjust="none"
+         font-stretch="normal"
+         font-weight="normal"
+         font-variant="normal"
+         font-style="normal"
+         stroke-miterlimit="10.433"
+         xml:space="preserve"
+         transform="matrix(0.3,0,0,-0.3,-52.5,222.75)"
+         id="g9138-7"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:2.08333349;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"><path
+           id="path9136-2"
+           d="m 461.19,423.93 v -15.39 h -3.44 v -2.34 c 1.41,0.05 4.39,0.16 6.29,0.16 1.95,0 4.89,-0.11 6.28,-0.16 v 2.34 h -3.44 v 10.41 c 0,5.44 4.28,7.87 7.42,7.87 1.7,0 2.74,-1.04 2.74,-4.82 v -13.46 h -3.44 v -2.34 c 1.4,0.05 4.39,0.16 6.28,0.16 1.95,0 4.89,-0.11 6.28,-0.16 v 2.34 h -3.44 v 12.91 c 0,5.23 -2.68,7.17 -7.67,7.17 -4.78,0 -7.42,-2.84 -8.72,-5.39 v 5.39 l -8.58,-0.41 v -2.34 c 3.1,0 3.44,0 3.44,-1.94 z"
+           inkscape:connector-curvature="0"
+           style="fill:#000000;stroke-width:0" /></g>
+    </g>
+    <path
+       style="opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.490524;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:url(#marker2355)"
+       d="M 111.83551,141.25234 90.184827,153.91261"
+       id="path1613"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.486039;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:url(#marker3131)"
+       d="M 133.34711,161.01255 120.869,173.35861"
+       id="path1870"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <g
+       inkscape:label=""
+       transform="matrix(0.77913289,0,0,0.77913289,-138.74248,86.343258)"
+       id="g2602">
+      <g
+         id="g4791">
+        <g
+           style="fill:#000000;fill-opacity:1"
+           id="g2694">
+          <use
+             xlink:href="#symbol3531"
+             x="296.66699"
+             y="93.917999"
+             id="use3276"
+             width="100%"
+             height="100%" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1"
+           id="g6414">
+          <use
+             xlink:href="#symbol8435"
+             x="304.63699"
+             y="89.805"
+             id="use4537"
+             width="100%"
+             height="100%" />
+          <use
+             xlink:href="#symbol8114"
+             x="307.75009"
+             y="89.805"
+             id="use8367"
+             width="100%"
+             height="100%" />
+          <use
+             xlink:href="#symbol7455"
+             x="311.72168"
+             y="89.805"
+             id="use9560"
+             width="100%"
+             height="100%" />
+        </g>
+      </g>
+    </g>
+    <g
+       inkscape:label=""
+       transform="matrix(0.77913289,0,0,0.77913289,-65.428187,54.238156)"
+       id="g2602-4">
+      <g
+         id="g4791-8">
+        <g
+           style="fill:#000000;fill-opacity:1"
+           id="g2694-0">
+          <use
+             xlink:href="#symbol3531"
+             x="296.66699"
+             y="93.917999"
+             id="use3276-4"
+             width="100%"
+             height="100%" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1"
+           id="g6414-2">
+          <use
+             xlink:href="#symbol8435"
+             x="304.63699"
+             y="89.805"
+             id="use4537-9"
+             width="100%"
+             height="100%" />
+          <use
+             xlink:href="#symbol8114"
+             x="307.75009"
+             y="89.805"
+             id="use8367-6"
+             width="100%"
+             height="100%" />
+          <use
+             xlink:href="#symbol7455"
+             x="311.72168"
+             y="89.805"
+             id="use9560-1"
+             width="100%"
+             height="100%" />
+        </g>
+      </g>
+    </g>
+    <g
+       inkscape:label=""
+       transform="matrix(0.77913289,0,0,0.77913289,-120.46804,98.328558)"
+       id="g3311">
+      <g
+         id="g3854">
+        <g
+           style="fill:#000000;fill-opacity:1"
+           id="g1539">
+          <use
+             xlink:href="#symbol8736"
+             x="296.66699"
+             y="93.917999"
+             id="use7806"
+             width="100%"
+             height="100%" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1"
+           id="g6787">
+          <use
+             xlink:href="#symbol8918"
+             x="304.63699"
+             y="89.805"
+             id="use1898"
+             width="100%"
+             height="100%" />
+          <use
+             xlink:href="#symbol4848"
+             x="307.75009"
+             y="89.805"
+             id="use425"
+             width="100%"
+             height="100%" />
+          <use
+             xlink:href="#symbol752"
+             x="311.72168"
+             y="89.805"
+             id="use4092"
+             width="100%"
+             height="100%" />
+        </g>
+      </g>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:1.25;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;stroke-width:0.999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
+       x="338.99246"
+       y="414.63266"
+       id="text4720"
+       transform="matrix(0.34447061,0,0,0.25744582,-8.9972316,64.199811)"><tspan
+         sodipodi:role="line"
+         id="tspan4718"
+         x="338.99246"
+         y="414.63266">-</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:1.25;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;stroke-width:0.999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
+       x="338.99246"
+       y="414.63266"
+       id="text6014"
+       transform="matrix(0.34447061,0,0,0.25744582,-26.88218,52.458233)"><tspan
+         sodipodi:role="line"
+         id="tspan6012"
+         x="338.99246"
+         y="414.63266">-</tspan></text>
+    <path
+       style="opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.490524;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:url(#marker2355)"
+       d="m 151.0403,141.25151 21.65067,-12.66027"
+       id="path6016"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.486039;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:url(#marker3131)"
+       d="m 131.00617,121.51679 12.47811,-12.34606"
+       id="path6093"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <g
+       inkscape:label=""
+       transform="matrix(0.77913289,0,0,0.77913289,-86.484856,40.221603)"
+       id="g6109">
+      <g
+         id="g6107">
+        <g
+           style="fill:#000000;fill-opacity:1"
+           id="g6097">
+          <use
+             xlink:href="#symbol8736"
+             x="296.66699"
+             y="93.917999"
+             id="use6095"
+             width="100%"
+             height="100%" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1"
+           id="g6105">
+          <use
+             xlink:href="#symbol8918"
+             x="304.63699"
+             y="89.805"
+             id="use6099"
+             width="100%"
+             height="100%" />
+          <use
+             xlink:href="#symbol4848"
+             x="307.75009"
+             y="89.805"
+             id="use6101"
+             width="100%"
+             height="100%" />
+          <use
+             xlink:href="#symbol752"
+             x="311.72168"
+             y="89.805"
+             id="use6103"
+             width="100%"
+             height="100%" />
+        </g>
+      </g>
+    </g>
+    <path
+       style="opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.490524;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:url(#marker2355)"
+       d="M 211.87175,136.06934 190.0622,148.67012"
+       id="path6111"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/ondro/Vyuka/Beamer_Sources/AdvancedSG/StressModelling/figures/Cauchy_2D_triangle_v2.png"
+       inkscape:export-xdpi="150.04509"
+       inkscape:export-ydpi="150.04509" />
+    <g
+       inkscape:label=""
+       transform="matrix(0.77913289,0,0,0.77913289,-46.391524,83.685503)"
+       id="g6127"
+       inkscape:export-filename="/home/ondro/Vyuka/Beamer_Sources/AdvancedSG/StressModelling/figures/Cauchy_2D_triangle_v2.png"
+       inkscape:export-xdpi="150.04509"
+       inkscape:export-ydpi="150.04509">
+      <g
+         id="g6125">
+        <g
+           style="fill:#000000;fill-opacity:1"
+           id="g6115">
+          <use
+             xlink:href="#symbol3531"
+             x="296.66699"
+             y="93.917999"
+             id="use6113"
+             width="100%"
+             height="100%" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1"
+           id="g6123">
+          <use
+             xlink:href="#symbol8435"
+             x="304.63699"
+             y="89.805"
+             id="use6117"
+             width="100%"
+             height="100%" />
+          <use
+             xlink:href="#symbol8114"
+             x="307.75009"
+             y="89.805"
+             id="use6119"
+             width="100%"
+             height="100%" />
+          <use
+             xlink:href="#symbol7455"
+             x="311.72168"
+             y="89.805"
+             id="use6121"
+             width="100%"
+             height="100%" />
+        </g>
+      </g>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:1.25;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;stroke-width:0.999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
+       x="338.99246"
+       y="414.63266"
+       id="text6131"
+       transform="matrix(0.34447061,0,0,0.25744582,65.468776,49.800478)"
+       inkscape:export-filename="/home/ondro/Vyuka/Beamer_Sources/AdvancedSG/StressModelling/figures/Cauchy_2D_triangle_v2.png"
+       inkscape:export-xdpi="150.04509"
+       inkscape:export-ydpi="150.04509"><tspan
+         sodipodi:role="line"
+         id="tspan6129"
+         x="338.99246"
+         y="414.63266">-</tspan></text>
+    <path
+       style="opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.486039;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:url(#marker3131)"
+       d="m 230.11339,155.83037 -12.47811,12.34605"
+       id="path6133"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/ondro/Vyuka/Beamer_Sources/AdvancedSG/StressModelling/figures/Cauchy_2D_triangle_v2.png"
+       inkscape:export-xdpi="150.04509"
+       inkscape:export-ydpi="150.04509" />
+    <g
+       inkscape:label=""
+       transform="matrix(0.77913289,0,0,0.77913289,-27.685324,97.459279)"
+       id="g6149"
+       inkscape:export-filename="/home/ondro/Vyuka/Beamer_Sources/AdvancedSG/StressModelling/figures/Cauchy_2D_triangle_v2.png"
+       inkscape:export-xdpi="150.04509"
+       inkscape:export-ydpi="150.04509">
+      <g
+         id="g6147">
+        <g
+           style="fill:#000000;fill-opacity:1"
+           id="g6137">
+          <use
+             xlink:href="#symbol8736"
+             x="296.66699"
+             y="93.917999"
+             id="use6135"
+             width="100%"
+             height="100%" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1"
+           id="g6145">
+          <use
+             xlink:href="#symbol8918"
+             x="304.63699"
+             y="89.805"
+             id="use6139"
+             width="100%"
+             height="100%" />
+          <use
+             xlink:href="#symbol4848"
+             x="307.75009"
+             y="89.805"
+             id="use6141"
+             width="100%"
+             height="100%" />
+          <use
+             xlink:href="#symbol752"
+             x="311.72168"
+             y="89.805"
+             id="use6143"
+             width="100%"
+             height="100%" />
+        </g>
+      </g>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:1.25;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;stroke-width:0.999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
+       x="338.99246"
+       y="414.63266"
+       id="text6153"
+       transform="matrix(0.34447061,0,0,0.25744582,83.785484,63.330532)"
+       inkscape:export-filename="/home/ondro/Vyuka/Beamer_Sources/AdvancedSG/StressModelling/figures/Cauchy_2D_triangle_v2.png"
+       inkscape:export-xdpi="150.04509"
+       inkscape:export-ydpi="150.04509"><tspan
+         sodipodi:role="line"
+         id="tspan6151"
+         x="338.99246"
+         y="414.63266">-</tspan></text>
+    <path
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.75,0.75;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none"
+       d="m 216.95187,168.73413 h 13.16808"
+       id="path6155"
+       inkscape:connector-curvature="0"
+       inkscape:export-xdpi="150.04509"
+       inkscape:export-ydpi="150.04509"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/ondro/Vyuka/Beamer_Sources/AdvancedSG/StressModelling/figures/Cauchy_2D_triangle_v2.png" />
+    <path
+       style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.75,0.75;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none"
+       d="m 189.28449,149.09083 h 22.58387"
+       id="path6155-0"
+       inkscape:connector-curvature="0"
+       inkscape:export-xdpi="150.04509"
+       inkscape:export-ydpi="150.04509"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/ondro/Vyuka/Beamer_Sources/AdvancedSG/StressModelling/figures/Cauchy_2D_triangle_v2.png" />
+    <path
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.75,0.75;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none"
+       d="M 189.37088,149.19138 V 136.09939"
+       id="path6184"
+       inkscape:connector-curvature="0"
+       inkscape:export-xdpi="150.04509"
+       inkscape:export-ydpi="150.04509"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/ondro/Vyuka/Beamer_Sources/AdvancedSG/StressModelling/figures/Cauchy_2D_triangle_v2.png" />
+    <path
+       style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.75,0.75;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none"
+       d="M 216.90814,168.79735 V 155.70536"
+       id="path6184-4"
+       inkscape:connector-curvature="0"
+       inkscape:export-xdpi="150.04509"
+       inkscape:export-ydpi="150.04509"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/ondro/Vyuka/Beamer_Sources/AdvancedSG/StressModelling/figures/Cauchy_2D_triangle_v2.png" />
+    <g
+       inkscape:label=""
+       transform="matrix(0.54869067,0,0,0.54869067,59.902672,79.804858)"
+       id="g8005"
+       style="stroke-width:1.82252"
+       inkscape:export-filename="/home/ondro/Vyuka/Beamer_Sources/AdvancedSG/StressModelling/figures/Cauchy_2D_triangle_v2.png"
+       inkscape:export-xdpi="150.04509"
+       inkscape:export-ydpi="150.04509">
+      <g
+         id="g9575"
+         style="stroke-width:1.82252">
+        <g
+           style="fill:#000000;fill-opacity:1;stroke-width:1.82252"
+           id="g3902">
+          <use
+             xlink:href="#symbol18"
+             x="300.77499"
+             y="93.917999"
+             id="use9635"
+             width="100%"
+             height="100%"
+             style="stroke-width:1.82252" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1;stroke-width:1.82252"
+           id="g3397">
+          <use
+             xlink:href="#symbol8799"
+             x="306.755"
+             y="95.412003"
+             id="use9970"
+             width="100%"
+             height="100%"
+             style="stroke-width:1.82252" />
+        </g>
+      </g>
+    </g>
+    <g
+       inkscape:label=""
+       transform="matrix(0.54869067,0,0,0.54869067,68.842099,73.033011)"
+       id="g8692"
+       style="stroke-width:1.82252"
+       inkscape:export-filename="/home/ondro/Vyuka/Beamer_Sources/AdvancedSG/StressModelling/figures/Cauchy_2D_triangle_v2.png"
+       inkscape:export-xdpi="150.04509"
+       inkscape:export-ydpi="150.04509">
+      <g
+         id="g8645"
+         style="stroke-width:1.82252">
+        <g
+           style="fill:#000000;fill-opacity:1;stroke-width:1.82252"
+           id="g1702">
+          <use
+             xlink:href="#symbol4774"
+             x="300.77499"
+             y="93.917999"
+             id="use3295"
+             width="100%"
+             height="100%"
+             style="stroke-width:1.82252" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1;stroke-width:1.82252"
+           id="g3401">
+          <use
+             xlink:href="#symbol4719"
+             x="306.755"
+             y="95.412003"
+             id="use8343"
+             width="100%"
+             height="100%"
+             style="stroke-width:1.82252" />
+        </g>
+      </g>
+    </g>
+    <g
+       inkscape:label=""
+       transform="matrix(0,0.54848618,-0.54848618,0,265.79304,-28.657502)"
+       id="g9545"
+       style="stroke-width:1.8232"
+       inkscape:export-filename="/home/ondro/Vyuka/Beamer_Sources/AdvancedSG/StressModelling/figures/Cauchy_2D_triangle_v2.png"
+       inkscape:export-xdpi="150.04509"
+       inkscape:export-ydpi="150.04509">
+      <g
+         id="g5831"
+         style="stroke-width:1.8232">
+        <g
+           style="fill:#000000;fill-opacity:1;stroke-width:1.8232"
+           id="g9470">
+          <use
+             xlink:href="#symbol160"
+             x="293.44199"
+             y="93.917999"
+             id="use329"
+             width="100%"
+             height="100%"
+             style="stroke-width:1.8232" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1;stroke-width:1.8232"
+           id="g1486">
+          <use
+             xlink:href="#symbol7909"
+             x="303.12799"
+             y="93.917999"
+             id="use5554"
+             width="100%"
+             height="100%"
+             style="stroke-width:1.8232" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1;stroke-width:1.8232"
+           id="g212">
+          <use
+             xlink:href="#symbol2810"
+             x="308.10901"
+             y="93.917999"
+             id="use7848"
+             width="100%"
+             height="100%"
+             style="stroke-width:1.8232" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1;stroke-width:1.8232"
+           id="g2304">
+          <use
+             xlink:href="#symbol1915"
+             x="314.08899"
+             y="95.412003"
+             id="use4954"
+             width="100%"
+             height="100%"
+             style="stroke-width:1.8232" />
+        </g>
+      </g>
+    </g>
+    <g
+       inkscape:label=""
+       transform="matrix(0.54848618,0,0,0.54848618,56.396301,101.63119)"
+       id="g10298"
+       style="stroke-width:1.8232"
+       inkscape:export-filename="/home/ondro/Vyuka/Beamer_Sources/AdvancedSG/StressModelling/figures/Cauchy_2D_triangle_v2.png"
+       inkscape:export-xdpi="150.04509"
+       inkscape:export-ydpi="150.04509">
+      <g
+         id="g1283"
+         style="stroke-width:1.8232">
+        <g
+           style="fill:#000000;fill-opacity:1;stroke-width:1.8232"
+           id="g5995">
+          <use
+             xlink:href="#symbol507"
+             x="293.44199"
+             y="93.917999"
+             id="use7412"
+             width="100%"
+             height="100%"
+             style="stroke-width:1.8232" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1;stroke-width:1.8232"
+           id="g893">
+          <use
+             xlink:href="#symbol8871"
+             x="303.12799"
+             y="93.917999"
+             id="use1407"
+             width="100%"
+             height="100%"
+             style="stroke-width:1.8232" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1;stroke-width:1.8232"
+           id="g3119">
+          <use
+             xlink:href="#symbol3325"
+             x="308.10901"
+             y="93.917999"
+             id="use1419"
+             width="100%"
+             height="100%"
+             style="stroke-width:1.8232" />
+        </g>
+        <g
+           style="fill:#000000;fill-opacity:1;stroke-width:1.8232"
+           id="g8796">
+          <use
+             xlink:href="#symbol9977"
+             x="314.08899"
+             y="95.412003"
+             id="use3057"
+             width="100%"
+             height="100%"
+             style="stroke-width:1.8232" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

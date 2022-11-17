@@ -1,0 +1,24 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: index
+parts:
+  - caption: Vectors and matrices for structural geologists
+    chapters:
+    - file: chapters/01-geomath/01-coordsys
+    - file: chapters/01-geomath/02-vectors
+    - file: chapters/01-geomath/03-matrices
+    - file: chapters/01-geomath/04-transformations
+  - caption: Concept of stress in geology
+    chapters:
+    - file: chapters/02-stress/01-stress_vector
+    - file: chapters/02-stress/02-stress_tensor
+    - file: chapters/02-stress/03-tensor_properties
+  - caption: Concept of strain in geology
+    chapters:
+    - file: chapters/03-strain/01-introduction
+    - file: chapters/03-strain/02-continuum
+    - file: chapters/03-strain/03-superposition
+    - file: chapters/03-strain/04-decomposition
+    - file: chapters/03-strain/05-finite-strain

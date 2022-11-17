@@ -1,0 +1,610 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Stress tensor properties &#8212; Advanced structural geology with Python</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Introduction to kinematic analysis" href="../03-strain/01-introduction.html" />
+    <link rel="prev" title="Stress tensor" href="02-stress_tensor.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Advanced structural geology with Python</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../index.html">
+                    Foreword
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Vectors and matrices for structural geologists
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../01-geomath/01-coordsys.html">
+   Coordinate Systems
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../01-geomath/02-vectors.html">
+   Vectors
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../01-geomath/03-matrices.html">
+   Matrices
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../01-geomath/04-transformations.html">
+   Transformations
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Concept of stress in geology
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="01-stress_vector.html">
+   Stress vector
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="02-stress_tensor.html">
+   Stress tensor
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Stress tensor properties
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Concept of strain in geology
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../03-strain/01-introduction.html">
+   Introduction to kinematic analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../03-strain/02-continuum.html">
+   Kinematics of continuum body
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../03-strain/03-superposition.html">
+   Superposition of deformation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../03-strain/04-decomposition.html">
+   Deformation gradient decompositions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../03-strain/05-finite-strain.html">
+   Finite strain
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/ondrolexa/apsg-book/master?urlpath=tree/docs/chapters/02-stress/03-tensor_properties.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/ondrolexa/apsg-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/ondrolexa/apsg-book/issues/new?title=Issue%20on%20page%20%2Fchapters/02-stress/03-tensor_properties.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../../_sources/chapters/02-stress/03-tensor_properties.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download notebook file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-code"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="../../_sources/chapters/02-stress/03-tensor_properties.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#transformation-rule-of-the-stress-tensor">
+   Transformation rule of the stress tensor
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#principal-stresses-and-principal-directions">
+   Principal stresses and principal directions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#stress-invariants">
+   Stress invariants
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tensor-decomposition">
+   Tensor decomposition
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Stress tensor properties</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#transformation-rule-of-the-stress-tensor">
+   Transformation rule of the stress tensor
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#principal-stresses-and-principal-directions">
+   Principal stresses and principal directions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#stress-invariants">
+   Stress invariants
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tensor-decomposition">
+   Tensor decomposition
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <div class="cell tag_remove-input docutils container">
+</div>
+<section class="tex2jax_ignore mathjax_ignore" id="stress-tensor-properties">
+<h1>Stress tensor properties<a class="headerlink" href="#stress-tensor-properties" title="Permalink to this headline">#</a></h1>
+<section id="transformation-rule-of-the-stress-tensor">
+<h2>Transformation rule of the stress tensor<a class="headerlink" href="#transformation-rule-of-the-stress-tensor" title="Permalink to this headline">#</a></h2>
+<p>From an <span class="math notranslate nohighlight">\(x_i\)</span> - system to an <span class="math notranslate nohighlight">\(x_i'\)</span> - system, the components <span class="math notranslate nohighlight">\(\sigma_{ij}\)</span> in the initial system are transformed into the components <span class="math notranslate nohighlight">\(\sigma_{ij}'\)</span> in the new system according to the <strong>tensor transformation rule</strong>:</p>
+<div class="math notranslate nohighlight">
+\[\boldsymbol{{\sigma}'} = \boldsymbol{R} \boldsymbol{\sigma} \boldsymbol{R}^{T}\]</div>
+<p>Note that inverse rule is: <span class="math notranslate nohighlight">\(\boldsymbol{{\sigma}} = \boldsymbol{R}^{T} \boldsymbol{{\sigma}'} \boldsymbol{R}\)</span></p>
+<a class="bg-primary mb-1 reference internal image-reference" href="../../_images/Stress_transformation_3D.png"><img alt="Stress transformation in 3D" class="bg-primary mb-1 align-center" src="../../_images/Stress_transformation_3D.png" style="width: 75%;" /></a>
+<p>where <span class="math notranslate nohighlight">\(\boldsymbol{R}\)</span> is a rotation matrix with components <span class="math notranslate nohighlight">\(a_{ij}\)</span>. In matrix form this is:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\left[{{\begin{matrix}\sigma '_{{11}}&amp;\sigma '_{{21}}&amp;\sigma '_{{31}}\\\sigma '_{{12}}&amp;\sigma '_{{22}}&amp;\sigma '_{{32}}\\\sigma '_{{13}}&amp;\sigma '_{{23}}&amp;\sigma '_{{33}}\\\end{matrix}}}\right]=\left[{{\begin{matrix}a_{{11}}&amp;a_{{12}}&amp;a_{{13}}\\a_{{21}}&amp;a_{{22}}&amp;a_{{23}}\\a_{{31}}&amp;a_{{32}}&amp;a_{{33}}\\\end{matrix}}}\right]\left[{{\begin{matrix}\sigma _{{11}}&amp;\sigma _{{21}}&amp;\sigma _{{31}}\\\sigma _{{12}}&amp;\sigma _{{22}}&amp;\sigma _{{32}}\\\sigma _{{13}}&amp;\sigma _{{23}}&amp;\sigma _{{33}}\\\end{matrix}}}\right]\left[{{\begin{matrix}a_{{11}}&amp;a_{{21}}&amp;a_{{31}}\\a_{{12}}&amp;a_{{22}}&amp;a_{{32}}\\a_{{13}}&amp;a_{{23}}&amp;a_{{33}}\\\end{matrix}}}\right]\end{split}\]</div>
+</section>
+<section id="principal-stresses-and-principal-directions">
+<h2>Principal stresses and principal directions<a class="headerlink" href="#principal-stresses-and-principal-directions" title="Permalink to this headline">#</a></h2>
+<p>At every point in a stressed body there are at least three planes, called <strong>principal planes</strong>, with normal vectors <span class="math notranslate nohighlight">\(\boldsymbol{n}\)</span>, called <strong>principal directions</strong>, where the corresponding stress vector is perpendicular to the plane, i.e., parallel or in the same
+direction as the normal vector <span class="math notranslate nohighlight">\(\boldsymbol{n}\)</span>, and where there are no normal shear stresses <span class="math notranslate nohighlight">\(\tau_{\mathrm{n}}\)</span>. The three stresses normal to these principal planes are called <strong>principal stresses</strong>.</p>
+<p>The components <span class="math notranslate nohighlight">\(\sigma_{ij}\)</span> of the stress tensor depend on the orientation of the coordinate system at the point under consideration. However, the stress tensor itself is a physical quantity and as such, it is independent of the coordinate system chosen to represent it. There are certain <strong>invariants</strong> associated with every tensor which are also independent of the coordinate system. One set of such invariants are the <strong>principal stresses</strong> of the stress tensor, which are just the <strong>eigenvalues</strong> of the stress tensor. Their direction vectors are the <strong>principal directions</strong> or <strong>eigenvectors</strong>.</p>
+</section>
+<section id="stress-invariants">
+<h2>Stress invariants<a class="headerlink" href="#stress-invariants" title="Permalink to this headline">#</a></h2>
+<p>A stress vector parallel to the normal unit vector <span class="math notranslate nohighlight">\(\boldsymbol{n}\)</span> is given by:</p>
+<div class="math notranslate nohighlight">
+\[\boldsymbol{T}^{(\boldsymbol {n} )} = \boldsymbol{\sigma} \cdot \boldsymbol{n} = \lambda \boldsymbol{n}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\lambda\)</span> is a constant of proportionality, and in this particular case corresponds to the magnitudes <span class="math notranslate nohighlight">\(\sigma_n\)</span> of the normal stress vectors or principal stresses.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \boldsymbol{\sigma} \cdot \boldsymbol{n} &amp;= \lambda \boldsymbol{n} \\
+  \boldsymbol{\sigma} \cdot \boldsymbol{n} - \lambda \boldsymbol{n} &amp;= \boldsymbol{0} \\
+  \left(\boldsymbol{\sigma} - \lambda \delta _{ij}\right)\boldsymbol{n} &amp;= \boldsymbol{0}\\
+\end{aligned}\end{split}\]</div>
+<p>This is a homogeneous system (note zero right side) of linear equations where components <span class="math notranslate nohighlight">\(n_{i}\)</span> of vector <span class="math notranslate nohighlight">\(\boldsymbol{n}\)</span> are the unknowns.</p>
+<p>To obtain a nontrivial (non-zero) solution for <span class="math notranslate nohighlight">\(n_{i}\)</span>, the determinant matrix of the coefficients must be equal to zero, i.e. the system is singular. Thus,</p>
+<div class="math notranslate nohighlight">
+\[\left|\boldsymbol{\sigma} - \lambda \delta _{ij}\right| = -\lambda ^{3}+I_{1}\lambda ^{2}-I_{2}\lambda +I_{3}=0\]</div>
+<p>where</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}I_{1}&amp;=\sigma _{11}+\sigma _{22}+\sigma _{33}=\sigma _{kk}={\text{tr}}({\boldsymbol {\sigma }})\\I_{2}&amp;=\sigma _{11}\sigma _{22}+\sigma _{22}\sigma _{33}+\sigma _{11}\sigma _{33}-\sigma _{12}^{2}-\sigma _{23}^{2}-\sigma _{31}^{2}\\&amp;={\frac {1}{2}}\left(\sigma _{ii}\sigma _{jj}-\sigma _{ij}\sigma _{ji}\right)={\frac {1}{2}}\left[\left({\text{tr}}({\boldsymbol {\sigma }})\right)^{2}-{\text{tr}}({\boldsymbol {\sigma }}^{2})\right]\\I_{3}&amp;=\det(\sigma _{ij})=\det({\boldsymbol {\sigma }})\end{aligned}\end{split}\]</div>
+<p>The <span class="math notranslate nohighlight">\(\sigma _{1}=\max \left(\lambda _{1},\lambda _{2},\lambda _{3}\right)\)</span>, <span class="math notranslate nohighlight">\(\sigma _{3}=\min \left(\lambda _{1},\lambda _{2},\lambda _{3}\right)\)</span> and <span class="math notranslate nohighlight">\(\sigma _{2}=I_{1}-\sigma _{1}-\sigma _{3}\)</span>, are the principal stresses. The coefficients <span class="math notranslate nohighlight">\(I_{1}\)</span>, <span class="math notranslate nohighlight">\(I_{2}\)</span> and <span class="math notranslate nohighlight">\(I_{3}\)</span>, are called the <strong>first, second, and third stress invariants</strong>.</p>
+</section>
+<section id="tensor-decomposition">
+<h2>Tensor decomposition<a class="headerlink" href="#tensor-decomposition" title="Permalink to this headline">#</a></h2>
+<p>A tensor decomposition is any scheme for expressing a tensor as a sequence of elementary operations acting on other, often simpler tensors. Many tensor decompositions generalize some matrix decompositions.</p>
+<p>Decomposition of tensor to symmetric <span class="math notranslate nohighlight">\(\boldsymbol{D}\)</span> and antisymmetric <span class="math notranslate nohighlight">\(\boldsymbol{W}\)</span> part, where</p>
+<div class="math notranslate nohighlight">
+\[\boldsymbol{D} = \frac{1}{2}\left( \boldsymbol{T} + \boldsymbol{T}^T\,\right) \;\textsf{and }\; \boldsymbol{W} = \frac{1}{2}\left( \boldsymbol{T} - \boldsymbol{T}^T\,\right)\]</div>
+<p>Decomposition of tensor to deviatoric <span class="math notranslate nohighlight">\(\boldsymbol{S}\)</span> and volumetric part <span class="math notranslate nohighlight">\(\boldsymbol{V}\)</span>, where</p>
+<div class="math notranslate nohighlight">
+\[\boldsymbol{S} = \boldsymbol{T} - \frac{\text{tr}(\boldsymbol{T})}{3}\delta_{ij} \;\textsf{and }\; \boldsymbol{V} = \frac{\text{tr}(\boldsymbol{T})}{3}\delta_{ij}\]</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./chapters/02-stress"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="02-stress_tensor.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Stress tensor</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../03-strain/01-introduction.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Introduction to kinematic analysis</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Ondrej Lexa<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

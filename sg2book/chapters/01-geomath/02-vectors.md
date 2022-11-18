@@ -225,6 +225,7 @@ while linear and planar features could be defined as lineation or foliation
 
 ```{code-cell} ipython3
 l = lin(120, 40)
-f = fol(210, 30_
+f = fol(210, 30)
+quicknet(f, l, fol_as_pole=False)
 ```
 

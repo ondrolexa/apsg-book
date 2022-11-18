@@ -13,8 +13,7 @@ kernelspec:
 
 ```{code-cell} ipython3
 :tags: [remove-input]
-import numpy as np
-import matplotlib.pyplot as plt
+from apsg import *
 ```
 
 # Matrices
@@ -37,7 +36,8 @@ $$\boldsymbol{B} = \begin{bmatrix}
 \end{bmatrix}$$
 
 ```{code-cell} ipython3
-A = np.array([[-2, 5, 6], [5, 2, 7]])
+A = matrix2([[-2, 5], [5, 2]])
+B = matrix2([[4, -1], [-1, 3]])
 ```
 
 ## Matrix addition, substraction and multiplication
@@ -48,9 +48,17 @@ $$\boldsymbol{A}+\boldsymbol{B}=\boldsymbol{C}$$
 
 $$\begin{bmatrix} a_{11} & a_{12}\\a_{21} & a_{22}\end{bmatrix} + \begin{bmatrix} b_{11} & b_{12}\\b_{21} & b_{22}\end{bmatrix} = \begin{bmatrix} a_{11}+b_{11} & a_{12}+b_{12}\\a_{21}+b_{21} & a_{22}+b_{22}\end{bmatrix}$$
 
+```{code-cell} ipython3
+A + B
+```
+
 Matrix multiplication gets a bit more complicated, since multiple elements in the first matrix interact with multiple elements in the second to generate each element in the product matrix. This means that matrix multiplication can be a tedious task to carry out by hand, and can be time consuming on a computer for very large matrices.
 
 $$\boldsymbol{A}\boldsymbol{B}=\boldsymbol{C}$$
 
 $$\begin{bmatrix} a_{11} & a_{12}\\a_{21} & a_{22}\end{bmatrix} \begin{bmatrix} b_{11} & b_{12}\\b_{21} & b_{22}\end{bmatrix} = \begin{bmatrix} a_{11}b_{11}+a_{12}b_{21} & a_{11}b_{12}+a_{12}b_{22}\\a_{21}b_{21}+a_{12}b_{21} & a_{21}b_{22}+a_{12}b_{22}\end{bmatrix}$$
+
+```{code-cell} ipython3
+A @ B
+```
 

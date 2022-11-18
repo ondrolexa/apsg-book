@@ -13,8 +13,7 @@ kernelspec:
 
 ```{code-cell} ipython3
 :tags: [remove-input]
-import numpy as np
-import matplotlib.pyplot as plt
+from apsg import *
 ```
 
 # Vectors
@@ -35,7 +34,8 @@ vector as:
 $$\bf{u}=\begin{bmatrix} u_1 & u_2 & u_3 \end{bmatrix} = \begin{bmatrix} u_x & u_y & u_z \end{bmatrix}$$
 
 ```{code-cell} ipython3
-u = np.array([2, -1, 3])
+u = vec(2, -1, 3)
+v = vec(1, 2, -1)
 ```
 
 ## Vector magnitude
@@ -54,7 +54,7 @@ In two dimensions, you can see that the magnitude is calculated from the Pythago
 ```
 
 ```{code-cell} ipython3
-np.linalg.norm(u)
+abs(u)
 ```
 
 ## Unit vector
@@ -66,8 +66,8 @@ np.linalg.norm(u)
 :align: center
 ```
 
-But, what if we don’t care about the magnitude? What if we are only interested in the orientation of our vector? It is convenient to represent direction by \textbf{unit vector}, i.e. the vector with length of one.
-Any vector could be normalized to \textbf{unit vector} by dividing each of it's components by its magnitude.
+But, what if we don’t care about the magnitude? What if we are only interested in the orientation of our vector? It is convenient to represent direction by **unit vector**, i.e. the vector with length of one.
+Any vector could be normalized to **unit vector** by dividing each of it's components by its magnitude.
 
 $${\boldsymbol{\hat u}} = \frac{{\boldsymbol{u}}}{{\left\| {\boldsymbol{u}} \right\|}} = {\boldsymbol{i}}\frac{{{u_1}}}{{\left\| {\boldsymbol{u}} \right\|}} + {\boldsymbol{j}}\frac{{{u_2}}}{{\left\| {\boldsymbol{u}} \right\|}} + {\boldsymbol{k}}\frac{{{u_3}}}{{\left\| {\boldsymbol{u}} \right\|}}$$
 
@@ -76,6 +76,10 @@ The projection of a unit vector onto a coordinate axis is just equal to the cosi
 Thus, the components of a unit vector are:
 
 $${\boldsymbol{\hat u}} = \begin{bmatrix} \cos (\alpha ) & \cos (\beta ) & \cos (\gamma ) \end{bmatrix}$$
+
+```{code-cell} ipython3
+u.normalized()
+```
 
 ## Vector addition, subtraction and scalar multiplication
 
@@ -94,6 +98,10 @@ $$\bf{u-v}=\begin{bmatrix} u_1 & u_2 & u_3 \end{bmatrix}-\begin{bmatrix} v_1 & v
 :align: center
 ```
 
+```{code-cell} ipython3
+u + v
+```
+
 ## Dot product
 
 **Dot product** or **scalar product** is an algebraic operation between two vectors. The dot product may be defined algebraically or geometrically. Conceptually, **dot product** can be thought of as multiplying the length of one vector by the *component of the other vector* which is parallel to the first:
@@ -108,9 +116,13 @@ $$\boldsymbol{u}\cdot \boldsymbol{v} = \sum_{i=1}^n u_iv_i = u_1v_1 + u_2v_2 + \
 
 Two vectors are orthogonal if the dot product of those two vectors is equal to zero.
 
+```{code-cell} ipython3
+u.dot(v)
+```
+
 ## Vector projection
 
-The**vector projection** of a vector $\boldsymbol{u}$ on a nonzero vector $\boldsymbol{v}$ (also known as the *vector component* of $\boldsymbol{u}$ in the direction of $\boldsymbol{u}$) is the orthogonal projection of $\boldsymbol{u}$ onto a straight line parallel to $\boldsymbol{v}$. It is a vector parallel to $\boldsymbol{v}$, defined as:
+The **vector projection** of a vector $\boldsymbol{u}$ on a nonzero vector $\boldsymbol{v}$ (also known as the *vector component* of $\boldsymbol{u}$ in the direction of $\boldsymbol{u}$) is the orthogonal projection of $\boldsymbol{u}$ onto a straight line parallel to $\boldsymbol{v}$. It is a vector parallel to $\boldsymbol{v}$, defined as:
 
 ```{image} figures/Dot_Product.png
 :alt: Vector projection
@@ -128,6 +140,10 @@ $$u_1 = \|\boldsymbol{u}\| \cos \theta = \frac {\boldsymbol{u} \cdot \boldsymbol
 Consequently,
 
 $$\boldsymbol{u}_1 = u_1\frac {\boldsymbol{v}} {\|\boldsymbol{v}\|} = \frac {\boldsymbol{u} \cdot \boldsymbol{v}} {\|\boldsymbol{v}\| } \frac {\boldsymbol{v}} {\|\boldsymbol{v}\|} = \frac {\boldsymbol{u} \cdot \boldsymbol{v}} {\|\boldsymbol{v}\|^2}{\boldsymbol{v}} = \frac {\boldsymbol{u} \cdot \boldsymbol{v}} {\boldsymbol{v} \cdot \boldsymbol{v}}{\boldsymbol{v}}$$
+
+```{code-cell} ipython3
+u.proj(v)
+```
 
 ## Cross product
 
@@ -152,9 +168,15 @@ The cross product is *anticommutative*
 
 $$\boldsymbol{u} \times \boldsymbol{v} = -(\boldsymbol{v} \times \boldsymbol{u})$$
 
+```{code-cell} ipython3
+u.cross(v)
+```
+
 ## Vectors in geology
 
-The compass measurements are commonly in **spherical coordinates** i.e. *azimuth* or *dip direction* ($\theta$) and *dip* ($\varphi$). To define 3D vector in Cartesian space, we use following transformations:
+The compass measurements are commonly in **spherical coordinates** i.e. *trend*
+or *dip direction* ($\theta$) and *plunge* or *dip* ($\varphi$). *Plunge* is used
+to describe the tilt of lines, the word *dip* being reserved for planes.
 
 ```{image} figures/Geo_coordinates_en.png
 :alt: Coordinate transformation in geology
@@ -162,6 +184,12 @@ The compass measurements are commonly in **spherical coordinates** i.e. *azimuth
 :width: 50%
 :align: center
 ```
+
+The linear feature has (a) the plunge direction or trend and (b) the angle of plunge.
+The plunge direction is the direction towards which the line is tilted.
+The angle of plunge is the amount of tilt; it is the angle, measured in the
+vertical plane, that the plunging line makes with the horizontal. The angle of
+plunge of a horizontal line is 0° and the angle of plunge of a vertical line is 90°. 
 
 Linear features (lines) are represented as vector:
 
@@ -171,6 +199,14 @@ u_2&=&\sin(\theta)\cos(\varphi)\\
 u_3&=&\sin(\varphi)
 \end{aligned}$$
 
+Planar fetaure that is not horizontal is said to dip. There are two aspects to
+the dip of a plane (a) the direction of dip, which is the compass direction
+towards which the plane slopes; and (b) the angle of dip, which is the angle
+that the plane makes with a horizontal plane. The direction of dip can be
+visualized as the direction in which water would flow if poured onto the
+plane. The angle of dip is an angle between 0° (for horizontal planes) and 90°
+(for vertical planes).
+
 Planar features (planes) are represented by normal vector:
 
 $$\begin{aligned}
@@ -178,3 +214,17 @@ p_1&=&-\cos(\theta)\sin(\varphi)\\
 p_2&=&-\sin(\theta)\sin(\varphi)\\
 p_3&=&\cos(\varphi)
 \end{aligned}$$
+
+With APSG the 3D vector could be defined using trend and plunge notation:
+
+```{code-cell} ipython3
+v = vec(130, 20)
+```
+
+while linear and planar features could be defined as lineation or foliation
+
+```{code-cell} ipython3
+l = lin(120, 40)
+f = fol(210, 30_
+```
+

@@ -36,11 +36,13 @@ statistics, which has led to its application in analysing multicomponent
 geochemical data, which is so readily available from modern analytical
 instruments.
 
-All codes in book use following imports:
+Many examples in this book using [APSG](https://github.com/ondrolexa/apsg)
+python package for structural geologists. It defines several new python
+classes to easily manage, analyze and visualize orientational structural
+geology data. 
 
 ```{code-cell} ipython3
-import numpy as np
-import matplotlib.pyplot as plt
+from apsg import *
 ```
 
 ```{tableofcontents}

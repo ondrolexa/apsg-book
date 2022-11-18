@@ -13,8 +13,7 @@ kernelspec:
 
 ```{code-cell} ipython3
 :tags: [remove-input]
-import numpy as np
-import matplotlib.pyplot as plt
+from apsg import *
 ```
 
 # Transformations
@@ -25,9 +24,14 @@ Consider the matrix equation:
 
 $$\boldsymbol{v} = \boldsymbol{A}\boldsymbol{u}$$
 
-If we vary $\boldsymbol{u}$, then $\boldsymbol{v}$ will also vary; in this way, we think of $\boldsymbol{A}$ as \textit{function} with independent variable $\boldsymbol{u}$ (which is a vector in $\mathbb{R}^n$) and dependent variable $\boldsymbol{v}$ (which is a vector in $\mathbb{R}^m$).
+If we vary $\boldsymbol{u}$, then $\boldsymbol{v}$ will also vary; in this way, we think of $\boldsymbol{A}$ as *function* with independent variable $\boldsymbol{u}$ (which is a vector in $\mathbb{R}^n$) and dependent variable $\boldsymbol{v}$ (which is a vector in $\mathbb{R}^m$).
 
-At this point it is convenient to fix our ideas and terminology regarding \textit{functions}, which we will call **transformations**. This allows us to systematize our discussion of **matrices as functions**.
+At this point it is convenient to fix our ideas and terminology regarding *functions*, which we will call **transformations**. This allows us to systematize our discussion of **matrices as functions**.
+
+```{code-cell} ipython3
+F = matrix([[2, 1, 0], [0, 1, 0], [0, 0, 0.5]])
+u.transform(F)
+```
 
 ## Matrix Transformations
 If $\boldsymbol{A}$ has $n$ columns, then it only makes sense to multiply $\boldsymbol{A}$ by vectors with $n$ entries. This is why the domain of transformation is $\mathbb{R}^n$. If $\boldsymbol{A}$ has $m$ rows, then $\boldsymbol{A}\boldsymbol{u}$ has $m$ entries for any vector $\boldsymbol{u}$ in $\mathbb{R}^n$; this is why the codomain of transformation is $\mathbb{R}^m$.
@@ -41,6 +45,7 @@ This is just a general linear combination of $v_1, v_1, \dots v_n$. Therefore, t
 ## Transpose and inverse of matrix product
   
 Following identities are used very often in linear algebra:
+
 $$(\mathbf{A}\mathbf{B})^T = \mathbf{B}^T\mathbf{A}^T$$
 
 $$(\mathbf{A}\mathbf{B})^{-1} = \mathbf{B}^{-1}\mathbf{A}^{-1}$$

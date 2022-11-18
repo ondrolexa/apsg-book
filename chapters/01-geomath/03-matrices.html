@@ -477,7 +477,8 @@ title="Print to PDF"
 \end{bmatrix}\end{split}\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">7</span><span class="p">]])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">matrix2</span><span class="p">([[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">]])</span>
+<span class="n">B</span> <span class="o">=</span> <span class="n">matrix2</span><span class="p">([[</span><span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">]])</span>
 </pre></div>
 </div>
 </div>
@@ -489,11 +490,39 @@ title="Print to PDF"
 \[\boldsymbol{A}+\boldsymbol{B}=\boldsymbol{C}\]</div>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{bmatrix} a_{11} &amp; a_{12}\\a_{21} &amp; a_{22}\end{bmatrix} + \begin{bmatrix} b_{11} &amp; b_{12}\\b_{21} &amp; b_{22}\end{bmatrix} = \begin{bmatrix} a_{11}+b_{11} &amp; a_{12}+b_{12}\\a_{21}+b_{21} &amp; a_{22}+b_{22}\end{bmatrix}\end{split}\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">+</span> <span class="n">B</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Matrix2
+[[2. 4.]
+ [4. 5.]]
+</pre></div>
+</div>
+</div>
+</div>
 <p>Matrix multiplication gets a bit more complicated, since multiple elements in the first matrix interact with multiple elements in the second to generate each element in the product matrix. This means that matrix multiplication can be a tedious task to carry out by hand, and can be time consuming on a computer for very large matrices.</p>
 <div class="math notranslate nohighlight">
 \[\boldsymbol{A}\boldsymbol{B}=\boldsymbol{C}\]</div>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{bmatrix} a_{11} &amp; a_{12}\\a_{21} &amp; a_{22}\end{bmatrix} \begin{bmatrix} b_{11} &amp; b_{12}\\b_{21} &amp; b_{22}\end{bmatrix} = \begin{bmatrix} a_{11}b_{11}+a_{12}b_{21} &amp; a_{11}b_{12}+a_{12}b_{22}\\a_{21}b_{21}+a_{12}b_{21} &amp; a_{21}b_{22}+a_{12}b_{22}\end{bmatrix}\end{split}\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">@</span> <span class="n">B</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Matrix2
+[[-13.  17.]
+ [ 18.   1.]]
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 </section>
 

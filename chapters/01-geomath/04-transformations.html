@@ -475,8 +475,27 @@ title="Print to PDF"
 <p>Consider the matrix equation:</p>
 <div class="math notranslate nohighlight">
 \[\boldsymbol{v} = \boldsymbol{A}\boldsymbol{u}\]</div>
-<p>If we vary <span class="math notranslate nohighlight">\(\boldsymbol{u}\)</span>, then <span class="math notranslate nohighlight">\(\boldsymbol{v}\)</span> will also vary; in this way, we think of <span class="math notranslate nohighlight">\(\boldsymbol{A}\)</span> as \textit{function} with independent variable <span class="math notranslate nohighlight">\(\boldsymbol{u}\)</span> (which is a vector in <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span>) and dependent variable <span class="math notranslate nohighlight">\(\boldsymbol{v}\)</span> (which is a vector in <span class="math notranslate nohighlight">\(\mathbb{R}^m\)</span>).</p>
-<p>At this point it is convenient to fix our ideas and terminology regarding \textit{functions}, which we will call <strong>transformations</strong>. This allows us to systematize our discussion of <strong>matrices as functions</strong>.</p>
+<p>If we vary <span class="math notranslate nohighlight">\(\boldsymbol{u}\)</span>, then <span class="math notranslate nohighlight">\(\boldsymbol{v}\)</span> will also vary; in this way, we think of <span class="math notranslate nohighlight">\(\boldsymbol{A}\)</span> as <em>function</em> with independent variable <span class="math notranslate nohighlight">\(\boldsymbol{u}\)</span> (which is a vector in <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span>) and dependent variable <span class="math notranslate nohighlight">\(\boldsymbol{v}\)</span> (which is a vector in <span class="math notranslate nohighlight">\(\mathbb{R}^m\)</span>).</p>
+<p>At this point it is convenient to fix our ideas and terminology regarding <em>functions</em>, which we will call <strong>transformations</strong>. This allows us to systematize our discussion of <strong>matrices as functions</strong>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">F</span> <span class="o">=</span> <span class="n">matrix</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">]])</span>
+<span class="n">u</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">F</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">F</span> <span class="o">=</span> <span class="n">matrix</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">]])</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">u</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">F</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;u&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
 <section id="matrix-transformations">
 <h2>Matrix Transformations<a class="headerlink" href="#matrix-transformations" title="Permalink to this headline">#</a></h2>
 <p>If <span class="math notranslate nohighlight">\(\boldsymbol{A}\)</span> has <span class="math notranslate nohighlight">\(n\)</span> columns, then it only makes sense to multiply <span class="math notranslate nohighlight">\(\boldsymbol{A}\)</span> by vectors with <span class="math notranslate nohighlight">\(n\)</span> entries. This is why the domain of transformation is <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span>. If <span class="math notranslate nohighlight">\(\boldsymbol{A}\)</span> has <span class="math notranslate nohighlight">\(m\)</span> rows, then <span class="math notranslate nohighlight">\(\boldsymbol{A}\boldsymbol{u}\)</span> has <span class="math notranslate nohighlight">\(m\)</span> entries for any vector <span class="math notranslate nohighlight">\(\boldsymbol{u}\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span>; this is why the codomain of transformation is <span class="math notranslate nohighlight">\(\mathbb{R}^m\)</span>.</p>
@@ -487,8 +506,9 @@ title="Print to PDF"
 </section>
 <section id="transpose-and-inverse-of-matrix-product">
 <h2>Transpose and inverse of matrix product<a class="headerlink" href="#transpose-and-inverse-of-matrix-product" title="Permalink to this headline">#</a></h2>
-<p>Following identities are used very often in linear algebra:
-$<span class="math notranslate nohighlight">\((\mathbf{A}\mathbf{B})^T = \mathbf{B}^T\mathbf{A}^T\)</span>$</p>
+<p>Following identities are used very often in linear algebra:</p>
+<div class="math notranslate nohighlight">
+\[(\mathbf{A}\mathbf{B})^T = \mathbf{B}^T\mathbf{A}^T\]</div>
 <div class="math notranslate nohighlight">
 \[(\mathbf{A}\mathbf{B})^{-1} = \mathbf{B}^{-1}\mathbf{A}^{-1}\]</div>
 <div class="math notranslate nohighlight">

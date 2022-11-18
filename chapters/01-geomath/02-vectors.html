@@ -536,7 +536,8 @@ vector as:</p>
 \[\bf{u}=\begin{bmatrix} u_1 &amp; u_2 &amp; u_3 \end{bmatrix} = \begin{bmatrix} u_x &amp; u_y &amp; u_z \end{bmatrix}\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">u</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">u</span> <span class="o">=</span> <span class="n">vec</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">v</span> <span class="o">=</span> <span class="n">vec</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -550,7 +551,7 @@ vector as:</p>
 <a class="bg-primary mb-1 reference internal image-reference" href="../../_images/Vec_magnitude.png"><img alt="Vector magnitude" class="bg-primary mb-1 align-center" src="../../_images/Vec_magnitude.png" style="width: 75%;" /></a>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">u</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">abs</span><span class="p">(</span><span class="n">u</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -564,14 +565,26 @@ vector as:</p>
 <section id="unit-vector">
 <h2>Unit vector<a class="headerlink" href="#unit-vector" title="Permalink to this headline">#</a></h2>
 <a class="bg-primary mb-1 reference internal image-reference" href="../../_images/3D_Vector.png"><img alt="3D vector" class="bg-primary mb-1 align-center" src="../../_images/3D_Vector.png" style="width: 35%;" /></a>
-<p>But, what if we don’t care about the magnitude? What if we are only interested in the orientation of our vector? It is convenient to represent direction by \textbf{unit vector}, i.e. the vector with length of one.
-Any vector could be normalized to \textbf{unit vector} by dividing each of it’s components by its magnitude.</p>
+<p>But, what if we don’t care about the magnitude? What if we are only interested in the orientation of our vector? It is convenient to represent direction by <strong>unit vector</strong>, i.e. the vector with length of one.
+Any vector could be normalized to <strong>unit vector</strong> by dividing each of it’s components by its magnitude.</p>
 <div class="math notranslate nohighlight">
 \[{\boldsymbol{\hat u}} = \frac{{\boldsymbol{u}}}{{\left\| {\boldsymbol{u}} \right\|}} = {\boldsymbol{i}}\frac{{{u_1}}}{{\left\| {\boldsymbol{u}} \right\|}} + {\boldsymbol{j}}\frac{{{u_2}}}{{\left\| {\boldsymbol{u}} \right\|}} + {\boldsymbol{k}}\frac{{{u_3}}}{{\left\| {\boldsymbol{u}} \right\|}}\]</div>
 <p>The projection of a unit vector onto a coordinate axis is just equal to the cosine of the angle that the vector makes with that axis.</p>
 <p>Thus, the components of a unit vector are:</p>
 <div class="math notranslate nohighlight">
 \[{\boldsymbol{\hat u}} = \begin{bmatrix} \cos (\alpha ) &amp; \cos (\beta ) &amp; \cos (\gamma ) \end{bmatrix}\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">u</span><span class="o">.</span><span class="n">normalized</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Vector3(0.535, -0.267, 0.802)
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 <section id="vector-addition-subtraction-and-scalar-multiplication">
 <h2>Vector addition, subtraction and scalar multiplication<a class="headerlink" href="#vector-addition-subtraction-and-scalar-multiplication" title="Permalink to this headline">#</a></h2>
@@ -582,6 +595,18 @@ Any vector could be normalized to \textbf{unit vector} by dividing each of it’
 <div class="math notranslate nohighlight">
 \[\bf{u-v}=\begin{bmatrix} u_1 &amp; u_2 &amp; u_3 \end{bmatrix}-\begin{bmatrix} v_1 &amp; v_2 &amp; v_3\end{bmatrix}=\begin{bmatrix} (u_1-v_1) &amp; (u_2-v_2) &amp; (u_3-v_3) \end{bmatrix}\]</div>
 <a class="bg-primary mb-1 reference internal image-reference" href="../../_images/Vec_add_sub.png"><img alt="Vector addition and subtraction" class="bg-primary mb-1 align-center" src="../../_images/Vec_add_sub.png" style="width: 75%;" /></a>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">u</span> <span class="o">+</span> <span class="n">v</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Vector3(3, 1, 2)
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 <section id="dot-product">
 <h2>Dot product<a class="headerlink" href="#dot-product" title="Permalink to this headline">#</a></h2>
@@ -593,10 +618,22 @@ Any vector could be normalized to \textbf{unit vector} by dividing each of it’
 <div class="math notranslate nohighlight">
 \[\boldsymbol{u}\cdot \boldsymbol{v} = \sum_{i=1}^n u_iv_i = u_1v_1 + u_2v_2 + \cdots + u_nv_n\]</div>
 <p>Two vectors are orthogonal if the dot product of those two vectors is equal to zero.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">u</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-3.0
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 <section id="vector-projection">
 <h2>Vector projection<a class="headerlink" href="#vector-projection" title="Permalink to this headline">#</a></h2>
-<p>The<strong>vector projection</strong> of a vector <span class="math notranslate nohighlight">\(\boldsymbol{u}\)</span> on a nonzero vector <span class="math notranslate nohighlight">\(\boldsymbol{v}\)</span> (also known as the <em>vector component</em> of <span class="math notranslate nohighlight">\(\boldsymbol{u}\)</span> in the direction of <span class="math notranslate nohighlight">\(\boldsymbol{u}\)</span>) is the orthogonal projection of <span class="math notranslate nohighlight">\(\boldsymbol{u}\)</span> onto a straight line parallel to <span class="math notranslate nohighlight">\(\boldsymbol{v}\)</span>. It is a vector parallel to <span class="math notranslate nohighlight">\(\boldsymbol{v}\)</span>, defined as:</p>
+<p>The <strong>vector projection</strong> of a vector <span class="math notranslate nohighlight">\(\boldsymbol{u}\)</span> on a nonzero vector <span class="math notranslate nohighlight">\(\boldsymbol{v}\)</span> (also known as the <em>vector component</em> of <span class="math notranslate nohighlight">\(\boldsymbol{u}\)</span> in the direction of <span class="math notranslate nohighlight">\(\boldsymbol{u}\)</span>) is the orthogonal projection of <span class="math notranslate nohighlight">\(\boldsymbol{u}\)</span> onto a straight line parallel to <span class="math notranslate nohighlight">\(\boldsymbol{v}\)</span>. It is a vector parallel to <span class="math notranslate nohighlight">\(\boldsymbol{v}\)</span>, defined as:</p>
 <a class="bg-primary mb-1 reference internal image-reference" href="../../_images/Dot_Product.png"><img alt="Vector projection" class="bg-primary mb-1 align-center" src="../../_images/Dot_Product.png" style="width: 35%;" /></a>
 <div class="math notranslate nohighlight">
 \[\boldsymbol{u}_1 = u_1\boldsymbol{\hat v} = u_1\frac {\boldsymbol{v}} {\|\boldsymbol{v}\|},\]</div>
@@ -606,6 +643,18 @@ Any vector could be normalized to \textbf{unit vector} by dividing each of it’
 <p>Consequently,</p>
 <div class="math notranslate nohighlight">
 \[\boldsymbol{u}_1 = u_1\frac {\boldsymbol{v}} {\|\boldsymbol{v}\|} = \frac {\boldsymbol{u} \cdot \boldsymbol{v}} {\|\boldsymbol{v}\| } \frac {\boldsymbol{v}} {\|\boldsymbol{v}\|} = \frac {\boldsymbol{u} \cdot \boldsymbol{v}} {\|\boldsymbol{v}\|^2}{\boldsymbol{v}} = \frac {\boldsymbol{u} \cdot \boldsymbol{v}} {\boldsymbol{v} \cdot \boldsymbol{v}}{\boldsymbol{v}}\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">u</span><span class="o">.</span><span class="n">proj</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Vector3(-0.5, -1, 0.5)
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 <section id="cross-product">
 <h2>Cross product<a class="headerlink" href="#cross-product" title="Permalink to this headline">#</a></h2>
@@ -620,11 +669,30 @@ Any vector could be normalized to \textbf{unit vector} by dividing each of it’
 <p>The cross product is <em>anticommutative</em></p>
 <div class="math notranslate nohighlight">
 \[\boldsymbol{u} \times \boldsymbol{v} = -(\boldsymbol{v} \times \boldsymbol{u})\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">u</span><span class="o">.</span><span class="n">cross</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Vector3(-5, 5, 5)
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 <section id="vectors-in-geology">
 <h2>Vectors in geology<a class="headerlink" href="#vectors-in-geology" title="Permalink to this headline">#</a></h2>
-<p>The compass measurements are commonly in <strong>spherical coordinates</strong> i.e. <em>azimuth</em> or <em>dip direction</em> (<span class="math notranslate nohighlight">\(\theta\)</span>) and <em>dip</em> (<span class="math notranslate nohighlight">\(\varphi\)</span>). To define 3D vector in Cartesian space, we use following transformations:</p>
+<p>The compass measurements are commonly in <strong>spherical coordinates</strong> i.e. <em>trend</em>
+or <em>dip direction</em> (<span class="math notranslate nohighlight">\(\theta\)</span>) and <em>plunge</em> or <em>dip</em> (<span class="math notranslate nohighlight">\(\varphi\)</span>). <em>Plunge</em> is used
+to describe the tilt of lines, the word <em>dip</em> being reserved for planes.</p>
 <a class="bg-primary mb-1 reference internal image-reference" href="../../_images/Geo_coordinates_en.png"><img alt="Coordinate transformation in geology" class="bg-primary mb-1 align-center" src="../../_images/Geo_coordinates_en.png" style="width: 50%;" /></a>
+<p>The linear feature has (a) the plunge direction or trend and (b) the angle of plunge.
+The plunge direction is the direction towards which the line is tilted.
+The angle of plunge is the amount of tilt; it is the angle, measured in the
+vertical plane, that the plunging line makes with the horizontal. The angle of
+plunge of a horizontal line is 0° and the angle of plunge of a vertical line is 90°.</p>
 <p>Linear features (lines) are represented as vector:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
@@ -632,6 +700,13 @@ u_1&amp;=&amp;\cos(\theta)\cos(\varphi)\\
 u_2&amp;=&amp;\sin(\theta)\cos(\varphi)\\
 u_3&amp;=&amp;\sin(\varphi)
 \end{aligned}\end{split}\]</div>
+<p>Planar fetaure that is not horizontal is said to dip. There are two aspects to
+the dip of a plane (a) the direction of dip, which is the compass direction
+towards which the plane slopes; and (b) the angle of dip, which is the angle
+that the plane makes with a horizontal plane. The direction of dip can be
+visualized as the direction in which water would flow if poured onto the
+plane. The angle of dip is an angle between 0° (for horizontal planes) and 90°
+(for vertical planes).</p>
 <p>Planar features (planes) are represented by normal vector:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
@@ -639,6 +714,31 @@ p_1&amp;=&amp;-\cos(\theta)\sin(\varphi)\\
 p_2&amp;=&amp;-\sin(\theta)\sin(\varphi)\\
 p_3&amp;=&amp;\cos(\varphi)
 \end{aligned}\end{split}\]</div>
+<p>With APSG the 3D vector could be defined using trend and plunge notation:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">v</span> <span class="o">=</span> <span class="n">vec</span><span class="p">(</span><span class="mi">130</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>while linear and planar features could be defined as lineation or foliation</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="n">lin</span><span class="p">(</span><span class="mi">120</span><span class="p">,</span> <span class="mi">40</span><span class="p">)</span>
+<span class="n">f</span> <span class="o">=</span> <span class="n">fol</span><span class="p">(</span><span class="mi">210</span><span class="p">,</span> <span class="mi">30</span><span class="n">_</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">10</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+    <span class="n">f</span> <span class="o">=</span> <span class="n">fol</span><span class="p">(</span><span class="mi">210</span><span class="p">,</span> <span class="mi">30</span><span class="n">_</span>
+                   <span class="o">^</span>
+<span class="ne">SyntaxError</span>: invalid decimal literal
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 </section>
 

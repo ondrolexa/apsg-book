@@ -29,6 +29,7 @@ If we vary $\boldsymbol{u}$, then $\boldsymbol{v}$ will also vary; in this way, 
 At this point it is convenient to fix our ideas and terminology regarding *functions*, which we will call **transformations**. This allows us to systematize our discussion of **matrices as functions**.
 
 ```{code-cell} ipython3
+u = vec(2, -1, 3)
 F = matrix([[2, 1, 0], [0, 1, 0], [0, 0, 0.5]])
 u.transform(F)
 ```

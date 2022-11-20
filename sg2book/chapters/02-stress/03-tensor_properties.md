@@ -87,11 +87,11 @@ S2.eigenfols  # principal planes
 The components $\sigma_{ij}$ of the stress tensor depend on the orientation of the coordinate system at the point under consideration. However, the stress tensor itself is a physical quantity and as such, it is independent of the coordinate system chosen to represent it. There are certain **invariants** associated with every tensor which are also independent of the coordinate system. One set of such invariants are the **principal stresses** of the stress tensor, which are just the **eigenvalues** of the stress tensor. Their direction vectors are the **principal directions** or **eigenvectors**.
 
 ```{code-cell} ipython3
-S.sigma1, S.sigma2, S.sigma3  # principal stresses of S
+S.eigenvalues()  # principal stresses of S
 ```
 
 ```{code-cell} ipython3
-S2.sigma1, S2.sigma2, S2.sigma3  # principal stresses of S2
+S2.eigenvalues()  # principal stresses of S2
 ```
 
 ## Stress invariants

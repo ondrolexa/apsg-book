@@ -13,8 +13,7 @@ kernelspec:
 
 ```{code-cell} ipython3
 :tags: [remove-input]
-import numpy as np
-import matplotlib.pyplot as plt
+from apsg import *
 ```
 
 # Stress tensor
@@ -66,6 +65,13 @@ n_2
 &
 \boldsymbol{T}^{\left( 2 \right)}
 \end{bmatrix}$$
+
+```{code-cell} ipython3
+S = stress2([[-8,  2],
+             [ 2, -5]])
+n = vec2(60)  # unit length vector oriented 60 degrees from x
+S.cauchy(n)  # traction vector
+```
 
 ## Cauchy formula in 3D
 
@@ -161,6 +167,17 @@ $$\boldsymbol{T}^{(\boldsymbol{n})} \equiv \left[{\begin{matrix} {T_1}^{(\boldsy
 \end{matrix}}\right] \cdot \left[{\begin{matrix} n_1 \\ n_2 \\ n_3 \end{matrix}}\right] \quad \text{or} \quad \boldsymbol{T}^{(\boldsymbol{n})} = \boldsymbol{\sigma} \cdot \bf{n}$$
 This equation implies that the stress vector $\bf{T}^{\left( n \right)}$ at any point $P$ in a continuum associated with a plane with normal unit vector $\bf{n}$, can be expressed as a function of the stress vectors on the planes perpendicular to the coordinate axes, i.e. stress tensor $\boldsymbol{\sigma}$.
 
+```{code-cell} ipython3
+S = stress.from_comp(xx=-8, yy=-6, zz=-2)
+S
+```
+
+```{code-cell} ipython3
+n = fol(150, 60)  # normal of plane
+T = S.cauchy(n)  # traction vector
+print(f'Magnitude of normal stress on plane {n} is {abs(T.proj(n))}')
+print(f'Magnitude of shear stress on plane {n} is {abs(T.reject(n))}')
+```
 
 ## Sign convention
 

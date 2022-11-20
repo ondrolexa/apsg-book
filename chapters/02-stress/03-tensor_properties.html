@@ -501,12 +501,130 @@ title="Print to PDF"
 <p>where <span class="math notranslate nohighlight">\(\boldsymbol{R}\)</span> is a rotation matrix with components <span class="math notranslate nohighlight">\(a_{ij}\)</span>. In matrix form this is:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\left[{{\begin{matrix}\sigma '_{{11}}&amp;\sigma '_{{21}}&amp;\sigma '_{{31}}\\\sigma '_{{12}}&amp;\sigma '_{{22}}&amp;\sigma '_{{32}}\\\sigma '_{{13}}&amp;\sigma '_{{23}}&amp;\sigma '_{{33}}\\\end{matrix}}}\right]=\left[{{\begin{matrix}a_{{11}}&amp;a_{{12}}&amp;a_{{13}}\\a_{{21}}&amp;a_{{22}}&amp;a_{{23}}\\a_{{31}}&amp;a_{{32}}&amp;a_{{33}}\\\end{matrix}}}\right]\left[{{\begin{matrix}\sigma _{{11}}&amp;\sigma _{{21}}&amp;\sigma _{{31}}\\\sigma _{{12}}&amp;\sigma _{{22}}&amp;\sigma _{{32}}\\\sigma _{{13}}&amp;\sigma _{{23}}&amp;\sigma _{{33}}\\\end{matrix}}}\right]\left[{{\begin{matrix}a_{{11}}&amp;a_{{21}}&amp;a_{{31}}\\a_{{12}}&amp;a_{{22}}&amp;a_{{32}}\\a_{{13}}&amp;a_{{23}}&amp;a_{{33}}\\\end{matrix}}}\right]\end{split}\]</div>
+<p>In following example we will define stress tensor in orientation given by foliation and lineation plane:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">S</span> <span class="o">=</span> <span class="n">stress</span><span class="o">.</span><span class="n">from_comp</span><span class="p">(</span><span class="n">xx</span><span class="o">=-</span><span class="mi">8</span><span class="p">,</span> <span class="n">yy</span><span class="o">=-</span><span class="mi">6</span><span class="p">,</span> <span class="n">zz</span><span class="o">=-</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">pair</span><span class="p">(</span><span class="mi">90</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
+<span class="n">R</span> <span class="o">=</span> <span class="n">defgrad</span><span class="o">.</span><span class="n">from_pair</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>  <span class="c1"># rotation to local coordinates</span>
+<span class="n">lin</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">R</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>L:90/60
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fol</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">R</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>S:90/60
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Sr</span> <span class="o">=</span> <span class="n">S</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">R</span><span class="p">)</span>
+<span class="nb">abs</span><span class="p">(</span><span class="n">Sr</span><span class="o">.</span><span class="n">cauchy</span><span class="p">(</span><span class="n">lin</span><span class="p">(</span><span class="mi">90</span><span class="p">,</span> <span class="mi">60</span><span class="p">)))</span>  <span class="c1"># magnitude of stress on plane perpendicular to 90/60</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8.0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Sr</span> <span class="o">=</span> <span class="n">S</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">R</span><span class="p">)</span>
+<span class="nb">abs</span><span class="p">(</span><span class="n">Sr</span><span class="o">.</span><span class="n">cauchy</span><span class="p">(</span><span class="n">fol</span><span class="p">(</span><span class="mi">90</span><span class="p">,</span> <span class="mi">60</span><span class="p">)))</span>  <span class="c1"># magnitude of stress on plane 90/60</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.9999999999999998
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 <section id="principal-stresses-and-principal-directions">
 <h2>Principal stresses and principal directions<a class="headerlink" href="#principal-stresses-and-principal-directions" title="Permalink to this headline">#</a></h2>
 <p>At every point in a stressed body there are at least three planes, called <strong>principal planes</strong>, with normal vectors <span class="math notranslate nohighlight">\(\boldsymbol{n}\)</span>, called <strong>principal directions</strong>, where the corresponding stress vector is perpendicular to the plane, i.e., parallel or in the same
 direction as the normal vector <span class="math notranslate nohighlight">\(\boldsymbol{n}\)</span>, and where there are no normal shear stresses <span class="math notranslate nohighlight">\(\tau_{\mathrm{n}}\)</span>. The three stresses normal to these principal planes are called <strong>principal stresses</strong>.</p>
+<p>Note three orientations with zero shear stress in following example. Their positions are <strong>principal directions</strong>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">pair</span><span class="p">(</span><span class="mi">150</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">41</span><span class="p">)</span>
+<span class="n">S2</span> <span class="o">=</span> <span class="n">S</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">defgrad</span><span class="o">.</span><span class="n">from_pair</span><span class="p">(</span><span class="n">p</span><span class="p">))</span>
+<span class="n">s</span> <span class="o">=</span> <span class="n">StereoNet</span><span class="p">()</span>
+<span class="n">s</span><span class="o">.</span><span class="n">grid</span><span class="o">.</span><span class="n">apply_func</span><span class="p">(</span><span class="n">S2</span><span class="o">.</span><span class="n">shear_stress</span><span class="p">)</span>
+<span class="n">s</span><span class="o">.</span><span class="n">contour</span><span class="p">(</span><span class="n">levels</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">s</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/03-tensor_properties_7_0.png" src="../../_images/03-tensor_properties_7_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">S2</span><span class="o">.</span><span class="n">eigenlins</span>  <span class="c1"># principal directions</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(L:90/41, L:217/34, L:330/30)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">S2</span><span class="o">.</span><span class="n">eigenfols</span>  <span class="c1"># principal planes</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(S:270/49, S:37/56, S:150/60)
+</pre></div>
+</div>
+</div>
+</div>
 <p>The components <span class="math notranslate nohighlight">\(\sigma_{ij}\)</span> of the stress tensor depend on the orientation of the coordinate system at the point under consideration. However, the stress tensor itself is a physical quantity and as such, it is independent of the coordinate system chosen to represent it. There are certain <strong>invariants</strong> associated with every tensor which are also independent of the coordinate system. One set of such invariants are the <strong>principal stresses</strong> of the stress tensor, which are just the <strong>eigenvalues</strong> of the stress tensor. Their direction vectors are the <strong>principal directions</strong> or <strong>eigenvectors</strong>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">S</span><span class="o">.</span><span class="n">sigma1</span><span class="p">,</span> <span class="n">S</span><span class="o">.</span><span class="n">sigma2</span><span class="p">,</span> <span class="n">S</span><span class="o">.</span><span class="n">sigma3</span>  <span class="c1"># principal stresses of S</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">9</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">S</span><span class="o">.</span><span class="n">sigma1</span><span class="p">,</span> <span class="n">S</span><span class="o">.</span><span class="n">sigma2</span><span class="p">,</span> <span class="n">S</span><span class="o">.</span><span class="n">sigma3</span>  <span class="c1"># principal stresses of S</span>
+
+<span class="ne">AttributeError</span>: &#39;Stress3&#39; object has no attribute &#39;sigma1&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">S2</span><span class="o">.</span><span class="n">sigma1</span><span class="p">,</span> <span class="n">S2</span><span class="o">.</span><span class="n">sigma2</span><span class="p">,</span> <span class="n">S2</span><span class="o">.</span><span class="n">sigma3</span>  <span class="c1"># principal stresses of S2</span>
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 <section id="stress-invariants">
 <h2>Stress invariants<a class="headerlink" href="#stress-invariants" title="Permalink to this headline">#</a></h2>
@@ -528,6 +646,20 @@ direction as the normal vector <span class="math notranslate nohighlight">\(\bol
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}I_{1}&amp;=\sigma _{11}+\sigma _{22}+\sigma _{33}=\sigma _{kk}={\text{tr}}({\boldsymbol {\sigma }})\\I_{2}&amp;=\sigma _{11}\sigma _{22}+\sigma _{22}\sigma _{33}+\sigma _{11}\sigma _{33}-\sigma _{12}^{2}-\sigma _{23}^{2}-\sigma _{31}^{2}\\&amp;={\frac {1}{2}}\left(\sigma _{ii}\sigma _{jj}-\sigma _{ij}\sigma _{ji}\right)={\frac {1}{2}}\left[\left({\text{tr}}({\boldsymbol {\sigma }})\right)^{2}-{\text{tr}}({\boldsymbol {\sigma }}^{2})\right]\\I_{3}&amp;=\det(\sigma _{ij})=\det({\boldsymbol {\sigma }})\end{aligned}\end{split}\]</div>
 <p>The <span class="math notranslate nohighlight">\(\sigma _{1}=\max \left(\lambda _{1},\lambda _{2},\lambda _{3}\right)\)</span>, <span class="math notranslate nohighlight">\(\sigma _{3}=\min \left(\lambda _{1},\lambda _{2},\lambda _{3}\right)\)</span> and <span class="math notranslate nohighlight">\(\sigma _{2}=I_{1}-\sigma _{1}-\sigma _{3}\)</span>, are the principal stresses. The coefficients <span class="math notranslate nohighlight">\(I_{1}\)</span>, <span class="math notranslate nohighlight">\(I_{2}\)</span> and <span class="math notranslate nohighlight">\(I_{3}\)</span>, are called the <strong>first, second, and third stress invariants</strong>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">S</span><span class="o">.</span><span class="n">I1</span><span class="p">,</span> <span class="n">S</span><span class="o">.</span><span class="n">I2</span><span class="p">,</span> <span class="n">S</span><span class="o">.</span><span class="n">I3</span>  <span class="c1"># stress invariants</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">S2</span><span class="o">.</span><span class="n">I1</span><span class="p">,</span> <span class="n">S2</span><span class="o">.</span><span class="n">I2</span><span class="p">,</span> <span class="n">S2</span><span class="o">.</span><span class="n">I3</span>  <span class="c1"># stress invariants</span>
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 <section id="tensor-decomposition">
 <h2>Tensor decomposition<a class="headerlink" href="#tensor-decomposition" title="Permalink to this headline">#</a></h2>
@@ -535,9 +667,23 @@ direction as the normal vector <span class="math notranslate nohighlight">\(\bol
 <p>Decomposition of tensor to symmetric <span class="math notranslate nohighlight">\(\boldsymbol{D}\)</span> and antisymmetric <span class="math notranslate nohighlight">\(\boldsymbol{W}\)</span> part, where</p>
 <div class="math notranslate nohighlight">
 \[\boldsymbol{D} = \frac{1}{2}\left( \boldsymbol{T} + \boldsymbol{T}^T\,\right) \;\textsf{and }\; \boldsymbol{W} = \frac{1}{2}\left( \boldsymbol{T} - \boldsymbol{T}^T\,\right)\]</div>
-<p>Decomposition of tensor to deviatoric <span class="math notranslate nohighlight">\(\boldsymbol{S}\)</span> and volumetric part <span class="math notranslate nohighlight">\(\boldsymbol{V}\)</span>, where</p>
+<p>Decomposition of tensor to deviatoric <span class="math notranslate nohighlight">\(\boldsymbol{S}\)</span> and volumetric (also known as hydrostatic) part <span class="math notranslate nohighlight">\(\boldsymbol{V}\)</span>, where</p>
 <div class="math notranslate nohighlight">
 \[\boldsymbol{S} = \boldsymbol{T} - \frac{\text{tr}(\boldsymbol{T})}{3}\delta_{ij} \;\textsf{and }\; \boldsymbol{V} = \frac{\text{tr}(\boldsymbol{T})}{3}\delta_{ij}\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">S2</span><span class="o">.</span><span class="n">deviatoric</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">S2</span><span class="o">.</span><span class="n">hydrostatic</span>
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 </section>
 

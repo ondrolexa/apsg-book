@@ -13,8 +13,7 @@ kernelspec:
 
 ```{code-cell} ipython3
 :tags: [remove-input]
-import numpy as np
-import matplotlib.pyplot as plt
+from apsg import *
 ```
 
 # Stress vector
@@ -103,6 +102,28 @@ $$\left\| {{{\vec \tau }_n}} \right\| = \sqrt {{{\left\| {{{\bf{T}}^{\left( {\bf
 
 $${{\vec \tau }_n} = {{\bf{T}}^{\left( {\bf{n}} \right)}} - {{\vec \sigma }_n}$$
 
+```{code-cell} ipython3
+n = fol(150, 60)
+T = 5 * vec('x')  # Traction vector oriented parallel to x-axis with magnitude 5
+T.dot(n)  # normal stress magnitude
+```
+
+```{code-cell} ipython3
+sn = T.proj(n)  # project tranction vector T onto normal n - normal stress
+abs(sn)  # magnitude of normal stress
+```
+
+```{code-cell} ipython3
+tau = T - sn  # shear stress
+abs(tau)  # magnitude of shear stress
+```
+
+or we can use vector rejection:
+
+```{code-cell} ipython3
+tau = T.reject(n)  # shear stress
+abs(tau)  # magnitude of shear stress
+```
 
 ## Stress at point
 It must be noted that the stresses in most 2-D or 3-D solids are actually more complex and need be defined more methodically.

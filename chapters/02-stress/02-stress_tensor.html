@@ -540,6 +540,21 @@ n_2
 &amp;
 \boldsymbol{T}^{\left( 2 \right)}
 \end{bmatrix}\end{split}\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">S</span> <span class="o">=</span> <span class="n">stress2</span><span class="p">([[</span><span class="o">-</span><span class="mi">8</span><span class="p">,</span>  <span class="mi">2</span><span class="p">],</span>
+             <span class="p">[</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">]])</span>
+<span class="n">n</span> <span class="o">=</span> <span class="n">vec2</span><span class="p">(</span><span class="mi">60</span><span class="p">)</span>  <span class="c1"># unit length vector oriented 60 degrees from x</span>
+<span class="n">S</span><span class="o">.</span><span class="n">cauchy</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>  <span class="c1"># traction vector</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Vector2(-5.928, -0.768)
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 <section id="cauchy-formula-in-3d">
 <h2>Cauchy formula in 3D<a class="headerlink" href="#cauchy-formula-in-3d" title="Permalink to this headline">#</a></h2>
@@ -614,6 +629,38 @@ the stress vector on any other plane passing through that point can be found thr
 \sigma _{13} &amp; \sigma _{23} &amp; \sigma _{33} 
 \end{matrix}}\right] \cdot \left[{\begin{matrix} n_1 \\ n_2 \\ n_3 \end{matrix}}\right] \quad \text{or} \quad \boldsymbol{T}^{(\boldsymbol{n})} = \boldsymbol{\sigma} \cdot \bf{n}\end{split}\]</div>
 <p>This equation implies that the stress vector <span class="math notranslate nohighlight">\(\bf{T}^{\left( n \right)}\)</span> at any point <span class="math notranslate nohighlight">\(P\)</span> in a continuum associated with a plane with normal unit vector <span class="math notranslate nohighlight">\(\bf{n}\)</span>, can be expressed as a function of the stress vectors on the planes perpendicular to the coordinate axes, i.e. stress tensor <span class="math notranslate nohighlight">\(\boldsymbol{\sigma}\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">S</span> <span class="o">=</span> <span class="n">stress</span><span class="o">.</span><span class="n">from_comp</span><span class="p">(</span><span class="n">xx</span><span class="o">=-</span><span class="mi">8</span><span class="p">,</span> <span class="n">yy</span><span class="o">=-</span><span class="mi">6</span><span class="p">,</span> <span class="n">zz</span><span class="o">=-</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">S</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Stress3
+[[-8.  0.  0.]
+ [ 0. -6.  0.]
+ [ 0.  0. -2.]]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="n">fol</span><span class="p">(</span><span class="mi">150</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>  <span class="c1"># normal of plane</span>
+<span class="n">T</span> <span class="o">=</span> <span class="n">S</span><span class="o">.</span><span class="n">cauchy</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>  <span class="c1"># traction vector</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Magnitude of normal stress on plane </span><span class="si">{</span><span class="n">n</span><span class="si">}</span><span class="s1"> is </span><span class="si">{</span><span class="nb">abs</span><span class="p">(</span><span class="n">T</span><span class="o">.</span><span class="n">proj</span><span class="p">(</span><span class="n">n</span><span class="p">))</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Magnitude of shear stress on plane </span><span class="si">{</span><span class="n">n</span><span class="si">}</span><span class="s1"> is </span><span class="si">{</span><span class="nb">abs</span><span class="p">(</span><span class="n">T</span><span class="o">.</span><span class="n">reject</span><span class="p">(</span><span class="n">n</span><span class="p">))</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Magnitude of normal stress on plane S:150/60 is 6.125
+Magnitude of shear stress on plane S:150/60 is 2.496873044429773
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 <section id="sign-convention">
 <h2>Sign convention<a class="headerlink" href="#sign-convention" title="Permalink to this headline">#</a></h2>

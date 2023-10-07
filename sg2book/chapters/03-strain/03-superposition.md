@@ -23,17 +23,17 @@ from strain2d import plot_defgrad
 
 $\boldsymbol{F}$ maps any undeformed vector into its deformed state. This vector can also be a position vector of a point. Therefore $\boldsymbol{F}$ also maps any point into its new position after deformation. Considering two successive deformations $\boldsymbol{F_1}$ and $\boldsymbol{F_2}$ write transformation equation....
 
-$$\vec{x}_1 = \boldsymbol{F_1} \cdot \vec{X}$$
+$$\mathbf{x}_1 = \boldsymbol{F_1} \cdot \mathbf{X}$$
 
-$$\vec{x}_2 = \boldsymbol{F_2} \cdot \vec{x}_1$$
+$$\mathbf{x}_2 = \boldsymbol{F_2} \cdot \mathbf{x}_1$$
 
 Substitute first equation to second gives:
 
-$$\vec{x}_2 = \boldsymbol{F_2} \cdot \boldsymbol{F_1} \cdot \vec{X}$$
+$$\mathbf{x}_2 = \boldsymbol{F_2} \cdot \boldsymbol{F_1} \cdot \mathbf{X}$$
 
 so
 
-$$\vec{x}_2 = \boldsymbol{F} \cdot \vec{X}$$
+$$\mathbf{x}_2 = \boldsymbol{F} \cdot \mathbf{X}$$
 
 where
 

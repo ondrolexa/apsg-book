@@ -45,9 +45,9 @@ From the perspective of what is happening within a material, stress is the inter
 
 Simplifying assumptions are often used to represent force acting on area as **traction vector** - simply the force vector divided by that area. 
 
-$$\boldsymbol{T} = \frac{\boldsymbol{F}}{A}$$
+$$\mathbf{t} = \frac{\mathbf{f}}{A}$$
 
-$\boldsymbol{T}$ has units of stress, but as it is a vector, all the usual rules for vectors apply to it.
+$\mathbf{t}$ has units of stress, but as it is a vector, all the usual rules for vectors apply to it.
 
 The unit of stress is Pascal [Pa] or Newtons per square meter [$\frac{N}{m^2}$]. A stress of 1 Pa is very small, for example, the load due to 1m of water is about 10$^4$ Pa. So, in geology we often use metric prefixes:
  - 1 hPa = 10$^2$ Pa (hektopascal)
@@ -73,8 +73,10 @@ The traction at a point on a surface is equal and opposite to the traction that 
 
 ## Stress components
 
-In general, a stress acting on a plane represented by traction $\boldsymbol{T}^{(\boldsymbol{n})}$ may be expressed as a sum
+In general, a stress acting on a plane represented by traction $\mathbf{t}$ may be expressed as a sum
 of shear and normal components.
+
+$$\mathbf{t} = \mathbf{\sigma}_n + \mathbf{\tau}_{x_1} + \mathbf{\tau}_{x_1} = \mathbf{\sigma}_n + \mathbf{\tau}_n$$
 
 ```{image} figures/stress_onplane.png
 :alt: Stress on plane
@@ -84,23 +86,25 @@ of shear and normal components.
 ```
 
 ```{note}
-**Normal stress**: The component of stress acting perpendicular to the plane
+**Normal stress**: The component of stress acting perpendicular to the plane ($\mathbf{\sigma}_n$)
 
-**Shear stress**: The component of stress acting parallel to the plane
+**Shear stress**: The component of stress acting parallel to the plane ($\mathbf{\tau}_n$)
 ```
 
-The magnitude of the normal stress component $\sigma _n$ of any stress vector $\boldsymbol{T}^{(\boldsymbol{n})}$ acting on an arbitrary
-plane with normal unit vector $n$ at a given point, in terms of the stress tensor $\boldsymbol{\sigma}$, could be calculated a scalar projection of the stress vector onto the normal unit vector:
+The magnitude of the normal stress component $\mathbf{\sigma}_n$ of any stress vector $\mathbf{t}$ acting on an arbitrary
+plane with normal unit vector $\mathbf{n}$ at a given point, could be calculated a scalar projection of the stress vector
+onto the normal unit vector:
 
-$$\left\| {{{\vec \sigma }_n}} \right\| = {{\bf{T}}^{\left( {\bf{n}} \right)}} \cdot \bf{n}$$
+$$\left\| \mathbf{\sigma}_n \right\| = \mathbf{t} \cdot \mathbf{n}$$
 
-$${{\vec \sigma }_n} = \left\| {{{\vec \sigma }_n}} \right\|\bf{n}$$
+$$\mathbf{\sigma}_n = \left\| \mathbf{\sigma}_n \right\|\mathbf{n}$$
 
-The magnitude of the shear stress component $\tau_n$, acting in the plane spanned by the two vectors $\boldsymbol{T}^{(\boldsymbol{n})}$ and $n$, can then be found using the Pythagorean theorem:
+The magnitude of the shear stress component $\mathbf{\tau}_n$, acting in the plane spanned by the two vectors $\mathbf{t}$ and
+$\mathbf{\sigma}_n$, can then be found using the Pythagorean theorem:
 
-$$\left\| {{{\vec \tau }_n}} \right\| = \sqrt {{{\left\| {{{\bf{T}}^{\left( {\bf{n}} \right)}}} \right\|}^2} - {{\left\| {{{\vec \sigma }_n}} \right\|}^2}}$$
+$$\left\| \mathbf{\tau} \right\| = \sqrt {{\left\| \mathbf{t} \right\|}^2 - {\left\| \mathbf{\sigma}_n \right\|}^2}$$
 
-$${{\vec \tau }_n} = {{\bf{T}}^{\left( {\bf{n}} \right)}} - {{\vec \sigma }_n}$$
+$$\mathbf{\tau}_n = \mathbf{t} - \mathbf{\sigma}_n$$
 
 ```{code-cell} ipython3
 n = fol(150, 60)
@@ -132,4 +136,4 @@ The internal force acting on a small area of a plane represented by traction vec
 
 Since stresses are defined in relation to the plane that passes through the point under consideration, and the number of such planes is infinite, there appear an infinite set of stresses at a point.
 
-Fortunately, it can be proven that the stresses on any plane can be computed from the stresses on three orthogonal planes passing through the point... and **tensors** will help us.
+Fortunately, it can be proven that the stresses on any plane can be computed from the stresses on three orthogonal planes passing through the point. This will bring us to the definition of the **stress tensor**...

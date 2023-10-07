@@ -582,28 +582,9 @@ direction as the normal vector <span class="math notranslate nohighlight">\(\bol
 </section>
 <section id="tensor-decomposition">
 <h2>Tensor decomposition<a class="headerlink" href="#tensor-decomposition" title="Permalink to this heading">#</a></h2>
-<p>A tensor decomposition is any scheme for expressing a tensor as a sequence of elementary operations acting on other, often simpler tensors. Many tensor decompositions generalize some matrix decompositions.</p>
-<p>Decomposition of tensor to symmetric <span class="math notranslate nohighlight">\(\boldsymbol{D}\)</span> and antisymmetric <span class="math notranslate nohighlight">\(\boldsymbol{W}\)</span> part, where</p>
+<p>Often it is convenient to decompose the stress tensor into volumetric <span class="math notranslate nohighlight">\(\mathbf{V}\)</span> (also known as hydrostatic) and deviatoric <span class="math notranslate nohighlight">\(\mathbf{S}\)</span> (distortional) parts. Applications of such decompositions can be found in metal plasticity, soil mechanics, and biomechanics.</p>
 <div class="math notranslate nohighlight">
-\[\boldsymbol{D} = \frac{1}{2}\left( \boldsymbol{T} + \boldsymbol{T}^T\,\right) \;\textsf{and }\; \boldsymbol{W} = \frac{1}{2}\left( \boldsymbol{T} - \boldsymbol{T}^T\,\right)\]</div>
-<p>Decomposition of tensor to deviatoric <span class="math notranslate nohighlight">\(\boldsymbol{S}\)</span> and volumetric (also known as hydrostatic) part <span class="math notranslate nohighlight">\(\boldsymbol{V}\)</span>, where</p>
-<div class="math notranslate nohighlight">
-\[\boldsymbol{S} = \boldsymbol{T} - \frac{\text{tr}(\boldsymbol{T})}{3}\delta_{ij} \;\textsf{and }\; \boldsymbol{V} = \frac{\text{tr}(\boldsymbol{T})}{3}\delta_{ij}\]</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">S2</span><span class="o">.</span><span class="n">deviatoric</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Stress3
-[[ 1.583 -1.3    1.499]
- [-1.3   -1.055 -1.856]
- [ 1.499 -1.856 -0.528]]
-</pre></div>
-</div>
-</div>
-</div>
+\[\mathbf{V} = \frac{\text{tr}(\boldsymbol{\sigma})}{3}\delta_{ij} \quad \text{and} \quad \mathbf{S} = \boldsymbol{\sigma} - \mathbf{V}\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">S2</span><span class="o">.</span><span class="n">hydrostatic</span>
@@ -615,6 +596,21 @@ direction as the normal vector <span class="math notranslate nohighlight">\(\bol
 [[-5.333  0.     0.   ]
  [ 0.    -5.333  0.   ]
  [ 0.     0.    -5.333]]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">S2</span><span class="o">.</span><span class="n">deviatoric</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Stress3
+[[ 1.583 -1.3    1.499]
+ [-1.3   -1.055 -1.856]
+ [ 1.499 -1.856 -0.528]]
 </pre></div>
 </div>
 </div>

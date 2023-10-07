@@ -130,20 +130,14 @@ S2.I1, S2.I2, S2.I3  # stress invariants
 
 ## Tensor decomposition
 
-A tensor decomposition is any scheme for expressing a tensor as a sequence of elementary operations acting on other, often simpler tensors. Many tensor decompositions generalize some matrix decompositions.
+Often it is convenient to decompose the stress tensor into volumetric $\mathbf{V}$ (also known as hydrostatic) and deviatoric $\mathbf{S}$ (distortional) parts. Applications of such decompositions can be found in metal plasticity, soil mechanics, and biomechanics.
 
-Decomposition of tensor to symmetric $\boldsymbol{D}$ and antisymmetric $\boldsymbol{W}$ part, where
-
-$$\boldsymbol{D} = \frac{1}{2}\left( \boldsymbol{T} + \boldsymbol{T}^T\,\right) \;\textsf{and }\; \boldsymbol{W} = \frac{1}{2}\left( \boldsymbol{T} - \boldsymbol{T}^T\,\right)$$
-
-Decomposition of tensor to deviatoric $\boldsymbol{S}$ and volumetric (also known as hydrostatic) part $\boldsymbol{V}$, where
-
-$$\boldsymbol{S} = \boldsymbol{T} - \frac{\text{tr}(\boldsymbol{T})}{3}\delta_{ij} \;\textsf{and }\; \boldsymbol{V} = \frac{\text{tr}(\boldsymbol{T})}{3}\delta_{ij}$$
-
-```{code-cell} ipython3
-S2.deviatoric
-```
+$$\mathbf{V} = \frac{\text{tr}(\boldsymbol{\sigma})}{3}\delta_{ij} \quad \text{and} \quad \mathbf{S} = \boldsymbol{\sigma} - \mathbf{V}$$
 
 ```{code-cell} ipython3
 S2.hydrostatic
+```
+
+```{code-cell} ipython3
+S2.deviatoric
 ```

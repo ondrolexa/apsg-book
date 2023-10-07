@@ -419,7 +419,11 @@ more than the other. While in rigid body mechanics, the concept of force is suff
 <li><p>1 MPa = 10<span class="math notranslate nohighlight">\(^6\)</span> Pa (megapascal)</p></li>
 <li><p>1 GPa = 10<span class="math notranslate nohighlight">\(^9\)</span> Pa (gigapascal)</p></li>
 </ul>
-<p>Other units are bars and atm: 1 MPa = 10<span class="math notranslate nohighlight">\(^6\)</span> Pa = 10 bars = 9.869232667 atm</p>
+<p>Other units are bar:</p>
+<ul class="simple">
+<li><p>1 bar = 10<span class="math notranslate nohighlight">\(^5\)</span> Pa</p></li>
+<li><p>1 kbar = 10<span class="math notranslate nohighlight">\(^8\)</span> Pa = 100 MPa</p></li>
+</ul>
 <p>The <strong>traction</strong> is a <strong>vector quantity</strong> that acts at a point on an imaginary or real surface of arbitrary orientation.</p>
 <div class="tip admonition">
 <p class="admonition-title">Cauchy reciprocal theorem</p>
@@ -436,17 +440,17 @@ of shear and normal components.</p>
 <a class="bg-primary mb-1 reference internal image-reference" href="../../_images/stress_onplane.png"><img alt="Stress on plane" class="bg-primary mb-1 align-center" src="../../_images/stress_onplane.png" style="width: 60%;" /></a>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><strong>Normal stress</strong>: The component of stress acting perpendicular to the plane (<span class="math notranslate nohighlight">\(\mathbf{\sigma}_n\)</span>)</p>
-<p><strong>Shear stress</strong>: The component of stress acting parallel to the plane (<span class="math notranslate nohighlight">\(\mathbf{\tau}_n\)</span>)</p>
+<p>A <strong>normal component</strong> of the traction vector (<span class="math notranslate nohighlight">\(\mathbf{\sigma}_n\)</span>) acting perpendicular to the plane.</p>
+<p>A <strong>shear component</strong> of the traction vector (<span class="math notranslate nohighlight">\(\mathbf{\tau}_n\)</span>) acting parallel to the plane.</p>
 </div>
-<p>The magnitude of the normal stress component <span class="math notranslate nohighlight">\(\mathbf{\sigma}_n\)</span> of any stress vector <span class="math notranslate nohighlight">\(\mathbf{t}\)</span> acting on an arbitrary
-plane with normal unit vector <span class="math notranslate nohighlight">\(\mathbf{n}\)</span> at a given point, could be calculated a scalar projection of the stress vector
-onto the normal unit vector:</p>
+<p>The magnitude of the normal component <span class="math notranslate nohighlight">\(\mathbf{\sigma}_n\)</span> (i.e. normal stress) of any traction vector <span class="math notranslate nohighlight">\(\mathbf{t}\)</span> acting on an arbitrary
+plane with unit normal vector <span class="math notranslate nohighlight">\(\mathbf{n}\)</span> at a given point, could be calculated a scalar projection of the stress vector
+onto the unit normal vector:</p>
 <div class="math notranslate nohighlight">
 \[\left\| \mathbf{\sigma}_n \right\| = \mathbf{t} \cdot \mathbf{n}\]</div>
 <div class="math notranslate nohighlight">
 \[\mathbf{\sigma}_n = \left\| \mathbf{\sigma}_n \right\|\mathbf{n}\]</div>
-<p>The magnitude of the shear stress component <span class="math notranslate nohighlight">\(\mathbf{\tau}_n\)</span>, acting in the plane spanned by the two vectors <span class="math notranslate nohighlight">\(\mathbf{t}\)</span> and
+<p>The magnitude of the shear component <span class="math notranslate nohighlight">\(\mathbf{\tau}_n\)</span> (i.e. shear stress), acting in the plane spanned by the two vectors <span class="math notranslate nohighlight">\(\mathbf{t}\)</span> and
 <span class="math notranslate nohighlight">\(\mathbf{\sigma}_n\)</span>, can then be found using the Pythagorean theorem:</p>
 <div class="math notranslate nohighlight">
 \[\left\| \mathbf{\tau} \right\| = \sqrt {{\left\| \mathbf{t} \right\|}^2 - {\left\| \mathbf{\sigma}_n \right\|}^2}\]</div>
@@ -469,7 +473,7 @@ onto the normal unit vector:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sn</span> <span class="o">=</span> <span class="n">T</span><span class="o">.</span><span class="n">proj</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>  <span class="c1"># project tranction vector T onto normal n - normal stress</span>
-<span class="nb">abs</span><span class="p">(</span><span class="n">sn</span><span class="p">)</span>  <span class="c1"># magnitude of normal stress</span>
+<span class="nb">abs</span><span class="p">(</span><span class="n">sn</span><span class="p">)</span>  <span class="c1"># normal stress magnitude</span>
 </pre></div>
 </div>
 </div>
@@ -482,7 +486,7 @@ onto the normal unit vector:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tau</span> <span class="o">=</span> <span class="n">T</span> <span class="o">-</span> <span class="n">sn</span>  <span class="c1"># shear stress</span>
-<span class="nb">abs</span><span class="p">(</span><span class="n">tau</span><span class="p">)</span>  <span class="c1"># magnitude of shear stress</span>
+<span class="nb">abs</span><span class="p">(</span><span class="n">tau</span><span class="p">)</span>  <span class="c1"># shear stress magnitude</span>
 </pre></div>
 </div>
 </div>

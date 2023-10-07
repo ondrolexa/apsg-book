@@ -471,7 +471,7 @@ n_2
 \[\mathbf{t} = \mathbf{t}_1 n_1 + \mathbf{t}_2 n_2 + \mathbf{t}_3 n_3\]</div>
 <div class="tip admonition">
 <p class="admonition-title">What is tensor</p>
-<p><strong>Tensors</strong> are algebraic objects that describe linear relationship between vectors, scalars, or tensors. Here, any linear connection between two physical vector quantities is called a <strong>tensor</strong>, reflecting original use to describe the “tensions” in a material (Cauchy).</p>
+<p><strong>Tensors</strong> are algebraic objects that describe linear relationship between vectors, scalars, or tensors. Here, any linear connection between two physical vector quantities is called a <strong>tensor</strong>, reflecting original use to describe the “tensions” in a material.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\left[{\begin{matrix} u_1 \\ u_2 \\ u_3 \end{matrix}}\right] = \left[{\begin{matrix}
     a_{11} &amp; a_{21} &amp; a_{31} \\
@@ -517,7 +517,7 @@ with nine components <span class="math notranslate nohighlight">\(\sigma_{ij}\)<
 </section>
 <section id="cauchy-s-stress-theorem">
 <h2>Cauchy’s stress theorem<a class="headerlink" href="#cauchy-s-stress-theorem" title="Permalink to this heading">#</a></h2>
-<p>According to Cauchy’s fundamental theorem, also called <strong>Cauchy’s stress theorem</strong>, merely by knowing the stress vectors on three mutually perpendicular planes, the stress vector on any other plane passing through that point can be found through coordinate transformation equations.</p>
+<p>According to Cauchy’s fundamental theorem, also called <strong>Cauchy’s stress theorem</strong>, merely by knowing the traction vectors on three mutually perpendicular planes, the stress vector on any other plane passing through that point can be found using transformation equation.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\mathbf{t} \equiv \left[{\begin{matrix} \mathbf{t}_1 &amp; \mathbf{t}_2 &amp; \mathbf{t}_3 \end{matrix}}\right] =
 \left[{\begin{matrix}
@@ -527,7 +527,7 @@ with nine components <span class="math notranslate nohighlight">\(\sigma_{ij}\)<
 \end{matrix}}\right] \cdot \left[{\begin{matrix} n_1 \\ n_2 \\ n_3 \end{matrix}}\right]
 \quad \text{or} \quad
 \mathbf{t} = \boldsymbol{\sigma} \cdot \mathbf{n}\end{split}\]</div>
-<p>This equation implies that the traction vector <span class="math notranslate nohighlight">\(\mathbf{t}\)</span> at any point <span class="math notranslate nohighlight">\(P\)</span> in a continuum associated with a plane with normal unit vector <span class="math notranslate nohighlight">\(\mathbf{n}\)</span>, can be expressed as a function of the tractions vectors on the planes perpendicular to the coordinate axes, i.e. stress tensor <span class="math notranslate nohighlight">\(\boldsymbol{\sigma}\)</span>.</p>
+<p>This equation implies that the traction vector <span class="math notranslate nohighlight">\(\mathbf{t}\)</span> at any point <span class="math notranslate nohighlight">\(P\)</span> in a continuum associated with a plane given by unit normal vector <span class="math notranslate nohighlight">\(\mathbf{n}\)</span>, can be expressed as a function of the traction vectors on the planes perpendicular to the coordinate axes, i.e. stress tensor <span class="math notranslate nohighlight">\(\boldsymbol{\sigma}\)</span>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">S</span> <span class="o">=</span> <span class="n">stress</span><span class="o">.</span><span class="n">from_comp</span><span class="p">(</span><span class="n">xx</span><span class="o">=-</span><span class="mi">8</span><span class="p">,</span> <span class="n">yy</span><span class="o">=-</span><span class="mi">6</span><span class="p">,</span> <span class="n">zz</span><span class="o">=-</span><span class="mi">2</span><span class="p">)</span>

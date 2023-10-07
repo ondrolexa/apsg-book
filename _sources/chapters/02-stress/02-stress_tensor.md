@@ -103,7 +103,7 @@ $$\mathbf{t} = \mathbf{t}_1 n_1 + \mathbf{t}_2 n_2 + \mathbf{t}_3 n_3$$
 
 ```{admonition} What is tensor
 :class: tip
-**Tensors** are algebraic objects that describe linear relationship between vectors, scalars, or tensors. Here, any linear connection between two physical vector quantities is called a **tensor**, reflecting original use to describe the "tensions" in a material (Cauchy).
+**Tensors** are algebraic objects that describe linear relationship between vectors, scalars, or tensors. Here, any linear connection between two physical vector quantities is called a **tensor**, reflecting original use to describe the "tensions" in a material.
 
 $$\left[{\begin{matrix} u_1 \\ u_2 \\ u_3 \end{matrix}}\right] = \left[{\begin{matrix}
     a_{11} & a_{21} & a_{31} \\
@@ -158,7 +158,7 @@ The first index $i$ indicates that the stress acts on a plane normal to the $x_i
 
 ## Cauchy's stress theorem
 
-According to Cauchy’s fundamental theorem, also called **Cauchy's stress theorem**, merely by knowing the stress vectors on three mutually perpendicular planes, the stress vector on any other plane passing through that point can be found through coordinate transformation equations.
+According to Cauchy’s fundamental theorem, also called **Cauchy's stress theorem**, merely by knowing the traction vectors on three mutually perpendicular planes, the stress vector on any other plane passing through that point can be found using transformation equation.
 
 $$\mathbf{t} \equiv \left[{\begin{matrix} \mathbf{t}_1 & \mathbf{t}_2 & \mathbf{t}_3 \end{matrix}}\right] =
 \left[{\begin{matrix}
@@ -169,7 +169,7 @@ $$\mathbf{t} \equiv \left[{\begin{matrix} \mathbf{t}_1 & \mathbf{t}_2 & \mathbf{
 \quad \text{or} \quad
 \mathbf{t} = \boldsymbol{\sigma} \cdot \mathbf{n}$$
 
-This equation implies that the traction vector $\mathbf{t}$ at any point $P$ in a continuum associated with a plane with normal unit vector $\mathbf{n}$, can be expressed as a function of the tractions vectors on the planes perpendicular to the coordinate axes, i.e. stress tensor $\boldsymbol{\sigma}$.
+This equation implies that the traction vector $\mathbf{t}$ at any point $P$ in a continuum associated with a plane given by unit normal vector $\mathbf{n}$, can be expressed as a function of the traction vectors on the planes perpendicular to the coordinate axes, i.e. stress tensor $\boldsymbol{\sigma}$.
 
 ```{code-cell} ipython3
 S = stress.from_comp(xx=-8, yy=-6, zz=-2)

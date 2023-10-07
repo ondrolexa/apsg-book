@@ -55,7 +55,9 @@ The unit of stress is Pascal [Pa] or Newtons per square meter [$\frac{N}{m^2}$].
  - 1 MPa = 10$^6$ Pa (megapascal)
  - 1 GPa = 10$^9$ Pa (gigapascal)
 
-Other units are bars and atm: 1 MPa = 10$^6$ Pa = 10 bars = 9.869232667 atm
+Other units are bar:
+ - 1 bar = 10$^5$ Pa
+ - 1 kbar = 10$^8$ Pa = 100 MPa
 
 The **traction** is a **vector quantity** that acts at a point on an imaginary or real surface of arbitrary orientation.
 
@@ -86,20 +88,20 @@ $$\mathbf{t} = \mathbf{\sigma}_n + \mathbf{\tau}_{x_1} + \mathbf{\tau}_{x_1} = \
 ```
 
 ```{note}
-**Normal stress**: The component of stress acting perpendicular to the plane ($\mathbf{\sigma}_n$)
+A **normal component** of the traction vector ($\mathbf{\sigma}_n$) acting perpendicular to the plane.
 
-**Shear stress**: The component of stress acting parallel to the plane ($\mathbf{\tau}_n$)
+A **shear component** of the traction vector ($\mathbf{\tau}_n$) acting parallel to the plane.
 ```
 
-The magnitude of the normal stress component $\mathbf{\sigma}_n$ of any stress vector $\mathbf{t}$ acting on an arbitrary
-plane with normal unit vector $\mathbf{n}$ at a given point, could be calculated a scalar projection of the stress vector
-onto the normal unit vector:
+The magnitude of the normal component $\mathbf{\sigma}_n$ (i.e. normal stress) of any traction vector $\mathbf{t}$ acting on an arbitrary
+plane with unit normal vector $\mathbf{n}$ at a given point, could be calculated a scalar projection of the stress vector
+onto the unit normal vector:
 
 $$\left\| \mathbf{\sigma}_n \right\| = \mathbf{t} \cdot \mathbf{n}$$
 
 $$\mathbf{\sigma}_n = \left\| \mathbf{\sigma}_n \right\|\mathbf{n}$$
 
-The magnitude of the shear stress component $\mathbf{\tau}_n$, acting in the plane spanned by the two vectors $\mathbf{t}$ and
+The magnitude of the shear component $\mathbf{\tau}_n$ (i.e. shear stress), acting in the plane spanned by the two vectors $\mathbf{t}$ and
 $\mathbf{\sigma}_n$, can then be found using the Pythagorean theorem:
 
 $$\left\| \mathbf{\tau} \right\| = \sqrt {{\left\| \mathbf{t} \right\|}^2 - {\left\| \mathbf{\sigma}_n \right\|}^2}$$
@@ -114,12 +116,12 @@ T.dot(n)  # normal stress magnitude
 
 ```{code-cell} ipython3
 sn = T.proj(n)  # project tranction vector T onto normal n - normal stress
-abs(sn)  # magnitude of normal stress
+abs(sn)  # normal stress magnitude
 ```
 
 ```{code-cell} ipython3
 tau = T - sn  # shear stress
-abs(tau)  # magnitude of shear stress
+abs(tau)  # shear stress magnitude
 ```
 
 or we can use vector rejection:

@@ -410,8 +410,8 @@ more than the other. While in rigid body mechanics, the concept of force is suff
 <h2>Traction<a class="headerlink" href="#traction" title="Permalink to this heading">#</a></h2>
 <p>Simplifying assumptions are often used to represent force acting on area as <strong>traction vector</strong> - simply the force vector divided by that area.</p>
 <div class="math notranslate nohighlight">
-\[\boldsymbol{T} = \frac{\boldsymbol{F}}{A}\]</div>
-<p><span class="math notranslate nohighlight">\(\boldsymbol{T}\)</span> has units of stress, but as it is a vector, all the usual rules for vectors apply to it.</p>
+\[\mathbf{t} = \frac{\mathbf{f}}{A}\]</div>
+<p><span class="math notranslate nohighlight">\(\mathbf{t}\)</span> has units of stress, but as it is a vector, all the usual rules for vectors apply to it.</p>
 <p>The unit of stress is Pascal [Pa] or Newtons per square meter [<span class="math notranslate nohighlight">\(\frac{N}{m^2}\)</span>]. A stress of 1 Pa is very small, for example, the load due to 1m of water is about 10<span class="math notranslate nohighlight">\(^4\)</span> Pa. So, in geology we often use metric prefixes:</p>
 <ul class="simple">
 <li><p>1 hPa = 10<span class="math notranslate nohighlight">\(^2\)</span> Pa (hektopascal)</p></li>
@@ -429,25 +429,29 @@ more than the other. While in rigid body mechanics, the concept of force is suff
 </section>
 <section id="stress-components">
 <h2>Stress components<a class="headerlink" href="#stress-components" title="Permalink to this heading">#</a></h2>
-<p>In general, a stress acting on a plane represented by traction <span class="math notranslate nohighlight">\(\boldsymbol{T}^{(\boldsymbol{n})}\)</span> may be expressed as a sum
+<p>In general, a stress acting on a plane represented by traction <span class="math notranslate nohighlight">\(\mathbf{t}\)</span> may be expressed as a sum
 of shear and normal components.</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{t} = \mathbf{\sigma}_n + \mathbf{\tau}_{x_1} + \mathbf{\tau}_{x_1} = \mathbf{\sigma}_n + \mathbf{\tau}_n\]</div>
 <a class="bg-primary mb-1 reference internal image-reference" href="../../_images/stress_onplane.png"><img alt="Stress on plane" class="bg-primary mb-1 align-center" src="../../_images/stress_onplane.png" style="width: 60%;" /></a>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><strong>Normal stress</strong>: The component of stress acting perpendicular to the plane</p>
-<p><strong>Shear stress</strong>: The component of stress acting parallel to the plane</p>
+<p><strong>Normal stress</strong>: The component of stress acting perpendicular to the plane (<span class="math notranslate nohighlight">\(\mathbf{\sigma}_n\)</span>)</p>
+<p><strong>Shear stress</strong>: The component of stress acting parallel to the plane (<span class="math notranslate nohighlight">\(\mathbf{\tau}_n\)</span>)</p>
 </div>
-<p>The magnitude of the normal stress component <span class="math notranslate nohighlight">\(\sigma _n\)</span> of any stress vector <span class="math notranslate nohighlight">\(\boldsymbol{T}^{(\boldsymbol{n})}\)</span> acting on an arbitrary
-plane with normal unit vector <span class="math notranslate nohighlight">\(n\)</span> at a given point, in terms of the stress tensor <span class="math notranslate nohighlight">\(\boldsymbol{\sigma}\)</span>, could be calculated a scalar projection of the stress vector onto the normal unit vector:</p>
+<p>The magnitude of the normal stress component <span class="math notranslate nohighlight">\(\mathbf{\sigma}_n\)</span> of any stress vector <span class="math notranslate nohighlight">\(\mathbf{t}\)</span> acting on an arbitrary
+plane with normal unit vector <span class="math notranslate nohighlight">\(\mathbf{n}\)</span> at a given point, could be calculated a scalar projection of the stress vector
+onto the normal unit vector:</p>
 <div class="math notranslate nohighlight">
-\[\left\| {{{\vec \sigma }_n}} \right\| = {{\bf{T}}^{\left( {\bf{n}} \right)}} \cdot \bf{n}\]</div>
+\[\left\| \mathbf{\sigma}_n \right\| = \mathbf{t} \cdot \mathbf{n}\]</div>
 <div class="math notranslate nohighlight">
-\[{{\vec \sigma }_n} = \left\| {{{\vec \sigma }_n}} \right\|\bf{n}\]</div>
-<p>The magnitude of the shear stress component <span class="math notranslate nohighlight">\(\tau_n\)</span>, acting in the plane spanned by the two vectors <span class="math notranslate nohighlight">\(\boldsymbol{T}^{(\boldsymbol{n})}\)</span> and <span class="math notranslate nohighlight">\(n\)</span>, can then be found using the Pythagorean theorem:</p>
+\[\mathbf{\sigma}_n = \left\| \mathbf{\sigma}_n \right\|\mathbf{n}\]</div>
+<p>The magnitude of the shear stress component <span class="math notranslate nohighlight">\(\mathbf{\tau}_n\)</span>, acting in the plane spanned by the two vectors <span class="math notranslate nohighlight">\(\mathbf{t}\)</span> and
+<span class="math notranslate nohighlight">\(\mathbf{\sigma}_n\)</span>, can then be found using the Pythagorean theorem:</p>
 <div class="math notranslate nohighlight">
-\[\left\| {{{\vec \tau }_n}} \right\| = \sqrt {{{\left\| {{{\bf{T}}^{\left( {\bf{n}} \right)}}} \right\|}^2} - {{\left\| {{{\vec \sigma }_n}} \right\|}^2}}\]</div>
+\[\left\| \mathbf{\tau} \right\| = \sqrt {{\left\| \mathbf{t} \right\|}^2 - {\left\| \mathbf{\sigma}_n \right\|}^2}\]</div>
 <div class="math notranslate nohighlight">
-\[{{\vec \tau }_n} = {{\bf{T}}^{\left( {\bf{n}} \right)}} - {{\vec \sigma }_n}\]</div>
+\[\mathbf{\tau}_n = \mathbf{t} - \mathbf{\sigma}_n\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="n">fol</span><span class="p">(</span><span class="mi">150</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
@@ -508,7 +512,7 @@ plane with normal unit vector <span class="math notranslate nohighlight">\(n\)</
 <p>It must be noted that the stresses in most 2-D or 3-D solids are actually more complex and need be defined more methodically.</p>
 <p>The internal force acting on a small area of a plane represented by traction vector can be resolved into normal and shear stress components. These stresses are average stresses as the area is finite, but when the area is allowed to approach zero, the stresses become stresses at a point.</p>
 <p>Since stresses are defined in relation to the plane that passes through the point under consideration, and the number of such planes is infinite, there appear an infinite set of stresses at a point.</p>
-<p>Fortunately, it can be proven that the stresses on any plane can be computed from the stresses on three orthogonal planes passing through the point… and <strong>tensors</strong> will help us.</p>
+<p>Fortunately, it can be proven that the stresses on any plane can be computed from the stresses on three orthogonal planes passing through the point. This will bring us to the definition of the <strong>stress tensor</strong>…</p>
 </section>
 </section>
 

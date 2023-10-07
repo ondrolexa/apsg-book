@@ -73,7 +73,7 @@ $$ \begin{bmatrix}x \\ y\end{bmatrix}=\begin{bmatrix} a & b \\ c & d \end{bmatri
 
 or
 
-$$\vec{x}=\boldsymbol{F}\vec{X}$$
+$$\mathbf{x}=\boldsymbol{F}\mathbf{X}$$
 
 where $\boldsymbol{F}$ is so called **deformation gradient**.
 
@@ -92,7 +92,7 @@ $$\begin{bmatrix}u \\ v\end{bmatrix}=\begin{bmatrix} a-1 & b \\ c & d-1 \end{bma
 
 or
 
-$$\vec{u}=(\boldsymbol{F}-\boldsymbol{I})\vec{X}=(\boldsymbol{\nabla u})\vec{X}$$
+$$\mathbf{u}=(\boldsymbol{F}-\boldsymbol{I})\mathbf{X}=(\boldsymbol{\nabla u})\mathbf{X}$$
 
 where $\boldsymbol{\nabla}\boldsymbol{u}$ is so called **displacement gradient**.
 

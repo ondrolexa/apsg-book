@@ -25,8 +25,8 @@ structural geology are vectors.
 
 Because structural geometry is three dimensional, all of our vectors will have three
 components. Each of the three numbers that define a vector refer to a specific coordinate axis:
-for example, $u_2$ (or $u_y$) is the value of our vector, $\boldsymbol{u}$, projected onto the second axis of the
-coordinate system, $X_2$ or $Y$. In a **NED** coordinate system, $u_2$ is the projection of $\boldsymbol{u}$ onto the
+for example, $u_2$ (or $u_y$) is the value of our vector, $\mathbf{u}$, projected onto the second axis of the
+coordinate system, $X_2$ or $Y$. In a **NED** coordinate system, $u_2$ is the projection of $\mathbf{u}$ onto the
 East axis, but in an **ENU** coordinate system, $u_2$ is u projected onto the North axis. Therefore,
 the numbers that define a vector depend on the specific coordinate system. We write out
 vector as:
@@ -42,7 +42,7 @@ v = vec(1, 2, -1)
 
 One of the most fundamental characteristics of a vector is its length or **magnitude**. Magnitude is a scalar quantity because it has no directional significance and furthermore, it is the same in all coordinate systems. The magnitude is given by:
 
-$$\left | \boldsymbol{u} \right |=\sqrt{{u_1}^2+{u_2}^2+{u_3}^2}$$
+$$\left | \mathbf{u} \right |=\sqrt{{u_1}^2+{u_2}^2+{u_3}^2}$$
 
 In two dimensions, you can see that the magnitude is calculated from the Pythagorean theorem which gives the length of a hypotenuse as the square root of the sum of the squares of the two sides. The extension to three dimensions is straightforward.
 
@@ -69,13 +69,13 @@ abs(u)
 But, what if we don’t care about the magnitude? What if we are only interested in the orientation of our vector? It is convenient to represent direction by **unit vector**, i.e. the vector with length of one.
 Any vector could be normalized to **unit vector** by dividing each of it's components by its magnitude.
 
-$${\boldsymbol{\hat u}} = \frac{{\boldsymbol{u}}}{{\left\| {\boldsymbol{u}} \right\|}} = {\boldsymbol{i}}\frac{{{u_1}}}{{\left\| {\boldsymbol{u}} \right\|}} + {\boldsymbol{j}}\frac{{{u_2}}}{{\left\| {\boldsymbol{u}} \right\|}} + {\boldsymbol{k}}\frac{{{u_3}}}{{\left\| {\boldsymbol{u}} \right\|}}$$
+$${\mathbf{\hat u}} = \frac{{\mathbf{u}}}{{\left\| {\mathbf{u}} \right\|}} = {\mathbf{i}}\frac{{{u_1}}}{{\left\| {\mathbf{u}} \right\|}} + {\mathbf{j}}\frac{{{u_2}}}{{\left\| {\mathbf{u}} \right\|}} + {\mathbf{k}}\frac{{{u_3}}}{{\left\| {\mathbf{u}} \right\|}}$$
 
 The projection of a unit vector onto a coordinate axis is just equal to the cosine of the angle that the vector makes with that axis.
 
 Thus, the components of a unit vector are:
 
-$${\boldsymbol{\hat u}} = \begin{bmatrix} \cos (\alpha ) & \cos (\beta ) & \cos (\gamma ) \end{bmatrix}$$
+$${\mathbf{\hat u}} = \begin{bmatrix} \cos (\alpha ) & \cos (\beta ) & \cos (\gamma ) \end{bmatrix}$$
 
 ```{code-cell} ipython3
 u.normalized()
@@ -108,11 +108,11 @@ u + v
 
 Geometrically, it is the product of the magnitudes of the two vectors and the cosine of the angle between them.
 
-$$\boldsymbol u\cdot\boldsymbol v = \|\boldsymbol u\|\,\|\boldsymbol v\|\cos\theta$$
+$$\mathbf u\cdot\mathbf v = \|\mathbf u\|\,\|\mathbf v\|\cos\theta$$
 
 Algebraically, it is the sum of the products of the corresponding entries of the two sequences of numbers.
 
-$$\boldsymbol{u}\cdot \boldsymbol{v} = \sum_{i=1}^n u_iv_i = u_1v_1 + u_2v_2 + \cdots + u_nv_n$$
+$$\mathbf{u}\cdot \mathbf{v} = \sum_{i=1}^n u_iv_i = u_1v_1 + u_2v_2 + \cdots + u_nv_n$$
 
 Two vectors are orthogonal if the dot product of those two vectors is equal to zero.
 
@@ -122,7 +122,7 @@ u.dot(v)
 
 ## Vector projection
 
-The **vector projection** of a vector $\boldsymbol{u}$ on a nonzero vector $\boldsymbol{v}$ (also known as the *vector component* of $\boldsymbol{u}$ in the direction of $\boldsymbol{u}$) is the orthogonal projection of $\boldsymbol{u}$ onto a straight line parallel to $\boldsymbol{v}$. It is a vector parallel to $\boldsymbol{v}$, defined as:
+The **vector projection** of a vector $\mathbf{u}$ on a nonzero vector $\mathbf{v}$ (also known as the *vector component* of $\mathbf{u}$ in the direction of $\mathbf{u}$) is the orthogonal projection of $\mathbf{u}$ onto a straight line parallel to $\mathbf{v}$. It is a vector parallel to $\mathbf{v}$, defined as:
 
 ```{image} figures/Dot_Product.png
 :alt: Vector projection
@@ -131,15 +131,15 @@ The **vector projection** of a vector $\boldsymbol{u}$ on a nonzero vector $\bol
 :align: center
 ```
 
-$$\boldsymbol{u}_1 = u_1\boldsymbol{\hat v} = u_1\frac {\boldsymbol{v}} {\|\boldsymbol{v}\|},$$
+$$\mathbf{u}_1 = u_1\mathbf{\hat v} = u_1\frac {\mathbf{v}} {\|\mathbf{v}\|},$$
 
 where $u_1$ is **scalar projection**. Using definition of cosine in right-angled triangle and **dot product** definition, we can write:
 
-$$u_1 = \|\boldsymbol{u}\| \cos \theta = \frac {\boldsymbol{u} \cdot \boldsymbol{v}} {\|\boldsymbol{v}\| }$$
+$$u_1 = \|\mathbf{u}\| \cos \theta = \frac {\mathbf{u} \cdot \mathbf{v}} {\|\mathbf{v}\| }$$
 
 Consequently,
 
-$$\boldsymbol{u}_1 = u_1\frac {\boldsymbol{v}} {\|\boldsymbol{v}\|} = \frac {\boldsymbol{u} \cdot \boldsymbol{v}} {\|\boldsymbol{v}\| } \frac {\boldsymbol{v}} {\|\boldsymbol{v}\|} = \frac {\boldsymbol{u} \cdot \boldsymbol{v}} {\|\boldsymbol{v}\|^2}{\boldsymbol{v}} = \frac {\boldsymbol{u} \cdot \boldsymbol{v}} {\boldsymbol{v} \cdot \boldsymbol{v}}{\boldsymbol{v}}$$
+$$\mathbf{u}_1 = u_1\frac {\mathbf{v}} {\|\mathbf{v}\|} = \frac {\mathbf{u} \cdot \mathbf{v}} {\|\mathbf{v}\| } \frac {\mathbf{v}} {\|\mathbf{v}\|} = \frac {\mathbf{u} \cdot \mathbf{v}} {\|\mathbf{v}\|^2}{\mathbf{v}} = \frac {\mathbf{u} \cdot \mathbf{v}} {\mathbf{v} \cdot \mathbf{v}}{\mathbf{v}}$$
 
 ```{code-cell} ipython3
 u.proj(v)
@@ -147,7 +147,7 @@ u.proj(v)
 
 ## Cross product
 
-The **cross product** $\boldsymbol{u} \times \boldsymbol{v}$ is defined as a vector that is perpendicular to both $\boldsymbol{u}$ and $\boldsymbol{v}$, with a direction given by the right-hand rule and a magnitude equal to the area of the parallelogram that the vectors span.
+The **cross product** $\mathbf{u} \times \mathbf{v}$ is defined as a vector that is perpendicular to both $\mathbf{u}$ and $\mathbf{v}$, with a direction given by the right-hand rule and a magnitude equal to the area of the parallelogram that the vectors span.
 
 ```{image} figures/Cross_product_vector.png
 :alt: Cross product
@@ -158,15 +158,15 @@ The **cross product** $\boldsymbol{u} \times \boldsymbol{v}$ is defined as a vec
 
 The cross product is defined by the formula
 
-$$\boldsymbol{u} \times \boldsymbol{v} = \left\| \boldsymbol{u} \right\| \left\| \boldsymbol{v} \right\| \sin \theta \ \boldsymbol{n}$$
+$$\mathbf{u} \times \mathbf{v} = \left\| \mathbf{u} \right\| \left\| \mathbf{v} \right\| \sin \theta \ \mathbf{n}$$
 
 or in **matrix notation**
 
-$$\boldsymbol{u\times v}=\begin{vmatrix} \boldsymbol{i}&\boldsymbol{j}&\boldsymbol{k}\\ u_1&u_2&u_3\\ v_1&v_2&v_3\\ \end{vmatrix}$$
+$$\mathbf{u\times v}=\begin{vmatrix} \mathbf{i}&\mathbf{j}&\mathbf{k}\\ u_1&u_2&u_3\\ v_1&v_2&v_3\\ \end{vmatrix}$$
 
 The cross product is *anticommutative*
 
-$$\boldsymbol{u} \times \boldsymbol{v} = -(\boldsymbol{v} \times \boldsymbol{u})$$
+$$\mathbf{u} \times \mathbf{v} = -(\mathbf{v} \times \mathbf{u})$$
 
 ```{code-cell} ipython3
 u.cross(v)
@@ -175,8 +175,9 @@ u.cross(v)
 ## Vectors in geology
 
 The compass measurements are commonly in **spherical coordinates** i.e. *trend*
-or *dip direction* ($\theta$) and *plunge* or *dip* ($\varphi$). *Plunge* is used
-to describe the tilt of lines, the word *dip* being reserved for planes.
+or *dip direction* ($\theta$) and *plunge* or *dip* ($\varphi$). *Trend* and *plunge*
+is used to describe the orientation of lines, while *dip direction* and *dip* being
+reserved for planes.
 
 ```{image} figures/Geo_coordinates_en.png
 :alt: Coordinate transformation in geology
@@ -185,11 +186,14 @@ to describe the tilt of lines, the word *dip* being reserved for planes.
 :align: center
 ```
 
-The linear feature has (a) the plunge direction or trend and (b) the angle of plunge.
-The plunge direction is the direction towards which the line is tilted.
-The angle of plunge is the amount of tilt; it is the angle, measured in the
-vertical plane, that the plunging line makes with the horizontal. The angle of
-plunge of a horizontal line is 0° and the angle of plunge of a vertical line is 90°. 
+### Linear features
+
+The linear feature has the *trend* or *plunge direction* ($\theta$) and the
+*plunge* ($\varphi$). The *trend* or *plunge direction* is the direction towards
+which the line is tilted. The *plunge* is the amount of tilt;
+it is the angle, measured in the vertical plane, that the plunging line makes
+with the horizontal. The *plunge* of a horizontal line is 0° and
+the *plunge* of a vertical line is 90°. 
 
 Linear features (lines) are represented as vector:
 
@@ -199,12 +203,14 @@ u_2&=&\sin(\theta)\cos(\varphi)\\
 u_3&=&\sin(\varphi)
 \end{aligned}$$
 
-Planar fetaure that is not horizontal is said to dip. There are two aspects to
-the dip of a plane (a) the direction of dip, which is the compass direction
-towards which the plane slopes; and (b) the angle of dip, which is the angle
-that the plane makes with a horizontal plane. The direction of dip can be
+### Planar features
+
+Planar feature that is not horizontal is said to dip. There are two aspects to
+the dip of a plane the *dip direction* ($\theta$), which is the compass direction
+towards which the plane slopes; and the *dip* ($\varphi$), which is the angle
+that the plane makes with a horizontal plane. The *dip direction* can be
 visualized as the direction in which water would flow if poured onto the
-plane. The angle of dip is an angle between 0° (for horizontal planes) and 90°
+plane. The *dip* is an angle between 0° (for horizontal planes) and 90°
 (for vertical planes).
 
 Planar features (planes) are represented by normal vector:
@@ -215,13 +221,14 @@ p_2&=&-\sin(\theta)\sin(\varphi)\\
 p_3&=&\cos(\varphi)
 \end{aligned}$$
 
-With APSG the 3D vector could be defined using trend and plunge notation:
+With APSG the 3D vector could be defined using *trend* and *plunge* notation:
 
 ```{code-cell} ipython3
 v = vec(130, 20)
 ```
 
-while linear and planar features could be defined as lineation or foliation
+while linear and planar features could be defined as lineation or foliation, using
+*trend* and *plunge* or *dip direction* and *dip*.
 
 ```{code-cell} ipython3
 l = lin(120, 40)

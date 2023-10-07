@@ -381,8 +381,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-transformations">Matrix Transformations</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transpose-and-inverse-of-matrix-product">Transpose and inverse of matrix product</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matrices-as-functions-transformation-matrix">Matrices as functions - transformation matrix</a></li>
 </ul>
             </nav>
         </div>
@@ -401,8 +400,8 @@ document.write(`
 <p>Informally, <em>function</em> is a rule that accepts inputs and produces outputs. For instance, <span class="math notranslate nohighlight">\(f(x)=x^2\)</span> is a function that accepts one number <span class="math notranslate nohighlight">\(x\)</span> as its input, and outputs the square of that number: <span class="math notranslate nohighlight">\(f(2)=4\)</span>.</p>
 <p>Consider the matrix equation:</p>
 <div class="math notranslate nohighlight">
-\[\boldsymbol{v} = \boldsymbol{A}\boldsymbol{u}\]</div>
-<p>If we vary <span class="math notranslate nohighlight">\(\boldsymbol{u}\)</span>, then <span class="math notranslate nohighlight">\(\boldsymbol{v}\)</span> will also vary; in this way, we think of <span class="math notranslate nohighlight">\(\boldsymbol{A}\)</span> as <em>function</em> with independent variable <span class="math notranslate nohighlight">\(\boldsymbol{u}\)</span> (which is a vector in <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span>) and dependent variable <span class="math notranslate nohighlight">\(\boldsymbol{v}\)</span> (which is a vector in <span class="math notranslate nohighlight">\(\mathbb{R}^m\)</span>).</p>
+\[\mathbf{v} = \mathbf{A}\mathbf{u}\]</div>
+<p>If we vary <span class="math notranslate nohighlight">\(\mathbf{u}\)</span>, then <span class="math notranslate nohighlight">\(\mathbf{v}\)</span> will also vary; in this way, we think of <span class="math notranslate nohighlight">\(\mathbf{A}\)</span> as <em>function</em> with independent variable <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> (which is a vector in <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span>) and dependent variable <span class="math notranslate nohighlight">\(\mathbf{v}\)</span> (which is a vector in <span class="math notranslate nohighlight">\(\mathbb{R}^m\)</span>).</p>
 <p>At this point it is convenient to fix our ideas and terminology regarding <em>functions</em>, which we will call <strong>transformations</strong>. This allows us to systematize our discussion of <strong>matrices as functions</strong>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -418,25 +417,24 @@ document.write(`
 </div>
 </div>
 </div>
-<section id="matrix-transformations">
-<h2>Matrix Transformations<a class="headerlink" href="#matrix-transformations" title="Permalink to this heading">#</a></h2>
-<p>If <span class="math notranslate nohighlight">\(\boldsymbol{A}\)</span> has <span class="math notranslate nohighlight">\(n\)</span> columns, then it only makes sense to multiply <span class="math notranslate nohighlight">\(\boldsymbol{A}\)</span> by vectors with <span class="math notranslate nohighlight">\(n\)</span> entries. This is why the domain of transformation is <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span>. If <span class="math notranslate nohighlight">\(\boldsymbol{A}\)</span> has <span class="math notranslate nohighlight">\(m\)</span> rows, then <span class="math notranslate nohighlight">\(\boldsymbol{A}\boldsymbol{u}\)</span> has <span class="math notranslate nohighlight">\(m\)</span> entries for any vector <span class="math notranslate nohighlight">\(\boldsymbol{u}\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span>; this is why the codomain of transformation is <span class="math notranslate nohighlight">\(\mathbb{R}^m\)</span>.</p>
-<p>Suppose that <span class="math notranslate nohighlight">\(\boldsymbol{A}\)</span> has columns <span class="math notranslate nohighlight">\(v_1, v_1, \dots v_n\)</span>,. If we multiply <span class="math notranslate nohighlight">\(\boldsymbol{A}\)</span> by a general vector <span class="math notranslate nohighlight">\(\boldsymbol{u}\)</span>, we get:</p>
+<section id="matrices-as-functions-transformation-matrix">
+<h2>Matrices as functions - transformation matrix<a class="headerlink" href="#matrices-as-functions-transformation-matrix" title="Permalink to this heading">#</a></h2>
+<p>If <span class="math notranslate nohighlight">\(\mathbf{A}\)</span> has <span class="math notranslate nohighlight">\(n\)</span> columns, then it only makes sense to multiply <span class="math notranslate nohighlight">\(\mathbf{A}\)</span> by vectors with <span class="math notranslate nohighlight">\(n\)</span> entries. This is why the domain of transformation is <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span>. If <span class="math notranslate nohighlight">\(\mathbf{A}\)</span> has <span class="math notranslate nohighlight">\(m\)</span> rows, then <span class="math notranslate nohighlight">\(\mathbf{A}\mathbf{u}\)</span> has <span class="math notranslate nohighlight">\(m\)</span> entries for any vector <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span>; this is why the codomain of transformation is <span class="math notranslate nohighlight">\(\mathbb{R}^m\)</span>.</p>
+<p>Suppose that <span class="math notranslate nohighlight">\(\mathbf{A}\)</span> has columns <span class="math notranslate nohighlight">\(v_1, v_1, \dots v_n\)</span>,. If we multiply <span class="math notranslate nohighlight">\(\mathbf{A}\)</span> by a general vector <span class="math notranslate nohighlight">\(\mathbf{u}\)</span>, we get:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\boldsymbol{A}\boldsymbol{u}=\begin{pmatrix}| &amp; | &amp;  &amp; | \\ v_1 &amp; v_2 &amp; \dots &amp; v_3\\ | &amp; | &amp;  &amp; | \end{pmatrix}\begin{pmatrix}u_1\\ u_2\\ \vdots \\ u_n\end{pmatrix}= u_1v_1 + u_2v_2 + \dots + u_nv_n\end{split}\]</div>
-<p>This is just a general linear combination of <span class="math notranslate nohighlight">\(v_1, v_1, \dots v_n\)</span>. Therefore, the outputs of matrix transformations are exactly the linear combinations of the columns of transformation matrix <span class="math notranslate nohighlight">\(\boldsymbol{A}\)</span>.</p>
-</section>
-<section id="transpose-and-inverse-of-matrix-product">
-<h2>Transpose and inverse of matrix product<a class="headerlink" href="#transpose-and-inverse-of-matrix-product" title="Permalink to this heading">#</a></h2>
-<p>Following identities are used very often in linear algebra:</p>
+\[\begin{split}\mathbf{A}\mathbf{u}=\begin{pmatrix}| &amp; | &amp;  &amp; | \\ v_1 &amp; v_2 &amp; \dots &amp; v_3\\ | &amp; | &amp;  &amp; | \end{pmatrix}\begin{pmatrix}u_1\\ u_2\\ \vdots \\ u_n\end{pmatrix}= u_1v_1 + u_2v_2 + \dots + u_nv_n\end{split}\]</div>
+<p>This is just a general linear combination of <span class="math notranslate nohighlight">\(v_1, v_1, \dots v_n\)</span>. Therefore, the outputs of matrix transformations are exactly the linear combinations of the columns of <em>transformation matrix</em> <span class="math notranslate nohighlight">\(\mathbf{A}\)</span>.</p>
+<div class="tip admonition">
+<p class="admonition-title">Useful identities</p>
+<p>Following identities are often used in linear algebra:</p>
 <div class="math notranslate nohighlight">
-\[(\mathbf{A}\mathbf{B})^T = \mathbf{B}^T\mathbf{A}^T\]</div>
-<div class="math notranslate nohighlight">
-\[(\mathbf{A}\mathbf{B})^{-1} = \mathbf{B}^{-1}\mathbf{A}^{-1}\]</div>
-<div class="math notranslate nohighlight">
-\[(\mathbf{A}^T)^{-1} = (\mathbf{A}^{-1})^T = \mathbf{A}^{-T}\]</div>
-<div class="math notranslate nohighlight">
-\[((\mathbf{A}\mathbf{B})^{-1})^T = ((\mathbf{A}\mathbf{B})^T)^{-1} = (\mathbf{B}^{-1}\mathbf{A}^{-1})^T = \mathbf{A}^{-T}\mathbf{B}^{-T}\]</div>
+\[\begin{split}\begin{aligned}
+(\mathbf{A}\mathbf{B})^T &amp;= \mathbf{B}^T\mathbf{A}^T\\
+(\mathbf{A}\mathbf{B})^{-1} &amp;= \mathbf{B}^{-1}\mathbf{A}^{-1}\\
+(\mathbf{A}^T)^{-1} &amp;= (\mathbf{A}^{-1})^T = \mathbf{A}^{-T}\\
+((\mathbf{A}\mathbf{B})^{-1})^T &amp;= ((\mathbf{A}\mathbf{B})^T)^{-1} = (\mathbf{B}^{-1}\mathbf{A}^{-1})^T = \mathbf{A}^{-T}\mathbf{B}^{-T}
+\end{aligned}\end{split}\]</div>
+</div>
 </section>
 </section>
 
@@ -503,8 +501,7 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-transformations">Matrix Transformations</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transpose-and-inverse-of-matrix-product">Transpose and inverse of matrix product</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matrices-as-functions-transformation-matrix">Matrices as functions - transformation matrix</a></li>
 </ul>
   </nav></div>
 

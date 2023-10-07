@@ -43,7 +43,7 @@ referenced from. Often, the configuration at $t=0$ is considered the reference c
 :align: center
 ```
 
-The components $x_i$ of the position vector $\vec{x}$ of a particle, taken with respect to the reference
+The components $x_i$ of the position vector $\mathbf{x}$ of a particle, taken with respect to the reference
 configuration, are called the **material or reference coordinates**.
 
 ```{image} figures/displacement_simple.png
@@ -55,19 +55,19 @@ configuration, are called the **material or reference coordinates**.
 
 The displacement of first point is decribed as:
 
-$$\vec{x} = \vec{X} + \vec{u}(\vec{X})$$
+$$\mathbf{x} = \mathbf{X} + \mathbf{u}(\mathbf{X})$$
 
 while displacement of second surrounding point is described as:
 
-$$\vec{x} + d\vec{x}  = \vec{X} + d\vec{X} + \vec{u}(\vec{X} + d\vec{X})$$
+$$\mathbf{x} + d\mathbf{x}  = \mathbf{X} + d\mathbf{X} + \mathbf{u}(\mathbf{X} + d\mathbf{X})$$
 
 Substituting first equation into second we got:
 
-$$\vec{X} + \vec{u}(\vec{X}) + d\vec{x}  = \vec{X} + d\vec{X} + \vec{u}(\vec{X} + d\vec{X})$$
+$$\mathbf{X} + \mathbf{u}(\mathbf{X}) + d\mathbf{x}  = \mathbf{X} + d\mathbf{X} + \mathbf{u}(\mathbf{X} + d\mathbf{X})$$
 
 which simplifies to:
 
-$$ d\vec{x} = d\vec{X} + \vec{u}(\vec{X} + d\vec{X}) - \vec{u}(\vec{X})$$
+$$ d\mathbf{x} = d\mathbf{X} + \mathbf{u}(\mathbf{X} + d\mathbf{X}) - \mathbf{u}(\mathbf{X})$$
 
 ```{admonition} Taylor's theorem
 :class: tip
@@ -79,28 +79,28 @@ than
 
 $$f(X+dX) - f(X) = {\frac  {f^{\prime }(X)}{1!}}dX+{\frac  {f^{{\prime \prime }}(X)}{2!}}dX^{2}+...=\sum _{{k=0}}^{{\infty }}{\frac  {f^{{(k)}}(X)}{k!}}dX^{{k}}$$
 
-neglecting higher terms as $\left | d\vec{X} \right | \ll 1$ as $dX^{{k}}$ is very small (we explore infinitesimal volume), it is:
+neglecting higher terms as $\left | d\mathbf{X} \right | \ll 1$ as $dX^{{k}}$ is very small (we explore infinitesimal volume), it is:
 
 $$ f(X+dX) - f(X) \approx  {\frac  {f^{\prime }(X)}{1!}}dX $$
 ```
 
 Similarily (for details you have to dig into your math classes notes), for vector-valued functions we can write:
 
-$$\vec{u}(\vec{X} + d\vec{X}) - \vec{u}(\vec{X}) \approx  \boldsymbol{J}(\vec{u})d\vec{X}$$
+$$\mathbf{u}(\mathbf{X} + d\mathbf{X}) - \mathbf{u}(\mathbf{X}) \approx  \boldsymbol{J}(\mathbf{u})d\mathbf{X}$$
 
-where $\boldsymbol{J}(\vec{u})$ is *Jacobian matrix* and in strain analysis, we usually called **displacement gradient** and we use symbol $\boldsymbol{\nabla u}$. Using that for infinitesimal deformation equation:
+where $\boldsymbol{J}(\mathbf{u})$ is *Jacobian matrix* and in strain analysis, we usually called **displacement gradient** and we use symbol $\boldsymbol{\nabla u}$. Using that for infinitesimal deformation equation:
 
-$$d\vec{x} = d\vec{X} + \vec{u}(\vec{X} + d\vec{X}) - \vec{u}(\vec{X})$$
+$$d\mathbf{x} = d\mathbf{X} + \mathbf{u}(\mathbf{X} + d\mathbf{X}) - \mathbf{u}(\mathbf{X})$$
 
 it could be written in terms of gradient as:
 
-$$d\vec{x} = d\vec{X} + (\boldsymbol{\nabla u})d\vec{X}$$
+$$d\mathbf{x} = d\mathbf{X} + (\boldsymbol{\nabla u})d\mathbf{X}$$
 
 where $\boldsymbol{\nabla u}$ is gradient of displacement field or **displacement gradient**.
 
 ## Displacement gradient
 
-The **displacement gradient** is the matrix of all first-order partial derivatives of each component of the element displacement $d\vec{u}$ with respect to each component of the reference element $d\vec{X}$:
+The **displacement gradient** is the matrix of all first-order partial derivatives of each component of the element displacement $d\mathbf{u}$ with respect to each component of the reference element $d\mathbf{X}$:
 
 $$\boldsymbol{\nabla u} =  u_{i,j}  =  \frac{\partial u_i}{\partial X_j} =
 \begin{bmatrix}
@@ -109,22 +109,22 @@ $$\boldsymbol{\nabla u} =  u_{i,j}  =  \frac{\partial u_i}{\partial X_j} =
 \frac{\partial u_3}{\partial X_1} & \frac{\partial u_3}{\partial X_2} & \frac{\partial u_3}{\partial X_3}
 \end{bmatrix}$$
 
-and characterise the local change of the displacement field at a material point with position vector $\vec{X}$. Knowing that:
+and characterise the local change of the displacement field at a material point with position vector $\mathbf{X}$. Knowing that:
 
-$$d\vec{u} = d\vec{x} - d\vec{X}$$
+$$d\mathbf{u} = d\mathbf{x} - d\mathbf{X}$$
 
 it could be also written as:
 
-$$d\vec{u} = (\boldsymbol{\nabla u})d\vec{X}$$
+$$d\mathbf{u} = (\boldsymbol{\nabla u})d\mathbf{X}$$
 
 
 ## Deformation gradient
 
-Recalling that $d\vec{u} = d\vec{x} - d\vec{X}$
+Recalling that $d\mathbf{u} = d\mathbf{x} - d\mathbf{X}$
 
 $$(\boldsymbol{\nabla u}) = \frac{\partial u_i}{\partial X_j} = \frac{\partial (x_i - X_i)}{\partial X_j} = \frac{\partial x_i}{\partial X_j} - \frac{\partial X_i}{\partial X_j} = \boldsymbol{F} - \boldsymbol{I}$$
 
-where $\boldsymbol{F}$ is so called **deformation gradient**, i.e the derivative of each component of the deformed linear element $d\vec{x}$ with respect to each component of the reference element $d\vec{X}$:
+where $\boldsymbol{F}$ is so called **deformation gradient**, i.e the derivative of each component of the deformed linear element $d\mathbf{x}$ with respect to each component of the reference element $d\mathbf{X}$:
 
 $$ \boldsymbol{F} =  x_{i,j}  =  \frac{\partial x_i}{\partial X_j} =
 \begin{bmatrix}
@@ -133,21 +133,21 @@ $$ \boldsymbol{F} =  x_{i,j}  =  \frac{\partial x_i}{\partial X_j} =
 \frac{\partial x_3}{\partial X_1} & \frac{\partial x_3}{\partial X_2} & \frac{\partial x_3}{\partial X_3}
 \end{bmatrix}$$
 
-and characterizes the local deformation at a material point with position vector $\vec{X}$, assuming continuity. Knowing that:
+and characterizes the local deformation at a material point with position vector $\mathbf{X}$, assuming continuity. Knowing that:
 
-$$d\vec{x} - d\vec{X} = d\vec{u} = (\boldsymbol{\nabla u})d\vec{X} = (\boldsymbol{F} - \boldsymbol{I})d\vec{X} = \boldsymbol{F}d\vec{X} - d\vec{X}$$
+$$d\mathbf{x} - d\mathbf{X} = d\mathbf{u} = (\boldsymbol{\nabla u})d\mathbf{X} = (\boldsymbol{F} - \boldsymbol{I})d\mathbf{X} = \boldsymbol{F}d\mathbf{X} - d\mathbf{X}$$
 
 it could be also written as:
 
-$$d\vec{x} = \boldsymbol{F}d\vec{X}$$
+$$d\mathbf{x} = \boldsymbol{F}d\mathbf{X}$$
 
 ## Properties of deformation gradient
 
 **Deformation gradient** $\boldsymbol{F}$ contains all the required local information about the changes in length, volumes and angles due to the deformation as follows:
 
-- When vector $\vec{X}$ in the reference configuration is deformed into the vector $\vec{x}$, these vectors are related as: $\vec{x} = \boldsymbol{F}\vec{X}$
+- When vector $\mathbf{X}$ in the reference configuration is deformed into the vector $\mathbf{x}$, these vectors are related as: $\mathbf{x} = \boldsymbol{F}\mathbf{X}$
 - The Jacobian of the deformation gradient is equal to the ratio between the local volume of the deformed configuration to the local volume in the reference configuration i.e. volume change: $J = \frac{dV}{dV_0} = \det({\boldsymbol{F})}$
-- Two infinitesimal areas with $da$ and $dA$ being their magnitudes and $\vec{n}$ and $\vec{N}$ are unit vectors perpendicular to them, then the relationship is given by: $(da)\vec{n} = \det(\boldsymbol{F})(dA)\boldsymbol{F}^{-T}\vec{N}$
+- Two infinitesimal areas with $da$ and $dA$ being their magnitudes and $\mathbf{n}$ and $\mathbf{N}$ are unit vectors perpendicular to them, then the relationship is given by: $(da)\mathbf{n} = \det(\boldsymbol{F})(dA)\boldsymbol{F}^{-T}\mathbf{N}$
 - An isochoric deformation is a deformation preserving local volume, i.e., $\det({\boldsymbol{F}})=1$
 - A deformation is called homogeneous if $\boldsymbol{F}$ is constant at every point. Otherwise, the deformation is called non-homogeneous
 - The physical restriction of possible deformation: $\det({\boldsymbol{F}}) > 0$

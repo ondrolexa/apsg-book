@@ -23,32 +23,32 @@ from apsg import *
 ```{image} figures/Cauchy_2D_triangle_v2.png
 :alt: Cauchy in 2D
 :class: bg-primary mb-1
-:width: 50%
+:width: 80%
 :align: center
 ```
 
-The equilibrium of forces, i.e. Euler’s first law of motion (Newton’s second law of motion) for 2D triangle, gives:
+The equilibrium of forces, i.e. Euler’s first law of motion (Newton’s second law of motion) for 2D triangle:
+
+$$\mathbf{t}A = \mathbf{t}_1 A_1 + \mathbf{t}_2 A_2$$
+
+The area of the faces of the triangle perpendicular to the axes can be found by projecting $A$ into each face
+
+$$\mathbf{t}A = \mathbf{t}_1 n_1 A + \mathbf{t}_2 n_2 A$$
+
+than divided by $A$ gives:
+
+$$\mathbf{t} = \mathbf{t}_1 n_1 + \mathbf{t}_2 n_2$$
+
+This equation could be written by components
 
 $$\begin{aligned}
-\boldsymbol{T}^{\left( n \right)} \cdot A &= \boldsymbol{T}^{\left( 1 \right)} \cdot A \cdot n_1 + \boldsymbol{T}^{\left( 2 \right)} \cdot A \cdot n_2\\
-\boldsymbol{T}^{\left( n \right)} &= \boldsymbol{T}^{\left( 1 \right)} \cdot n_1
-+ \boldsymbol{T}^{\left( 2 \right)} \cdot n_2
+t_1 &= \sigma_{11} n_1 + \sigma_{21} n_2 \\
+t_2 &= \sigma_{12} n_1 + \sigma_{22} n_2 
 \end{aligned}$$
 
-written by components we obtain
+or in matrix form
 
-$$\begin{aligned}
-T_1^{\left( n \right)} &= \sigma_{11} \cdot n_1 + \sigma_{21} \cdot n_2 \\
-T_2^{\left( n \right)} &= \sigma_{12} \cdot n_1 + \sigma_{22} \cdot n_2 
-\end{aligned}$$
-
-or
-
-$$\begin{bmatrix}
-T_1^{\left( n \right)}\\ 
-T_2^{\left( n \right)}
-\end{bmatrix}
-=
+$$\begin{bmatrix}t_1\\t_2\end{bmatrix}=
 \begin{bmatrix}
 \sigma_{11} & \sigma_{21}\\ 
 \sigma_{12} & \sigma_{22}
@@ -59,12 +59,16 @@ n_1\\
 n_2
 \end{bmatrix}
 \quad \text{or} \quad
-\boldsymbol{T}^{(\boldsymbol{n})} = \sigma _{ij} \cdot \bf{n}  \quad \text{where} \quad \sigma _{ij} =
-\begin{bmatrix}
-\boldsymbol{T}^{\left( 1 \right)}
-&
-\boldsymbol{T}^{\left( 2 \right)}
-\end{bmatrix}$$
+\mathbf{t} = \boldsymbol{\sigma} \cdot \mathbf{n}
+\quad \text{where} \quad
+\boldsymbol{\sigma} = \begin{bmatrix}\mathbf{t}_1 & \mathbf{t}_2\end{bmatrix}$$
+
+Because the $\sigma_{12} = \sigma_{21}$ (conservation of angular momentum), the $\boldsymbol{\sigma}$ must be **symmetric**.
+
+```{admonition} Matrix as function
+:class: tip
+Note that $\boldsymbol{\sigma}$, known as **stress tensor** operates as a function, i.e. each normal unit vector $\mathbf{n}$ is transformed to traction vector $\mathbf{t}$ acting on the plane normal to $\mathbf{n}$. In this way, stress tensor describing stress on arbitrary plane, i.e describing *stress in point*.
+```
 
 ```{code-cell} ipython3
 S = stress2([[-8,  2],
@@ -75,7 +79,7 @@ S.cauchy(n)  # traction vector
 
 ## Cauchy formula in 3D
 
-The tetrahedron is formed by slicing the infinitesimal element along an arbitrary plane n. The stress vector on this plane is denoted by $T^{(n)}$. The stress vectors acting on the faces of the tetrahedron are denoted as $T^{(e_1)}$, $T^{(e_2)}$, and $T^{(e_3)}$, and are by definition the components $\sigma_{ij}$ of the stress tensor $\sigma$.
+The tetrahedron is formed by slicing the infinitesimal element along an arbitrary plane with normal $\mathbf{n}$. The traction vector on this plane is denoted by $\mathbf{t}$. The traction vectors acting on the faces of the tetrahedron are denoted as $\mathbf{t}_1$, $\mathbf{t}_2$, and $\mathbf{t}_3$, and are by definition the components of the stress tensor $\boldsymbol{\sigma}$.
 
 ```{image} figures/Cauchy_tetrahedron.png
 :alt: Cauchy in 3D
@@ -84,42 +88,38 @@ The tetrahedron is formed by slicing the infinitesimal element along an arbitrar
 :align: center
 ```
 
-The equilibrium of forces, i.e. Euler’s first law of motion (Newton’s second law of motion), gives:
+Similarly to 2D case, the equilibrium of forces, i.e. Euler’s first law of motion (Newton’s second law of motion), gives:
 
-$$\boldsymbol {T} ^{(\boldsymbol {n} )}\,dA-\boldsymbol {T} ^{(\boldsymbol {e} _{1})}\,dA_{1}-\boldsymbol {T} ^{(\boldsymbol {e} _{2})}\,dA_{2}-\boldsymbol {T} ^{(\boldsymbol {e} _{3})}\,dA_{3}=\rho \left({\frac {h}{3}}dA\right)\boldsymbol {a}$$
+$$\mathbf{t} A = \mathbf{t}_1 A_1 + \mathbf{t}_2 A_2 + \mathbf{t}_3 A_3$$
 
-where the right-hand-side represents the product of the mass enclosed by the tetrahedron and its acceleration: $\rho$ is the density, $a$ is the acceleration, and $h$ is the height of the tetrahedron, considering the plane $n$ as the base.
+The area of the faces of the tetrahedron perpendicular to the axes can be found by projecting $A$ into each face:
 
-The area of the faces of the tetrahedron perpendicular to the axes can be found by projecting dA into each face:
+$$\mathbf{t} A = \mathbf{t}_1 n_1 A + \mathbf{t}_2 n_2 A + \mathbf{t}_3 n_3 A$$
 
-$$\begin{aligned}
-dA_{1}&=\left(\boldsymbol {n} \cdot \boldsymbol {e} _{1}\right)dA=n_{1}\;dA\\
-dA_{2}&=\left(\boldsymbol {n} \cdot \boldsymbol {e} _{2}\right)dA=n_{2}\;dA\\
-dA_{3}&=\left(\boldsymbol {n} \cdot \boldsymbol {e} _{3}\right)dA=n_{3}\;dA
-\end{aligned}$$
+than divided by $A$ gives:
 
-and then substituting into the equation to cancel out $dA$:
+$$\mathbf{t} = \mathbf{t}_1 n_1 + \mathbf{t}_2 n_2 + \mathbf{t}_3 n_3$$
 
-$$\boldsymbol {T} ^{(\boldsymbol {n} )}-\boldsymbol {T} ^{(\boldsymbol {e} _{1})}n_{1}-\boldsymbol {T} ^{(\boldsymbol {e} _{2})}n_{2}-\boldsymbol {T} ^{(\boldsymbol {e} _{3})}n_{3}=\rho \left({\frac {h}{3}}\right)\boldsymbol {a}$$
 
-To consider the limiting case as the tetrahedron shrinks to a point, $h$ and the right-hand-side of the equation approaches 0, so:
-
-$$\boldsymbol {T} ^{(\boldsymbol {n} )}=\boldsymbol {T} ^{(\boldsymbol {e} _{1})}n_{1}+\boldsymbol {T} ^{(\boldsymbol {e} _{2})}n_{2}+\boldsymbol {T} ^{(\boldsymbol {e} _{3})}n_{3}$$
-
-## Cauchy stress tensor
-
+```{admonition} What is tensor
+:class: tip
 **Tensors** are algebraic objects that describe linear relationship between vectors, scalars, or tensors. Here, any linear connection between two physical vector quantities is called a **tensor**, reflecting original use to describe the "tensions" in a material (Cauchy).
 
 $$\left[{\begin{matrix} u_1 \\ u_2 \\ u_3 \end{matrix}}\right] = \left[{\begin{matrix}
-    T_{11} & T_{21} & T_{31} \\
-    T_{12} & T_{22} & T_{32} \\
-    T_{13} & T_{23} & T_{33}
-\end{matrix}}\right] \cdot \left[{\begin{matrix} v_1 \\ v_2 \\ v_3 \end{matrix}}\right]$$
+    a_{11} & a_{21} & a_{31} \\
+    a_{12} & a_{22} & a_{32} \\
+    a_{13} & a_{23} & a_{33}
+\end{matrix}}\right] \left[{\begin{matrix} v_1 \\ v_2 \\ v_3 \end{matrix}}\right]$$
 
-$$\boldsymbol{u} = \boldsymbol{T} \cdot \boldsymbol{v}$$
+$$\mathbf{u} = \mathbf{A} \cdot \mathbf{v}$$
+```
 
-In continuum mechanics, the Cauchy **stress tensor** $\boldsymbol\sigma$ is a second order tensor,
-with nine components $\sigma_{ij}$, that completely define the state of stress at a point inside a material. The stress tensor is symmetric, so the number of independent stress components is equal to 6.
+## Cauchy stress tensor
+
+In continuum mechanics, the Cauchy **stress tensor** $\boldsymbol{\sigma}$ is a second order tensor,
+with nine components $\sigma_{ij}$, that completely define the state of stress at a point inside a material.
+
+According to the *principle of conservation of angular momentum*, equilibrium requires that the summation of moments with respect to an arbitrary point is zero, which leads to the conclusion that the stress tensor is symmetric, thus having only *six independent stress components*, instead of the original nine.
 
 ```{image} figures/Components_stress_tensor_cartesian.png
 :alt: Stress tensor components
@@ -128,7 +128,8 @@ with nine components $\sigma_{ij}$, that completely define the state of stress a
 :align: center
 ```
 
-$$\boldsymbol{\sigma} = \sigma_{ij} = \left[{\begin{matrix} \boldsymbol{T}^{(\boldsymbol{e}_1)} & \boldsymbol{T}^{(\boldsymbol{e}_2)} & \boldsymbol{T}^{(\boldsymbol{e}_3)} \end{matrix}}\right]  = \left[{\begin{matrix}
+$$\boldsymbol{\sigma} = \sigma_{ij} = \left[{\begin{matrix} \mathbf{t}_1 & \mathbf{t}_2 & \mathbf{t}_3 \end{matrix}}\right] =
+\left[{\begin{matrix}
     \sigma _{11} & \sigma _{21} & \sigma _{31} \\
     \sigma _{12} & \sigma _{22} & \sigma _{32} \\
     \sigma _{13} & \sigma _{23} & \sigma _{33}
@@ -157,15 +158,18 @@ The first index $i$ indicates that the stress acts on a plane normal to the $x_i
 
 ## Cauchy's stress theorem
 
-According to Cauchy’s fundamental theorem, also called Cauchy's stress theorem, merely by knowing the stress vectors on three mutually perpendicular planes,
-the stress vector on any other plane passing through that point can be found through coordinate transformation equations.
+According to Cauchy’s fundamental theorem, also called **Cauchy's stress theorem**, merely by knowing the stress vectors on three mutually perpendicular planes, the stress vector on any other plane passing through that point can be found through coordinate transformation equations.
 
-$$\boldsymbol{T}^{(\boldsymbol{n})} \equiv \left[{\begin{matrix} {T_1}^{(\boldsymbol{n})} \\ {T_2}^{(\boldsymbol{n})} \\ {T_3}^{(\boldsymbol{n})} \end{matrix}}\right] = \left[{\begin{matrix}
+$$\mathbf{t} \equiv \left[{\begin{matrix} \mathbf{t}_1 & \mathbf{t}_2 & \mathbf{t}_3 \end{matrix}}\right] =
+\left[{\begin{matrix}
 \sigma _{11} & \sigma _{21} & \sigma _{31} \\
 \sigma _{12} & \sigma _{22} & \sigma _{32} \\
 \sigma _{13} & \sigma _{23} & \sigma _{33} 
-\end{matrix}}\right] \cdot \left[{\begin{matrix} n_1 \\ n_2 \\ n_3 \end{matrix}}\right] \quad \text{or} \quad \boldsymbol{T}^{(\boldsymbol{n})} = \boldsymbol{\sigma} \cdot \bf{n}$$
-This equation implies that the stress vector $\bf{T}^{\left( n \right)}$ at any point $P$ in a continuum associated with a plane with normal unit vector $\bf{n}$, can be expressed as a function of the stress vectors on the planes perpendicular to the coordinate axes, i.e. stress tensor $\boldsymbol{\sigma}$.
+\end{matrix}}\right] \cdot \left[{\begin{matrix} n_1 \\ n_2 \\ n_3 \end{matrix}}\right]
+\quad \text{or} \quad
+\mathbf{t} = \boldsymbol{\sigma} \cdot \mathbf{n}$$
+
+This equation implies that the traction vector $\mathbf{t}$ at any point $P$ in a continuum associated with a plane with normal unit vector $\mathbf{n}$, can be expressed as a function of the tractions vectors on the planes perpendicular to the coordinate axes, i.e. stress tensor $\boldsymbol{\sigma}$.
 
 ```{code-cell} ipython3
 S = stress.from_comp(xx=-8, yy=-6, zz=-2)

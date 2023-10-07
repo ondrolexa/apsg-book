@@ -22,9 +22,9 @@ Informally, *function* is a rule that accepts inputs and produces outputs. For i
 
 Consider the matrix equation:
 
-$$\boldsymbol{v} = \boldsymbol{A}\boldsymbol{u}$$
+$$\mathbf{v} = \mathbf{A}\mathbf{u}$$
 
-If we vary $\boldsymbol{u}$, then $\boldsymbol{v}$ will also vary; in this way, we think of $\boldsymbol{A}$ as *function* with independent variable $\boldsymbol{u}$ (which is a vector in $\mathbb{R}^n$) and dependent variable $\boldsymbol{v}$ (which is a vector in $\mathbb{R}^m$).
+If we vary $\mathbf{u}$, then $\mathbf{v}$ will also vary; in this way, we think of $\mathbf{A}$ as *function* with independent variable $\mathbf{u}$ (which is a vector in $\mathbb{R}^n$) and dependent variable $\mathbf{v}$ (which is a vector in $\mathbb{R}^m$).
 
 At this point it is convenient to fix our ideas and terminology regarding *functions*, which we will call **transformations**. This allows us to systematize our discussion of **matrices as functions**.
 
@@ -34,24 +34,24 @@ F = matrix([[2, 1, 0], [0, 1, 0], [0, 0, 0.5]])
 u.transform(F)
 ```
 
-## Matrix Transformations
-If $\boldsymbol{A}$ has $n$ columns, then it only makes sense to multiply $\boldsymbol{A}$ by vectors with $n$ entries. This is why the domain of transformation is $\mathbb{R}^n$. If $\boldsymbol{A}$ has $m$ rows, then $\boldsymbol{A}\boldsymbol{u}$ has $m$ entries for any vector $\boldsymbol{u}$ in $\mathbb{R}^n$; this is why the codomain of transformation is $\mathbb{R}^m$.
+## Matrices as functions - transformation matrix
 
-Suppose that $\boldsymbol{A}$ has columns $v_1, v_1, \dots v_n$,. If we multiply $\boldsymbol{A}$ by a general vector $\boldsymbol{u}$, we get:
+If $\mathbf{A}$ has $n$ columns, then it only makes sense to multiply $\mathbf{A}$ by vectors with $n$ entries. This is why the domain of transformation is $\mathbb{R}^n$. If $\mathbf{A}$ has $m$ rows, then $\mathbf{A}\mathbf{u}$ has $m$ entries for any vector $\mathbf{u}$ in $\mathbb{R}^n$; this is why the codomain of transformation is $\mathbb{R}^m$.
 
-$$\boldsymbol{A}\boldsymbol{u}=\begin{pmatrix}| & | &  & | \\ v_1 & v_2 & \dots & v_3\\ | & | &  & | \end{pmatrix}\begin{pmatrix}u_1\\ u_2\\ \vdots \\ u_n\end{pmatrix}= u_1v_1 + u_2v_2 + \dots + u_nv_n$$
+Suppose that $\mathbf{A}$ has columns $v_1, v_1, \dots v_n$,. If we multiply $\mathbf{A}$ by a general vector $\mathbf{u}$, we get:
 
-This is just a general linear combination of $v_1, v_1, \dots v_n$. Therefore, the outputs of matrix transformations are exactly the linear combinations of the columns of transformation matrix $\boldsymbol{A}$.
+$$\mathbf{A}\mathbf{u}=\begin{pmatrix}| & | &  & | \\ v_1 & v_2 & \dots & v_3\\ | & | &  & | \end{pmatrix}\begin{pmatrix}u_1\\ u_2\\ \vdots \\ u_n\end{pmatrix}= u_1v_1 + u_2v_2 + \dots + u_nv_n$$
 
-## Transpose and inverse of matrix product
-  
-Following identities are used very often in linear algebra:
+This is just a general linear combination of $v_1, v_1, \dots v_n$. Therefore, the outputs of matrix transformations are exactly the linear combinations of the columns of *transformation matrix* $\mathbf{A}$.
 
-$$(\mathbf{A}\mathbf{B})^T = \mathbf{B}^T\mathbf{A}^T$$
+```{admonition} Useful identities
+:class: tip
+Following identities are often used in linear algebra:
 
-$$(\mathbf{A}\mathbf{B})^{-1} = \mathbf{B}^{-1}\mathbf{A}^{-1}$$
-
-$$(\mathbf{A}^T)^{-1} = (\mathbf{A}^{-1})^T = \mathbf{A}^{-T}$$
-
-$$((\mathbf{A}\mathbf{B})^{-1})^T = ((\mathbf{A}\mathbf{B})^T)^{-1} = (\mathbf{B}^{-1}\mathbf{A}^{-1})^T = \mathbf{A}^{-T}\mathbf{B}^{-T}$$
-
+$$\begin{aligned}
+(\mathbf{A}\mathbf{B})^T &= \mathbf{B}^T\mathbf{A}^T\\
+(\mathbf{A}\mathbf{B})^{-1} &= \mathbf{B}^{-1}\mathbf{A}^{-1}\\
+(\mathbf{A}^T)^{-1} &= (\mathbf{A}^{-1})^T = \mathbf{A}^{-T}\\
+((\mathbf{A}\mathbf{B})^{-1})^T &= ((\mathbf{A}\mathbf{B})^T)^{-1} = (\mathbf{B}^{-1}\mathbf{A}^{-1})^T = \mathbf{A}^{-T}\mathbf{B}^{-T}
+\end{aligned}$$
+```

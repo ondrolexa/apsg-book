@@ -411,21 +411,21 @@ document.write(`
 <p>It is convenient to identify a <strong>reference configuration or initial condition</strong> which all subsequent <strong>deformed configurations</strong> are
 referenced from. Often, the configuration at <span class="math notranslate nohighlight">\(t=0\)</span> is considered the reference configuration.</p>
 <a class="bg-primary mb-1 reference internal image-reference" href="../../_images/displacement_simple.png"><img alt="Displacement simplified" class="bg-primary mb-1 align-center" src="../../_images/displacement_simple.png" style="width: 50%;" /></a>
-<p>The components <span class="math notranslate nohighlight">\(x_i\)</span> of the position vector <span class="math notranslate nohighlight">\(\vec{x}\)</span> of a particle, taken with respect to the reference
+<p>The components <span class="math notranslate nohighlight">\(x_i\)</span> of the position vector <span class="math notranslate nohighlight">\(\mathbf{x}\)</span> of a particle, taken with respect to the reference
 configuration, are called the <strong>material or reference coordinates</strong>.</p>
 <a class="bg-primary mb-1 reference internal image-reference" href="../../_images/displacement_simple.png"><img alt="Displacement simplified" class="bg-primary mb-1 align-center" src="../../_images/displacement_simple.png" style="width: 50%;" /></a>
 <p>The displacement of first point is decribed as:</p>
 <div class="math notranslate nohighlight">
-\[\vec{x} = \vec{X} + \vec{u}(\vec{X})\]</div>
+\[\mathbf{x} = \mathbf{X} + \mathbf{u}(\mathbf{X})\]</div>
 <p>while displacement of second surrounding point is described as:</p>
 <div class="math notranslate nohighlight">
-\[\vec{x} + d\vec{x}  = \vec{X} + d\vec{X} + \vec{u}(\vec{X} + d\vec{X})\]</div>
+\[\mathbf{x} + d\mathbf{x}  = \mathbf{X} + d\mathbf{X} + \mathbf{u}(\mathbf{X} + d\mathbf{X})\]</div>
 <p>Substituting first equation into second we got:</p>
 <div class="math notranslate nohighlight">
-\[\vec{X} + \vec{u}(\vec{X}) + d\vec{x}  = \vec{X} + d\vec{X} + \vec{u}(\vec{X} + d\vec{X})\]</div>
+\[\mathbf{X} + \mathbf{u}(\mathbf{X}) + d\mathbf{x}  = \mathbf{X} + d\mathbf{X} + \mathbf{u}(\mathbf{X} + d\mathbf{X})\]</div>
 <p>which simplifies to:</p>
 <div class="math notranslate nohighlight">
-\[ d\vec{x} = d\vec{X} + \vec{u}(\vec{X} + d\vec{X}) - \vec{u}(\vec{X})\]</div>
+\[ d\mathbf{x} = d\mathbf{X} + \mathbf{u}(\mathbf{X} + d\mathbf{X}) - \mathbf{u}(\mathbf{X})\]</div>
 <div class="tip admonition">
 <p class="admonition-title">Taylor’s theorem</p>
 <p>Taylor’s theorem states that any function that is infinitely differentiable may be represented by a Taylor series expansion:</p>
@@ -434,24 +434,24 @@ configuration, are called the <strong>material or reference coordinates</strong>
 <p>than</p>
 <div class="math notranslate nohighlight">
 \[f(X+dX) - f(X) = {\frac  {f^{\prime }(X)}{1!}}dX+{\frac  {f^{{\prime \prime }}(X)}{2!}}dX^{2}+...=\sum _{{k=0}}^{{\infty }}{\frac  {f^{{(k)}}(X)}{k!}}dX^{{k}}\]</div>
-<p>neglecting higher terms as <span class="math notranslate nohighlight">\(\left | d\vec{X} \right | \ll 1\)</span> as <span class="math notranslate nohighlight">\(dX^{{k}}\)</span> is very small (we explore infinitesimal volume), it is:</p>
+<p>neglecting higher terms as <span class="math notranslate nohighlight">\(\left | d\mathbf{X} \right | \ll 1\)</span> as <span class="math notranslate nohighlight">\(dX^{{k}}\)</span> is very small (we explore infinitesimal volume), it is:</p>
 <div class="math notranslate nohighlight">
 \[ f(X+dX) - f(X) \approx  {\frac  {f^{\prime }(X)}{1!}}dX \]</div>
 </div>
 <p>Similarily (for details you have to dig into your math classes notes), for vector-valued functions we can write:</p>
 <div class="math notranslate nohighlight">
-\[\vec{u}(\vec{X} + d\vec{X}) - \vec{u}(\vec{X}) \approx  \boldsymbol{J}(\vec{u})d\vec{X}\]</div>
-<p>where <span class="math notranslate nohighlight">\(\boldsymbol{J}(\vec{u})\)</span> is <em>Jacobian matrix</em> and in strain analysis, we usually called <strong>displacement gradient</strong> and we use symbol <span class="math notranslate nohighlight">\(\boldsymbol{\nabla u}\)</span>. Using that for infinitesimal deformation equation:</p>
+\[\mathbf{u}(\mathbf{X} + d\mathbf{X}) - \mathbf{u}(\mathbf{X}) \approx  \boldsymbol{J}(\mathbf{u})d\mathbf{X}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\boldsymbol{J}(\mathbf{u})\)</span> is <em>Jacobian matrix</em> and in strain analysis, we usually called <strong>displacement gradient</strong> and we use symbol <span class="math notranslate nohighlight">\(\boldsymbol{\nabla u}\)</span>. Using that for infinitesimal deformation equation:</p>
 <div class="math notranslate nohighlight">
-\[d\vec{x} = d\vec{X} + \vec{u}(\vec{X} + d\vec{X}) - \vec{u}(\vec{X})\]</div>
+\[d\mathbf{x} = d\mathbf{X} + \mathbf{u}(\mathbf{X} + d\mathbf{X}) - \mathbf{u}(\mathbf{X})\]</div>
 <p>it could be written in terms of gradient as:</p>
 <div class="math notranslate nohighlight">
-\[d\vec{x} = d\vec{X} + (\boldsymbol{\nabla u})d\vec{X}\]</div>
+\[d\mathbf{x} = d\mathbf{X} + (\boldsymbol{\nabla u})d\mathbf{X}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\boldsymbol{\nabla u}\)</span> is gradient of displacement field or <strong>displacement gradient</strong>.</p>
 </section>
 <section id="displacement-gradient">
 <h2>Displacement gradient<a class="headerlink" href="#displacement-gradient" title="Permalink to this heading">#</a></h2>
-<p>The <strong>displacement gradient</strong> is the matrix of all first-order partial derivatives of each component of the element displacement <span class="math notranslate nohighlight">\(d\vec{u}\)</span> with respect to each component of the reference element <span class="math notranslate nohighlight">\(d\vec{X}\)</span>:</p>
+<p>The <strong>displacement gradient</strong> is the matrix of all first-order partial derivatives of each component of the element displacement <span class="math notranslate nohighlight">\(d\mathbf{u}\)</span> with respect to each component of the reference element <span class="math notranslate nohighlight">\(d\mathbf{X}\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\boldsymbol{\nabla u} =  u_{i,j}  =  \frac{\partial u_i}{\partial X_j} =
 \begin{bmatrix}
@@ -459,19 +459,19 @@ configuration, are called the <strong>material or reference coordinates</strong>
 \frac{\partial u_2}{\partial X_1} &amp; \frac{\partial u_2}{\partial X_2} &amp; \frac{\partial u_2}{\partial X_3} \\
 \frac{\partial u_3}{\partial X_1} &amp; \frac{\partial u_3}{\partial X_2} &amp; \frac{\partial u_3}{\partial X_3}
 \end{bmatrix}\end{split}\]</div>
-<p>and characterise the local change of the displacement field at a material point with position vector <span class="math notranslate nohighlight">\(\vec{X}\)</span>. Knowing that:</p>
+<p>and characterise the local change of the displacement field at a material point with position vector <span class="math notranslate nohighlight">\(\mathbf{X}\)</span>. Knowing that:</p>
 <div class="math notranslate nohighlight">
-\[d\vec{u} = d\vec{x} - d\vec{X}\]</div>
+\[d\mathbf{u} = d\mathbf{x} - d\mathbf{X}\]</div>
 <p>it could be also written as:</p>
 <div class="math notranslate nohighlight">
-\[d\vec{u} = (\boldsymbol{\nabla u})d\vec{X}\]</div>
+\[d\mathbf{u} = (\boldsymbol{\nabla u})d\mathbf{X}\]</div>
 </section>
 <section id="deformation-gradient">
 <h2>Deformation gradient<a class="headerlink" href="#deformation-gradient" title="Permalink to this heading">#</a></h2>
-<p>Recalling that <span class="math notranslate nohighlight">\(d\vec{u} = d\vec{x} - d\vec{X}\)</span></p>
+<p>Recalling that <span class="math notranslate nohighlight">\(d\mathbf{u} = d\mathbf{x} - d\mathbf{X}\)</span></p>
 <div class="math notranslate nohighlight">
 \[(\boldsymbol{\nabla u}) = \frac{\partial u_i}{\partial X_j} = \frac{\partial (x_i - X_i)}{\partial X_j} = \frac{\partial x_i}{\partial X_j} - \frac{\partial X_i}{\partial X_j} = \boldsymbol{F} - \boldsymbol{I}\]</div>
-<p>where <span class="math notranslate nohighlight">\(\boldsymbol{F}\)</span> is so called <strong>deformation gradient</strong>, i.e the derivative of each component of the deformed linear element <span class="math notranslate nohighlight">\(d\vec{x}\)</span> with respect to each component of the reference element <span class="math notranslate nohighlight">\(d\vec{X}\)</span>:</p>
+<p>where <span class="math notranslate nohighlight">\(\boldsymbol{F}\)</span> is so called <strong>deformation gradient</strong>, i.e the derivative of each component of the deformed linear element <span class="math notranslate nohighlight">\(d\mathbf{x}\)</span> with respect to each component of the reference element <span class="math notranslate nohighlight">\(d\mathbf{X}\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \boldsymbol{F} =  x_{i,j}  =  \frac{\partial x_i}{\partial X_j} =
 \begin{bmatrix}
@@ -479,20 +479,20 @@ configuration, are called the <strong>material or reference coordinates</strong>
 \frac{\partial x_2}{\partial X_1} &amp; \frac{\partial x_2}{\partial X_2} &amp; \frac{\partial x_2}{\partial X_3} \\
 \frac{\partial x_3}{\partial X_1} &amp; \frac{\partial x_3}{\partial X_2} &amp; \frac{\partial x_3}{\partial X_3}
 \end{bmatrix}\end{split}\]</div>
-<p>and characterizes the local deformation at a material point with position vector <span class="math notranslate nohighlight">\(\vec{X}\)</span>, assuming continuity. Knowing that:</p>
+<p>and characterizes the local deformation at a material point with position vector <span class="math notranslate nohighlight">\(\mathbf{X}\)</span>, assuming continuity. Knowing that:</p>
 <div class="math notranslate nohighlight">
-\[d\vec{x} - d\vec{X} = d\vec{u} = (\boldsymbol{\nabla u})d\vec{X} = (\boldsymbol{F} - \boldsymbol{I})d\vec{X} = \boldsymbol{F}d\vec{X} - d\vec{X}\]</div>
+\[d\mathbf{x} - d\mathbf{X} = d\mathbf{u} = (\boldsymbol{\nabla u})d\mathbf{X} = (\boldsymbol{F} - \boldsymbol{I})d\mathbf{X} = \boldsymbol{F}d\mathbf{X} - d\mathbf{X}\]</div>
 <p>it could be also written as:</p>
 <div class="math notranslate nohighlight">
-\[d\vec{x} = \boldsymbol{F}d\vec{X}\]</div>
+\[d\mathbf{x} = \boldsymbol{F}d\mathbf{X}\]</div>
 </section>
 <section id="properties-of-deformation-gradient">
 <h2>Properties of deformation gradient<a class="headerlink" href="#properties-of-deformation-gradient" title="Permalink to this heading">#</a></h2>
 <p><strong>Deformation gradient</strong> <span class="math notranslate nohighlight">\(\boldsymbol{F}\)</span> contains all the required local information about the changes in length, volumes and angles due to the deformation as follows:</p>
 <ul class="simple">
-<li><p>When vector <span class="math notranslate nohighlight">\(\vec{X}\)</span> in the reference configuration is deformed into the vector <span class="math notranslate nohighlight">\(\vec{x}\)</span>, these vectors are related as: <span class="math notranslate nohighlight">\(\vec{x} = \boldsymbol{F}\vec{X}\)</span></p></li>
+<li><p>When vector <span class="math notranslate nohighlight">\(\mathbf{X}\)</span> in the reference configuration is deformed into the vector <span class="math notranslate nohighlight">\(\mathbf{x}\)</span>, these vectors are related as: <span class="math notranslate nohighlight">\(\mathbf{x} = \boldsymbol{F}\mathbf{X}\)</span></p></li>
 <li><p>The Jacobian of the deformation gradient is equal to the ratio between the local volume of the deformed configuration to the local volume in the reference configuration i.e. volume change: <span class="math notranslate nohighlight">\(J = \frac{dV}{dV_0} = \det({\boldsymbol{F})}\)</span></p></li>
-<li><p>Two infinitesimal areas with <span class="math notranslate nohighlight">\(da\)</span> and <span class="math notranslate nohighlight">\(dA\)</span> being their magnitudes and <span class="math notranslate nohighlight">\(\vec{n}\)</span> and <span class="math notranslate nohighlight">\(\vec{N}\)</span> are unit vectors perpendicular to them, then the relationship is given by: <span class="math notranslate nohighlight">\((da)\vec{n} = \det(\boldsymbol{F})(dA)\boldsymbol{F}^{-T}\vec{N}\)</span></p></li>
+<li><p>Two infinitesimal areas with <span class="math notranslate nohighlight">\(da\)</span> and <span class="math notranslate nohighlight">\(dA\)</span> being their magnitudes and <span class="math notranslate nohighlight">\(\mathbf{n}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{N}\)</span> are unit vectors perpendicular to them, then the relationship is given by: <span class="math notranslate nohighlight">\((da)\mathbf{n} = \det(\boldsymbol{F})(dA)\boldsymbol{F}^{-T}\mathbf{N}\)</span></p></li>
 <li><p>An isochoric deformation is a deformation preserving local volume, i.e., <span class="math notranslate nohighlight">\(\det({\boldsymbol{F}})=1\)</span></p></li>
 <li><p>A deformation is called homogeneous if <span class="math notranslate nohighlight">\(\boldsymbol{F}\)</span> is constant at every point. Otherwise, the deformation is called non-homogeneous</p></li>
 <li><p>The physical restriction of possible deformation: <span class="math notranslate nohighlight">\(\det({\boldsymbol{F}}) &gt; 0\)</span></p></li>

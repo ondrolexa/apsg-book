@@ -399,18 +399,19 @@ document.write(`
 <h1>Matrices<a class="headerlink" href="#matrices" title="Permalink to this heading">#</a></h1>
 <p>A matrix, like a vector, is also a collection of numbers. The difference is that a matrix is a table of numbers rather than a list. Many of the same rules we just outlined for vectors above apply equally well to matrices. In fact, you can think of vectors as matrices that happen to only have one column or one row.</p>
 <p>The <strong>dimensions of a matrix</strong> tells its size: the number of rows and columns of the matrix, in that order.</p>
-<p>Since matrix <span class="math notranslate nohighlight">\(\boldsymbol{A}\)</span> has two rows and three columns, we write its dimensions as <span class="math notranslate nohighlight">\(2\times 3\)</span>, pronounced “two by three”. In contrast, matrix <span class="math notranslate nohighlight">\(\boldsymbol{B}\)</span> has three rows and two columns, so it is a <span class="math notranslate nohighlight">\(3\times 2\)</span> matrix.</p>
+<p>Since matrix <span class="math notranslate nohighlight">\(\mathbf{A}\)</span> has two rows and three columns, we write its dimensions as <span class="math notranslate nohighlight">\(2\times 3\)</span>, pronounced “two by three”. In contrast, matrix <span class="math notranslate nohighlight">\(\mathbf{B}\)</span> has three rows and two columns, so it is a <span class="math notranslate nohighlight">\(3\times 2\)</span> matrix.</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\boldsymbol{A} = \begin{bmatrix}
+\[\begin{split}\mathbf{A} = \begin{bmatrix}
   -2 &amp; 5 &amp; 6\\ 
   5 &amp; 2 &amp; 7
 \end{bmatrix}\end{split}\]</div>
 <div class="math notranslate nohighlight">
-\[\begin{split}\boldsymbol{B} = \begin{bmatrix}
+\[\begin{split}\mathbf{B} = \begin{bmatrix}
   -8 &amp; -4\\ 
   23 &amp; 12\\ 
   18 &amp; 10
 \end{bmatrix}\end{split}\]</div>
+<p>APSG offers <em>matrix2</em> and <em>matrix3</em> classes for square matrices commonly used in structural geology.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">matrix2</span><span class="p">([[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">]])</span>
@@ -423,7 +424,7 @@ document.write(`
 <h2>Matrix addition, substraction and multiplication<a class="headerlink" href="#matrix-addition-substraction-and-multiplication" title="Permalink to this heading">#</a></h2>
 <p>First, let’s consider matrix addition and subtraction. This part is uncomplicated. You can add and subtract matrices the same way you add vectors – element by element:</p>
 <div class="math notranslate nohighlight">
-\[\boldsymbol{A}+\boldsymbol{B}=\boldsymbol{C}\]</div>
+\[\mathbf{A}+\mathbf{B}=\mathbf{C}\]</div>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{bmatrix} a_{11} &amp; a_{12}\\a_{21} &amp; a_{22}\end{bmatrix} + \begin{bmatrix} b_{11} &amp; b_{12}\\b_{21} &amp; b_{22}\end{bmatrix} = \begin{bmatrix} a_{11}+b_{11} &amp; a_{12}+b_{12}\\a_{21}+b_{21} &amp; a_{22}+b_{22}\end{bmatrix}\end{split}\]</div>
 <div class="cell docutils container">
@@ -442,7 +443,7 @@ document.write(`
 </div>
 <p>Matrix multiplication gets a bit more complicated, since multiple elements in the first matrix interact with multiple elements in the second to generate each element in the product matrix. This means that matrix multiplication can be a tedious task to carry out by hand, and can be time consuming on a computer for very large matrices.</p>
 <div class="math notranslate nohighlight">
-\[\boldsymbol{A}\boldsymbol{B}=\boldsymbol{C}\]</div>
+\[\mathbf{A}\mathbf{B}=\mathbf{C}\]</div>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{bmatrix} a_{11} &amp; a_{12}\\a_{21} &amp; a_{22}\end{bmatrix} \begin{bmatrix} b_{11} &amp; b_{12}\\b_{21} &amp; b_{22}\end{bmatrix} = \begin{bmatrix} a_{11}b_{11}+a_{12}b_{21} &amp; a_{11}b_{12}+a_{12}b_{22}\\a_{21}b_{21}+a_{12}b_{21} &amp; a_{21}b_{22}+a_{12}b_{22}\end{bmatrix}\end{split}\]</div>
 <div class="cell docutils container">

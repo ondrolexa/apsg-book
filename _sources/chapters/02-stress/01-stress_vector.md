@@ -34,16 +34,16 @@ From the perspective of loading, stress is the applied force or system of forces
 
 From the perspective of what is happening within a material, stress is the internal distribution of forces within a body that balance and react to the loads applied to it. The stress distribution may or may not be uniform, depending on the nature of the loading condition. 
 
+## Traction
+
+Simplifying assumptions are often used to represent force acting on area as **traction vector** - simply the force vector divided by that area.
+
 ```{image} figures/simple_stress.png
 :alt: Simple stress
 :class: bg-primary mb-1
 :width: 50%
 :align: center
 ```
-
-## Traction
-
-Simplifying assumptions are often used to represent force acting on area as **traction vector** - simply the force vector divided by that area. 
 
 $$\mathbf{t} = \frac{\mathbf{f}}{A}$$
 

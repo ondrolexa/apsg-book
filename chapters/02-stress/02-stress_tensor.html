@@ -547,9 +547,25 @@ with nine components <span class="math notranslate nohighlight">\(\sigma_{ij}\)<
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="n">fol</span><span class="p">(</span><span class="mi">150</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>  <span class="c1"># normal of plane</span>
-<span class="n">T</span> <span class="o">=</span> <span class="n">S</span><span class="o">.</span><span class="n">cauchy</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>  <span class="c1"># traction vector</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Magnitude of normal stress on plane </span><span class="si">{</span><span class="n">n</span><span class="si">}</span><span class="s1"> is </span><span class="si">{</span><span class="nb">abs</span><span class="p">(</span><span class="n">T</span><span class="o">.</span><span class="n">proj</span><span class="p">(</span><span class="n">n</span><span class="p">))</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Magnitude of shear stress on plane </span><span class="si">{</span><span class="n">n</span><span class="si">}</span><span class="s1"> is </span><span class="si">{</span><span class="nb">abs</span><span class="p">(</span><span class="n">T</span><span class="o">.</span><span class="n">reject</span><span class="p">(</span><span class="n">n</span><span class="p">))</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">S</span><span class="o">.</span><span class="n">cauchy</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>  <span class="c1"># traction vector</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Magnitude of normal stress on plane </span><span class="si">{</span><span class="n">n</span><span class="si">}</span><span class="s1"> is </span><span class="si">{</span><span class="nb">abs</span><span class="p">(</span><span class="n">t</span><span class="o">.</span><span class="n">project</span><span class="p">(</span><span class="n">n</span><span class="p">))</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Magnitude of shear stress on plane </span><span class="si">{</span><span class="n">n</span><span class="si">}</span><span class="s1"> is </span><span class="si">{</span><span class="nb">abs</span><span class="p">(</span><span class="n">t</span><span class="o">.</span><span class="n">reject</span><span class="p">(</span><span class="n">n</span><span class="p">))</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Magnitude of normal stress on plane S:150/60 is 6.125
+Magnitude of shear stress on plane S:150/60 is 2.496873044429773
+</pre></div>
+</div>
+</div>
+</div>
+<p>In APSG you can use the <code class="docutils literal notranslate"><span class="pre">stress_comp</span></code> method of the stress tensor:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sn</span><span class="p">,</span> <span class="n">tau</span> <span class="o">=</span> <span class="n">S</span><span class="o">.</span><span class="n">stress_comp</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Magnitude of normal stress on plane </span><span class="si">{</span><span class="n">n</span><span class="si">}</span><span class="s1"> is </span><span class="si">{</span><span class="nb">abs</span><span class="p">(</span><span class="n">sn</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Magnitude of shear stress on plane </span><span class="si">{</span><span class="n">n</span><span class="si">}</span><span class="s1"> is </span><span class="si">{</span><span class="nb">abs</span><span class="p">(</span><span class="n">tau</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>

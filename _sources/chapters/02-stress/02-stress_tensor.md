@@ -178,9 +178,17 @@ S
 
 ```{code-cell} ipython3
 n = fol(150, 60)  # normal of plane
-T = S.cauchy(n)  # traction vector
-print(f'Magnitude of normal stress on plane {n} is {abs(T.proj(n))}')
-print(f'Magnitude of shear stress on plane {n} is {abs(T.reject(n))}')
+t = S.cauchy(n)  # traction vector
+print(f'Magnitude of normal stress on plane {n} is {abs(t.project(n))}')
+print(f'Magnitude of shear stress on plane {n} is {abs(t.reject(n))}')
+```
+
+In APSG you can use the `stress_comp` method of the stress tensor:
+
+```{code-cell} ipython3
+sn, tau = S.stress_comp(n)
+print(f'Magnitude of normal stress on plane {n} is {abs(sn)}')
+print(f'Magnitude of shear stress on plane {n} is {abs(tau)}')
 ```
 
 ## Sign convention

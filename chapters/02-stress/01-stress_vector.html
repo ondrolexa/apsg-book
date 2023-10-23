@@ -436,31 +436,23 @@ more than the other. While in rigid body mechanics, the concept of force is suff
 <p>In general, a stress acting on a plane represented by traction <span class="math notranslate nohighlight">\(\mathbf{t}\)</span> may be expressed as a sum
 of shear and normal components.</p>
 <div class="math notranslate nohighlight">
-\[\mathbf{t} = \mathbf{\sigma}_n + \mathbf{\tau}_{x_1} + \mathbf{\tau}_{x_1} = \mathbf{\sigma}_n + \mathbf{\tau}_n\]</div>
+\[\mathbf{t} = \boldsymbol{\sigma}_n + \boldsymbol{\tau}_{x_1} + \boldsymbol{\tau}_{x_1} = \boldsymbol{\sigma}_n + \boldsymbol{\tau}_n\]</div>
 <a class="bg-primary mb-1 reference internal image-reference" href="../../_images/stress_onplane.png"><img alt="Stress on plane" class="bg-primary mb-1 align-center" src="../../_images/stress_onplane.png" style="width: 60%;" /></a>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>A <strong>normal component</strong> of the traction vector (<span class="math notranslate nohighlight">\(\mathbf{\sigma}_n\)</span>) acting perpendicular to the plane.</p>
-<p>A <strong>shear component</strong> of the traction vector (<span class="math notranslate nohighlight">\(\mathbf{\tau}_n\)</span>) acting parallel to the plane.</p>
+<p>A <strong>normal component</strong> of the traction vector (<span class="math notranslate nohighlight">\(\boldsymbol{\sigma}_n\)</span>) acting perpendicular to the plane.</p>
+<p>A <strong>shear component</strong> of the traction vector (<span class="math notranslate nohighlight">\(\boldsymbol{\tau}_n\)</span>) acting parallel to the plane.</p>
 </div>
-<p>The magnitude of the normal component <span class="math notranslate nohighlight">\(\mathbf{\sigma}_n\)</span> (i.e. normal stress) of any traction vector <span class="math notranslate nohighlight">\(\mathbf{t}\)</span> acting on an arbitrary
-plane with unit normal vector <span class="math notranslate nohighlight">\(\mathbf{n}\)</span> at a given point, could be calculated a scalar projection of the stress vector
-onto the unit normal vector:</p>
+<p>The magnitude of the normal component <span class="math notranslate nohighlight">\(\boldsymbol{\sigma}_n\)</span> (i.e. normal stress) of any traction vector <span class="math notranslate nohighlight">\(\mathbf{t}\)</span> acting on an arbitrary
+plane with unit normal vector <span class="math notranslate nohighlight">\(\mathbf{n}\)</span> at a given point, could be calculated as it’s projection onto the unit normal vector, i.e. their
+<em>scalar product</em>:</p>
 <div class="math notranslate nohighlight">
-\[\left\| \mathbf{\sigma}_n \right\| = \mathbf{t} \cdot \mathbf{n}\]</div>
-<div class="math notranslate nohighlight">
-\[\mathbf{\sigma}_n = \left\| \mathbf{\sigma}_n \right\|\mathbf{n}\]</div>
-<p>The magnitude of the shear component <span class="math notranslate nohighlight">\(\mathbf{\tau}_n\)</span> (i.e. shear stress), acting in the plane spanned by the two vectors <span class="math notranslate nohighlight">\(\mathbf{t}\)</span> and
-<span class="math notranslate nohighlight">\(\mathbf{\sigma}_n\)</span>, can then be found using the Pythagorean theorem:</p>
-<div class="math notranslate nohighlight">
-\[\left\| \mathbf{\tau} \right\| = \sqrt {{\left\| \mathbf{t} \right\|}^2 - {\left\| \mathbf{\sigma}_n \right\|}^2}\]</div>
-<div class="math notranslate nohighlight">
-\[\mathbf{\tau}_n = \mathbf{t} - \mathbf{\sigma}_n\]</div>
+\[\left| \boldsymbol{\sigma}_n \right| = \mathbf{t} \cdot \mathbf{n}\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="n">fol</span><span class="p">(</span><span class="mi">150</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
-<span class="n">T</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">*</span> <span class="n">vec</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>  <span class="c1"># Traction vector oriented parallel to x-axis with magnitude 5</span>
-<span class="n">T</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>  <span class="c1"># normal stress magnitude</span>
+<span class="n">t</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">*</span> <span class="n">vec</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>  <span class="c1"># Traction vector oriented parallel to x-axis with magnitude 5</span>
+<span class="n">t</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>  <span class="c1"># normal stress magnitude (signed)</span>
 </pre></div>
 </div>
 </div>
@@ -470,10 +462,13 @@ onto the unit normal vector:</p>
 </div>
 </div>
 </div>
+<p>The vector representation of the normal component <span class="math notranslate nohighlight">\(\boldsymbol{\sigma}_n\)</span> could be expressed as unit normal vector scaled by a projection of the traction vector onto the unit normal vector:</p>
+<div class="math notranslate nohighlight">
+\[\boldsymbol{\sigma}_n = (\mathbf{t} \cdot \mathbf{n})\mathbf{n}\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sn</span> <span class="o">=</span> <span class="n">T</span><span class="o">.</span><span class="n">proj</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>  <span class="c1"># project tranction vector T onto normal n - normal stress</span>
-<span class="nb">abs</span><span class="p">(</span><span class="n">sn</span><span class="p">)</span>  <span class="c1"># normal stress magnitude</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sn</span> <span class="o">=</span> <span class="n">n</span><span class="o">*</span><span class="n">t</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>  <span class="c1"># scaled unit normal vector - normal stress</span>
+<span class="nb">abs</span><span class="p">(</span><span class="n">sn</span><span class="p">)</span>  <span class="c1"># normal stress magnitude (always positive)</span>
 </pre></div>
 </div>
 </div>
@@ -483,24 +478,59 @@ onto the unit normal vector:</p>
 </div>
 </div>
 </div>
+<p>In APSG we can use vector projection:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tau</span> <span class="o">=</span> <span class="n">T</span> <span class="o">-</span> <span class="n">sn</span>  <span class="c1"># shear stress</span>
-<span class="nb">abs</span><span class="p">(</span><span class="n">tau</span><span class="p">)</span>  <span class="c1"># shear stress magnitude</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sn</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">project</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>  <span class="c1"># project traction vector t onto normal n - normal stress</span>
+<span class="nb">abs</span><span class="p">(</span><span class="n">sn</span><span class="p">)</span>  <span class="c1"># normal stress magnitude (always positive)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.307189138830738
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.75
 </pre></div>
 </div>
 </div>
 </div>
-<p>or we can use vector rejection:</p>
+<p>The magnitude of  shear component <span class="math notranslate nohighlight">\(\boldsymbol{\tau}_n\)</span> (i.e. shear stress), acting in the plane spanned by the two vectors <span class="math notranslate nohighlight">\(\mathbf{t}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{n}\)</span>, could be calculated as it’s rejection onto the unit normal vector, i.e. magnitude of their <em>cross product</em>:</p>
+<div class="math notranslate nohighlight">
+\[\left| \boldsymbol{\tau} \right| = \left|\mathbf{t} \times \mathbf{n}\right|\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tau</span> <span class="o">=</span> <span class="n">T</span><span class="o">.</span><span class="n">reject</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>  <span class="c1"># shear stress</span>
-<span class="nb">abs</span><span class="p">(</span><span class="n">tau</span><span class="p">)</span>  <span class="c1"># magnitude of shear stress</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">abs</span><span class="p">(</span><span class="n">t</span><span class="o">.</span><span class="n">cross</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>  <span class="c1"># shear stress magnitude (always positive)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.3071891388307386
+</pre></div>
+</div>
+</div>
+</div>
+<p>The shear component <span class="math notranslate nohighlight">\(\boldsymbol{\tau}_n\)</span>, acting in the plane spanned by the two vectors <span class="math notranslate nohighlight">\(\mathbf{t}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{\sigma}_n\)</span>, can then be found as difference between traction vector <span class="math notranslate nohighlight">\(\mathbf{t}\)</span> and normal component <span class="math notranslate nohighlight">\(\mathbf{\sigma}_n\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\boldsymbol{\tau}_n = \mathbf{t} - \boldsymbol{\sigma}_n\]</div>
+<p>or using the double cross product:</p>
+<div class="math notranslate nohighlight">
+\[\boldsymbol{\tau}_n = \mathbf{n} \times (\mathbf{t} \times \mathbf{n})\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tau</span> <span class="o">=</span> <span class="n">n</span><span class="o">.</span><span class="n">cross</span><span class="p">(</span><span class="n">t</span><span class="o">.</span><span class="n">cross</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>  <span class="c1"># double cross product - shear stress</span>
+<span class="nb">abs</span><span class="p">(</span><span class="n">tau</span><span class="p">)</span>  <span class="c1"># shear stress magnitude (always positive)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.3071891388307386
+</pre></div>
+</div>
+</div>
+</div>
+<p>In APSG we can use vector rejection:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tau</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">reject</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>  <span class="c1"># reject traction vector t onto normal n - shear stress</span>
+<span class="nb">abs</span><span class="p">(</span><span class="n">tau</span><span class="p">)</span>  <span class="c1"># shear stress magnitude (always positive)</span>
 </pre></div>
 </div>
 </div>

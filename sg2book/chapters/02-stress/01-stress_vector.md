@@ -78,7 +78,7 @@ The traction at a point on a surface is equal and opposite to the traction that 
 In general, a stress acting on a plane represented by traction $\mathbf{t}$ may be expressed as a sum
 of shear and normal components.
 
-$$\mathbf{t} = \mathbf{\sigma}_n + \mathbf{\tau}_{x_1} + \mathbf{\tau}_{x_1} = \mathbf{\sigma}_n + \mathbf{\tau}_n$$
+$$\mathbf{t} = \boldsymbol{\sigma}_n + \boldsymbol{\tau}_{x_1} + \boldsymbol{\tau}_{x_1} = \boldsymbol{\sigma}_n + \boldsymbol{\tau}_n$$
 
 ```{image} figures/stress_onplane.png
 :alt: Stress on plane
@@ -88,47 +88,65 @@ $$\mathbf{t} = \mathbf{\sigma}_n + \mathbf{\tau}_{x_1} + \mathbf{\tau}_{x_1} = \
 ```
 
 ```{note}
-A **normal component** of the traction vector ($\mathbf{\sigma}_n$) acting perpendicular to the plane.
+A **normal component** of the traction vector ($\boldsymbol{\sigma}_n$) acting perpendicular to the plane.
 
-A **shear component** of the traction vector ($\mathbf{\tau}_n$) acting parallel to the plane.
+A **shear component** of the traction vector ($\boldsymbol{\tau}_n$) acting parallel to the plane.
 ```
 
-The magnitude of the normal component $\mathbf{\sigma}_n$ (i.e. normal stress) of any traction vector $\mathbf{t}$ acting on an arbitrary
-plane with unit normal vector $\mathbf{n}$ at a given point, could be calculated a scalar projection of the stress vector
-onto the unit normal vector:
+The magnitude of the normal component $\boldsymbol{\sigma}_n$ (i.e. normal stress) of any traction vector $\mathbf{t}$ acting on an arbitrary
+plane with unit normal vector $\mathbf{n}$ at a given point, could be calculated as it's projection onto the unit normal vector, i.e. their
+*scalar product*:
 
-$$\left\| \mathbf{\sigma}_n \right\| = \mathbf{t} \cdot \mathbf{n}$$
-
-$$\mathbf{\sigma}_n = \left\| \mathbf{\sigma}_n \right\|\mathbf{n}$$
-
-The magnitude of the shear component $\mathbf{\tau}_n$ (i.e. shear stress), acting in the plane spanned by the two vectors $\mathbf{t}$ and
-$\mathbf{\sigma}_n$, can then be found using the Pythagorean theorem:
-
-$$\left\| \mathbf{\tau} \right\| = \sqrt {{\left\| \mathbf{t} \right\|}^2 - {\left\| \mathbf{\sigma}_n \right\|}^2}$$
-
-$$\mathbf{\tau}_n = \mathbf{t} - \mathbf{\sigma}_n$$
+$$\left| \boldsymbol{\sigma}_n \right| = \mathbf{t} \cdot \mathbf{n}$$
 
 ```{code-cell} ipython3
 n = fol(150, 60)
-T = 5 * vec('x')  # Traction vector oriented parallel to x-axis with magnitude 5
-T.dot(n)  # normal stress magnitude
+t = 5 * vec('x')  # Traction vector oriented parallel to x-axis with magnitude 5
+t.dot(n)  # normal stress magnitude (signed)
 ```
 
+The vector representation of the normal component $\boldsymbol{\sigma}_n$ could be expressed as unit normal vector scaled by a projection of the traction vector onto the unit normal vector:
+
+$$\boldsymbol{\sigma}_n = (\mathbf{t} \cdot \mathbf{n})\mathbf{n}$$
+
 ```{code-cell} ipython3
-sn = T.proj(n)  # project tranction vector T onto normal n - normal stress
-abs(sn)  # normal stress magnitude
+sn = n*t.dot(n)  # scaled unit normal vector - normal stress
+abs(sn)  # normal stress magnitude (always positive)
 ```
 
+In APSG we can use vector projection:
+
 ```{code-cell} ipython3
-tau = T - sn  # shear stress
-abs(tau)  # shear stress magnitude
+sn = t.project(n)  # project traction vector t onto normal n - normal stress
+abs(sn)  # normal stress magnitude (always positive)
 ```
 
-or we can use vector rejection:
+The magnitude of  shear component $\boldsymbol{\tau}_n$ (i.e. shear stress), acting in the plane spanned by the two vectors $\mathbf{t}$ and $\mathbf{n}$, could be calculated as it's rejection onto the unit normal vector, i.e. magnitude of their *cross product*:
+
+$$\left| \boldsymbol{\tau} \right| = \left|\mathbf{t} \times \mathbf{n}\right|$$
 
 ```{code-cell} ipython3
-tau = T.reject(n)  # shear stress
-abs(tau)  # magnitude of shear stress
+abs(t.cross(n))  # shear stress magnitude (always positive)
+```
+
+The shear component $\boldsymbol{\tau}_n$, acting in the plane spanned by the two vectors $\mathbf{t}$ and $\mathbf{\sigma}_n$, can then be found as difference between traction vector $\mathbf{t}$ and normal component $\mathbf{\sigma}_n$:
+
+$$\boldsymbol{\tau}_n = \mathbf{t} - \boldsymbol{\sigma}_n$$
+
+or using the double cross product:
+	
+$$\boldsymbol{\tau}_n = \mathbf{n} \times (\mathbf{t} \times \mathbf{n})$$
+
+```{code-cell} ipython3
+tau = n.cross(t.cross(n))  # double cross product - shear stress
+abs(tau)  # shear stress magnitude (always positive)
+```
+
+In APSG we can use vector rejection:
+
+```{code-cell} ipython3
+tau = t.reject(n)  # reject traction vector t onto normal n - shear stress
+abs(tau)  # shear stress magnitude (always positive)
 ```
 
 ## Stress at point

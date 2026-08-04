@@ -27,11 +27,14 @@ bibtex_bibfiles:
 # Information about where the book exists on the web
 repository:
   url: https://github.com/ondrolexa/apsg-book
-  path_to_book: docs  # Optional path to your book, relative to the repository root
-  branch: master
+  path_to_book: sg2book  # Optional path to your book, relative to the repository root
+  branch: main
 
 # Add GitHub buttons to your book
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
 html:
   use_issues_button: true
   use_repository_button: true
+
+exclude_patterns:
+  - '.venv/*'

@@ -15,7 +15,7 @@ def plot_defgrad(F, **kwargs):
     ymax = kwargs.pop('ymax', 2)
     ysteps = kwargs.pop('ysteps', 17)
     xpoly = kwargs.pop('xpoly', [-1, -1, 1, 1, -1])
-    ypoly = kwargs.pop('xpoly', [-1, 1, 1, -1, -1])
+    ypoly = kwargs.pop('ypoly', [-1, 1, 1, -1, -1])
     if 'ax' in kwargs:
         ax = kwargs.pop('ax')
     else:

@@ -42,7 +42,7 @@ jobs:
           BASE_URL: /${{ github.event.repository.name }}/
         run: |
           cd sg2book
-          jupyter-book build --html
+          jupyter-book build --html --execute
 
       # Upload the book's HTML as an artifact
       - name: Upload artifact

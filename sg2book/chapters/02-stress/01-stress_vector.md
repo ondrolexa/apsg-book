@@ -19,7 +19,7 @@ from apsg import *
 # Stress vector
 
 Consider two blocks of different cross-sections. Intuitively, the blocks whose cross-section is smaller is going to deform a lot
-more than the other. While in rigid body mechanics, the concept of force is sufficient to describe or predict the motion of the body, in deformable bodies it is not. 
+more than the other. While in rigid body mechanics, the concept of force is sufficient to describe or predict the motion of the body, in deformable bodies it is not. This chapter's treatment of stress follows {cite}`twissmoores2007` and {cite}`means1976`.
 
 ```{image} figures/twiss_stress.png
 :alt: Stress
@@ -78,7 +78,7 @@ The traction at a point on a surface is equal and opposite to the traction that 
 In general, a stress acting on a plane represented by traction $\mathbf{t}$ may be expressed as a sum
 of shear and normal components.
 
-$$\mathbf{t} = \boldsymbol{\sigma}_n + \boldsymbol{\tau}_{x_1} + \boldsymbol{\tau}_{x_1} = \boldsymbol{\sigma}_n + \boldsymbol{\tau}_n$$
+$$\mathbf{t} = \boldsymbol{\sigma}_n + \boldsymbol{\tau}_n$$
 
 ```{image} figures/stress_onplane.png
 :alt: Stress on plane

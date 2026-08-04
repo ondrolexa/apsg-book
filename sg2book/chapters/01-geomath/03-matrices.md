@@ -22,18 +22,20 @@ A matrix, like a vector, is also a collection of numbers. The difference is that
 
 The **dimensions of a matrix** tells its size: the number of rows and columns of the matrix, in that order.
 
-Since matrix $\mathbf{A}$ has two rows and three columns, we write its dimensions as $2\times 3$, pronounced "two by three". In contrast, matrix $\mathbf{B}$ has three rows and two columns, so it is a $3\times 2$ matrix.
+Since matrix $\mathbf{P}$ has two rows and three columns, we write its dimensions as $2\times 3$, pronounced "two by three". In contrast, matrix $\mathbf{Q}$ has three rows and two columns, so it is a $3\times 2$ matrix.
 
-$$\mathbf{A} = \begin{bmatrix}
+$$\mathbf{P} = \begin{bmatrix}
   -2 & 5 & 6\\ 
   5 & 2 & 7
 \end{bmatrix}$$
 
-$$\mathbf{B} = \begin{bmatrix}
+$$\mathbf{Q} = \begin{bmatrix}
   -8 & -4\\ 
   23 & 12\\ 
   18 & 10
 \end{bmatrix}$$
+
+Note that $\mathbf{P}$ and $\mathbf{Q}$ are not square, so they cannot be added or multiplied together — they are here only to illustrate the "rows × columns" dimension convention. The rest of this chapter uses fresh symbols $\mathbf{A}$, $\mathbf{B}$ for actual $2\times 2$ examples.
 
 APSG offers *matrix2* and *matrix3* classes for square matrices commonly used in structural geology.
 
@@ -58,7 +60,7 @@ Matrix multiplication gets a bit more complicated, since multiple elements in th
 
 $$\mathbf{A}\mathbf{B}=\mathbf{C}$$
 
-$$\begin{bmatrix} a_{11} & a_{12}\\a_{21} & a_{22}\end{bmatrix} \begin{bmatrix} b_{11} & b_{12}\\b_{21} & b_{22}\end{bmatrix} = \begin{bmatrix} a_{11}b_{11}+a_{12}b_{21} & a_{11}b_{12}+a_{12}b_{22}\\a_{21}b_{21}+a_{12}b_{21} & a_{21}b_{22}+a_{12}b_{22}\end{bmatrix}$$
+$$\begin{bmatrix} a_{11} & a_{12}\\a_{21} & a_{22}\end{bmatrix} \begin{bmatrix} b_{11} & b_{12}\\b_{21} & b_{22}\end{bmatrix} = \begin{bmatrix} a_{11}b_{11}+a_{12}b_{21} & a_{11}b_{12}+a_{12}b_{22}\\a_{21}b_{11}+a_{22}b_{21} & a_{21}b_{12}+a_{22}b_{22}\end{bmatrix}$$
 
 ```{code-cell} ipython3
 A @ B

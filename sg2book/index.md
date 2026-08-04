@@ -37,13 +37,23 @@ geochemical data, which is so readily available from modern analytical
 instruments.
 
 Many examples in this book using [APSG](https://github.com/ondrolexa/apsg)
-python package for structural geologists. It defines several new python
+python package for structural geologists {cite}`apsg`. It defines several new python
 classes to easily manage, analyze and visualize orientational structural
 geology data. 
+
+The mathematical treatment of vectors, tensors and coordinate systems follows the
+approach of {cite}`allmendinger2012structural`; the treatment of stress and finite
+strain draws on {cite}`twissmoores2007`, {cite}`means1976`, {cite}`malvern1969`, and
+{cite}`ramsayhuber1983`.
 
 ```{code-cell} ipython3
 from apsg import *
 ```
 
 ```{tableofcontents}
+```
+
+## References
+
+```{bibliography}
 ```

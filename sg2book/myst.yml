@@ -2,14 +2,41 @@
 version: 1
 project:
   id: acfc79cd-2b14-45d6-9f45-db6991ae56d9
-  # title:
+  title: Advanced structural geology with Python
+  authors:
+    - name: Ondrej Lexa
+  copyright: "2026"
   # description:
   # keywords: []
-  # authors: []
-  # github:
-  # To autogenerate a Table of Contents, run "jupyter book init --write-toc"
+  github: https://github.com/ondrolexa/apsg-book
+  bibliography:
+    - references.bib
+  exports:
+    - format: tex
+      output: apsgbook.tex
+  toc:
+    - file: index.md
+    - title: Vectors and matrices for structural geologists
+      children:
+        - file: chapters/01-geomath/01-coordsys.md
+        - file: chapters/01-geomath/02-vectors.md
+        - file: chapters/01-geomath/03-matrices.md
+        - file: chapters/01-geomath/04-transformations.md
+    - title: Concept of stress in geology
+      children:
+        - file: chapters/02-stress/01-stress_vector.md
+        - file: chapters/02-stress/02-stress_tensor.md
+        - file: chapters/02-stress/03-tensor_properties.md
+    - title: Concept of strain in geology
+      children:
+        - file: chapters/03-strain/01-introduction.md
+        - file: chapters/03-strain/02-continuum.md
+        - file: chapters/03-strain/03-superposition.md
+        - file: chapters/03-strain/04-decomposition.md
+        - file: chapters/03-strain/05-finite-strain.md
+        - file: chapters/03-strain/06-progressive.md
 site:
   template: book-theme
-  # options:
-  #   favicon: favicon.ico
-  #   logo: site_logo.png
+  options:
+    logo: logo.png
+    # favicon: favicon.ico

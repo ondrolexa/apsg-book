@@ -69,6 +69,41 @@ $$\boldsymbol{F} = \begin{bmatrix} 1.732 & -0.25 \\ 1 & 0.433 \end{bmatrix} \app
 
 Such a partitioning of the **deformation gradient** into the product of a **rotation matrix** and **stretch tensor** is known as a **polar decomposition**.
 
+## Pure shear and simple shear
+
+The rotation part $\boldsymbol{R}$ of the polar decomposition gives a precise way to define two deformation types that are fundamental in structural geology:
+
+```{admonition} Pure shear vs. simple shear
+:class: tip
+**Pure shear** is a deformation with **no internal rotation**: $\boldsymbol{R}=\boldsymbol{I}$, so $\boldsymbol{F}=\boldsymbol{U}=\boldsymbol{V}$ is symmetric ($\boldsymbol{F}=\boldsymbol{F}^T$). The principal stretch axes stay fixed in orientation throughout the deformation — recall from the previous chapter that this is exactly what makes a progressive deformation **coaxial**.
+
+**Simple shear** is a constant-area (in 2D) or constant-volume (in 3D) deformation, $\det(\boldsymbol{F})=1$, in which material lines parallel to the shear plane are not rotated, but $\boldsymbol{F}\ne\boldsymbol{F}^T$ — it necessarily carries an internal rotation, making it the classic **non-coaxial** deformation.
+```
+
+The stretch tensor $\boldsymbol{U}$ from the worked example above is, by construction, a pure shear ($\boldsymbol{R}=\boldsymbol{I}$):
+
+```{code-cell} ipython3
+U.R  # rotation part of U — identity, confirming pure shear
+```
+
+```{code-cell} ipython3
+np.array(U) == np.array(U).T  # symmetric F <=> pure shear
+```
+
+A simple shear looks deceptively similar in matrix form — a single off-diagonal term — but hides a real internal rotation once decomposed:
+
+```{code-cell} ipython3
+Fs = defgrad2([[1, 1], [0, 1]])
+print('det(Fs) =', Fs.det)
+Fs.R  # rotation part is *not* the identity
+```
+
+```{code-cell} ipython3
+Fs.R.angle()  # non-zero rotation angle, in degrees
+```
+
+This is a common source of confusion: a simple shear matrix contains no rotation term written explicitly, yet its polar decomposition shows the material *is* rotating relative to the fixed principal stretch directions — precisely the non-coaxial behaviour that distinguishes it from pure shear. We revisit this distinction, and the general (non-instantaneous) case, in terms of the kinematic vorticity number in a later chapter.
+
 ## Rotation matrix
 
 ````{admonition} Derivation of 2D rotation matrix
@@ -143,16 +178,19 @@ V @ R == R @ U
 
 ## Singular value decomposition
 
-In linear algebra, the singular value decomposition (**SVD**) is a factorization of a real or complex matrix $\boldsymbol{F} =\boldsymbol{U} {\boldsymbol {\Sigma }}\boldsymbol{V} ^{*}$. Thus the expression $\boldsymbol{U} {\boldsymbol {\Sigma }}\boldsymbol{V} ^{*}$ can be intuitively interpreted as a composition of three geometrical transformations:
+In linear algebra, the singular value decomposition (**SVD**) is a factorization of a real or complex matrix $\boldsymbol{F} =\boldsymbol{U} {\boldsymbol {\Sigma }}\boldsymbol{V} ^{*}$. Thus the expression $\boldsymbol{U} {\boldsymbol {\Sigma }}\boldsymbol{V} ^{*}$ can be intuitively interpreted as a composition of three geometrical transformations, shown in {numref}`fig-svd-interpreted`:
  - **rotation or reflection**
  - **scaling**
  - and another **rotation or reflection**
 
-```{image} figures/svd_interpreted.png
+```{figure} figures/svd_interpreted.png
+:name: fig-svd-interpreted
 :alt: SVD interpreted
 :class: bg-primary mb-1
 :width: 75%
 :align: center
+
+SVD as rotation/reflection → scaling → rotation/reflection.
 ```
 
 ---
@@ -186,4 +224,11 @@ In addition, we can use stretching tensor and second rotation matrix to calculat
 ar = s[0] / s[1]
 ori = np.degrees(np.arctan2(U[1, 0], U[0, 0]))
 print('Orientation:{:g} AR:{:g}'.format(ori, ar))
+```
+
+In APSG this is available directly from the deformation gradient, without reimplementing the SVD by hand — the Finger (left Cauchy-Green) ellipse already carries the axial ratio and orientation as properties:
+
+```{code-cell} ipython3
+E = ellipse.from_defgrad(F)
+E.ar, E.orientation
 ```

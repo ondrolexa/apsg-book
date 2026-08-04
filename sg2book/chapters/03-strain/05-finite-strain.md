@@ -21,6 +21,8 @@ from strain2d import plot_defgrad
 
 # Finite strain
 
+The strain-ellipse treatment in this chapter follows the classic structural-geology presentation of {cite}`ramsayhuber1983`.
+
 A strain analysis consists in quantifying the changes in shape and size due to deformation. The strain analysis involves determining the orientation of principal strains and their magnitudes. The finite strain is the measurable parameter that assigns a quantity to the total change in the shape of a deformed object compared to its original shape. In practice, dilatation is very difficult to measure so that geologists usually speak of strain for distortion only. One way of describing deformation is to use a strain ellipse or ellipsoid. If you start out with a perfectly circular or spherical feature, after it has been deformed it will form an ellipse or ellipsoid. In general a preexisting line will have been both stretched and rotated. However, for any strain ellipse/ellipsoid there are two/three, perpendicular directions in which lines undergo stretching but no rotation. These directions are called the principal strain axes and are a fundamental concept in structural geology.
 
 ## Deformation tensors
@@ -71,12 +73,18 @@ $$(\boldsymbol{F}X)^T\cdot\boldsymbol{F}X=X^T\boldsymbol{F}^T\cdot\boldsymbol{F}
 
 where matrix $\boldsymbol{C}=\boldsymbol{F}^T\cdot\boldsymbol{F}$ is called **Green's** or **Right Cauchy-Green** deformation tensor.
 
-```{image} figures/reciprocal_strain.png
+```{figure} figures/reciprocal_strain.png
+:name: fig-reciprocal-strain
 :alt: Reciprocal strain
 :class: bg-primary mb-1
 :width: 100%
 :align: center
+
+The strain ellipse (from $\boldsymbol{B}$) and reciprocal strain ellipse (from $\boldsymbol{B}^{-1}$).
 ```
+
+{numref}`fig-reciprocal-strain` shows the strain ellipse and its reciprocal side by side.
+
 ## Strain ellipse or ellipsoid
 
 Plugging the polar decomposition into equations for above defined deformation tensors gives a rather surprising results.
@@ -102,13 +110,16 @@ of squeezing or stretching (the strain) is called the **eigenvalue**. There is a
 
 $$\boldsymbol{B}x=\lambda x$$
 
-where $\boldsymbol{B}$ is a square matrix (here Finger deformation tensor), $x$ is an eigenvector of $\boldsymbol{B}$ and $\lambda$ is the associated eigenvalue. $\lambda$ is a scalar, so the equation tells us that applying $\boldsymbol{B}$ to its eigenvectors does not alter their directions, but only scales their lengths. In structural geology, the eigenvectors are the principal strain axes associated with that deformation, and the eigenvalues are the associated quadratic elongations (Note that deformation tensor is a second power of stretching tensor).
+where $\boldsymbol{B}$ is a square matrix (here Finger deformation tensor), $x$ is an eigenvector of $\boldsymbol{B}$ and $\lambda$ is the associated eigenvalue. $\lambda$ is a scalar, so the equation tells us that applying $\boldsymbol{B}$ to its eigenvectors does not alter their directions, but only scales their lengths. In structural geology, the eigenvectors are the principal strain axes associated with that deformation, and the eigenvalues are the associated quadratic elongations (Note that deformation tensor is a second power of stretching tensor), as shown in {numref}`fig-def-tensor-eigens`.
 
-```{image} figures/def_tensors_eigens.png
+```{figure} figures/def_tensors_eigens.png
+:name: fig-def-tensor-eigens
 :alt: Eigenvectors and eigenvalues
 :class: bg-primary mb-1
 :width: 50%
 :align: center
+
+Eigenvectors of the deformation tensor are the principal strain axes; eigenvalues are the quadratic elongations.
 ```
 
 To find the eigenvectors and eigenvalues, we rewrite the above equation as:

@@ -177,7 +177,8 @@ u.cross(v)
 The compass measurements are commonly in **spherical coordinates** i.e. *trend*
 or *dip direction* ($\theta$) and *plunge* or *dip* ($\varphi$). *Trend* and *plunge*
 is used to describe the orientation of lines, while *dip direction* and *dip* being
-reserved for planes.
+reserved for planes. The vector conventions used throughout this book follow
+{cite}`allmendinger2012structural`.
 
 ```{image} figures/Geo_coordinates_en.png
 :alt: Coordinate transformation in geology

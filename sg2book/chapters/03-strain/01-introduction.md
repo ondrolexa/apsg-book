@@ -21,6 +21,8 @@ from strain2d import plot_defgrad
 
 # Introduction to kinematic analysis
 
+The continuum-mechanics treatment of deformation and strain in this and the following chapters follows {cite}`malvern1969` and {cite}`means1976`, with structural-geology applications drawn from {cite}`ramsayhuber1983`.
+
 **Deformation** is the transformation of a body from a reference configuration to a current configuration. A configuration is a set containing the positions of all particles of the body. A deformation can occur because of external loads, body forces (such as gravity), or changes in temperature, pressure, or chemical reactions, etc.
 
 **Strain** is related to deformation in terms of relative displacement of particles in the body that excludes rigid-body motions. Different equivalent choices may be made for the expression of a strain field depending on whether it is defined with respect to the initial or the final configuration of the body. Here we will follow simplified view.
@@ -28,8 +30,8 @@ from strain2d import plot_defgrad
 In a continuous body, a deformation field results from a stress field due to applied forces or because of some changes in the temperature field of the body. The relation between stress and strain is expressed by **constitutive equations**, e.g., Hooke's law for linear elastic materials. Deformations which cease to exist after the stress field is removed are termed as **elastic deformation**. In this case, the continuum completely recovers its original configuration. On the other hand, irreversible deformations remain. They exist even after stresses have been removed. One type of irreversible deformation is **plastic deformation**, which occurs in material bodies after stresses have attained a certain threshold value known as the elastic limit or yield stress, and are the result of slip, or dislocation mechanisms at the atomic level. Another type of irreversible deformation is **viscous deformation**, which is the irreversible part of viscoelastic deformation.
 
 ## Components of deformation
-A change in the configuration of a continuum body results in a displacement from an \textbf{initial or undeformed configuration} to a current
-or \textbf{deformed configuration}.
+A change in the configuration of a continuum body results in a displacement from an **initial or undeformed configuration** to a current
+or **deformed configuration**.
 
 The displacement of a body has two components:
 

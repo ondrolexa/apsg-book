@@ -151,3 +151,43 @@ $$d\mathbf{x} = \boldsymbol{F}d\mathbf{X}$$
 - An isochoric deformation is a deformation preserving local volume, i.e., $\det({\boldsymbol{F}})=1$
 - A deformation is called homogeneous if $\boldsymbol{F}$ is constant at every point. Otherwise, the deformation is called non-homogeneous
 - The physical restriction of possible deformation: $\det({\boldsymbol{F}}) > 0$
+
+## Infinitesimal strain vs. finite strain
+
+Everything above — $\boldsymbol{F}$, $\boldsymbol{\nabla u}$ — is exact, with no restriction on how large the deformation is. The later chapters build **finite strain** measures directly from $\boldsymbol{F}$ (the Green-Lagrange strain $\boldsymbol{E}=\frac{1}{2}(\boldsymbol{C}-\boldsymbol{I})=\frac{1}{2}(\boldsymbol{F}^T\boldsymbol{F}-\boldsymbol{I})$, and the Cauchy-Green tensors $\boldsymbol{B}$, $\boldsymbol{C}$), which remain valid however large the rotation or stretch is.
+
+There is, however, a much older and simpler measure that you will meet in classical elasticity, seismology, and geodesy texts: the **infinitesimal (small) strain tensor**. It comes from splitting the displacement gradient into its symmetric and antisymmetric parts, which is always possible for any square matrix:
+
+$$\boldsymbol{\nabla u} = \underbrace{\tfrac{1}{2}\left(\boldsymbol{\nabla u}+(\boldsymbol{\nabla u})^T\right)}_{\boldsymbol{\varepsilon}\ \text{(infinitesimal strain)}} + \underbrace{\tfrac{1}{2}\left(\boldsymbol{\nabla u}-(\boldsymbol{\nabla u})^T\right)}_{\boldsymbol{\omega}\ \text{(infinitesimal rotation)}}$$
+
+$\boldsymbol{\varepsilon}$ is symmetric (pure shape/size change), $\boldsymbol{\omega}$ is antisymmetric (a small rigid rotation, no shape change). Expanding the Green-Lagrange strain in terms of $\boldsymbol{\nabla u}$ shows exactly how $\boldsymbol{\varepsilon}$ relates to it:
+
+$$\boldsymbol{E} = \tfrac{1}{2}\left(\boldsymbol{F}^T\boldsymbol{F}-\boldsymbol{I}\right) = \tfrac{1}{2}\left((\boldsymbol{I}+\boldsymbol{\nabla u})^T(\boldsymbol{I}+\boldsymbol{\nabla u})-\boldsymbol{I}\right) = \boldsymbol{\varepsilon} + \tfrac{1}{2}(\boldsymbol{\nabla u})^T\boldsymbol{\nabla u}$$
+
+This identity holds exactly, for *any* deformation. The infinitesimal strain tensor $\boldsymbol{\varepsilon}$ is a good approximation to the finite strain $\boldsymbol{E}$ only when the quadratic term $\tfrac{1}{2}(\boldsymbol{\nabla u})^T\boldsymbol{\nabla u}$ is negligible next to the linear term — i.e. when $|\boldsymbol{\nabla u}|\ll 1$. We can check both regimes directly:
+
+```{code-cell} ipython3
+def eps_and_E(du):
+    du = np.asarray(du, dtype=float)
+    I = np.eye(2)
+    F = I + du
+    eps = 0.5 * (du + du.T)
+    E = 0.5 * (F.T @ F - I)
+    return eps, E
+
+# a small deformation: |grad u| ~ 0.01
+eps, E = eps_and_E([[0.01, 0.005], [0.005, -0.005]])
+print('eps:\n', eps)
+print('E:\n', E)
+print('max |E - eps| =', np.max(np.abs(E - eps)))
+```
+
+```{code-cell} ipython3
+# the same F used in the polar-decomposition example (next chapter): grad(u) = F - I, |grad u| ~ O(1)
+eps, E = eps_and_E([[0.732, -0.25], [1, -0.567]])
+print('eps:\n', eps)
+print('E:\n', E)
+print('max |E - eps| =', np.max(np.abs(E - eps)))
+```
+
+For the small deformation, $\boldsymbol{\varepsilon}$ and $\boldsymbol{E}$ agree to within $10^{-4}$ — the linearization is excellent. For the $O(1)$ deformation, they disagree by up to $0.77$, comparable to the strain itself — the linearization is useless. **This is the whole reason structural geology needs finite-strain theory** (this chapter onward): natural deformations routinely involve stretches and rotations far too large for the infinitesimal approximation, so we work directly with $\boldsymbol{F}$, $\boldsymbol{B}$, $\boldsymbol{C}$ rather than their small-strain linearization $\boldsymbol{\varepsilon}$.

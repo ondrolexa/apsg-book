@@ -38,11 +38,11 @@ u.transform(F)
 
 If $\mathbf{A}$ has $n$ columns, then it only makes sense to multiply $\mathbf{A}$ by vectors with $n$ entries. This is why the domain of transformation is $\mathbb{R}^n$. If $\mathbf{A}$ has $m$ rows, then $\mathbf{A}\mathbf{u}$ has $m$ entries for any vector $\mathbf{u}$ in $\mathbb{R}^n$; this is why the codomain of transformation is $\mathbb{R}^m$.
 
-Suppose that $\mathbf{A}$ has columns $v_1, v_1, \dots v_n$,. If we multiply $\mathbf{A}$ by a general vector $\mathbf{u}$, we get:
+Suppose that $\mathbf{A}$ has columns $v_1, v_2, \dots v_n$. If we multiply $\mathbf{A}$ by a general vector $\mathbf{u}$, we get:
 
-$$\mathbf{A}\mathbf{u}=\begin{pmatrix}| & | &  & | \\ v_1 & v_2 & \dots & v_3\\ | & | &  & | \end{pmatrix}\begin{pmatrix}u_1\\ u_2\\ \vdots \\ u_n\end{pmatrix}= u_1v_1 + u_2v_2 + \dots + u_nv_n$$
+$$\mathbf{A}\mathbf{u}=\begin{pmatrix}| & | &  & | \\ v_1 & v_2 & \dots & v_n\\ | & | &  & | \end{pmatrix}\begin{pmatrix}u_1\\ u_2\\ \vdots \\ u_n\end{pmatrix}= u_1v_1 + u_2v_2 + \dots + u_nv_n$$
 
-This is just a general linear combination of $v_1, v_1, \dots v_n$. Therefore, the outputs of matrix transformations are exactly the linear combinations of the columns of *transformation matrix* $\mathbf{A}$.
+This is just a general linear combination of $v_1, v_2, \dots v_n$. Therefore, the outputs of matrix transformations are exactly the linear combinations of the columns of *transformation matrix* $\mathbf{A}$.
 
 ```{admonition} Useful identities
 :class: tip

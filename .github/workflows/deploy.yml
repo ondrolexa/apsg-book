@@ -16,15 +16,15 @@ jobs:
     steps:
       - uses: actions/checkout@v7
 
-      # Install dependencies
-      - name: Set up Python
-        uses: actions/setup-python@v7
+      # Install uv and the project's Python + dependencies (from pyproject.toml/uv.lock)
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v6
         with:
-          python-version: "3.13"
-          cache: pip # Implicitly uses requirements.txt for cache key
+          enable-cache: true
+          cache-dependency-glob: "uv.lock"
 
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: uv sync --locked
 
       # (optional) Cache your executed notebooks between runs
       # if you have config:
@@ -34,7 +34,7 @@ jobs:
         uses: actions/cache@v6
         with:
           path: _build/.jupyter_cache
-          key: jupyter-book-cache-${{ hashFiles('requirements.txt') }}
+          key: jupyter-book-cache-${{ hashFiles('uv.lock') }}
 
       # Build the book
       - name: Build the book
@@ -42,7 +42,7 @@ jobs:
           BASE_URL: /${{ github.event.repository.name }}/
         run: |
           cd sg2book
-          jupyter-book build --html --execute
+          uv run jupyter-book build --html --execute
 
       # Upload the book's HTML as an artifact
       - name: Upload artifact

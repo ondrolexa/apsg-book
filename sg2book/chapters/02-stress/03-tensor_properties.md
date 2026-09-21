@@ -124,7 +124,7 @@ for (a, b), color, lbl in [((s1, s3), 'C1', r'$\sigma_1,\sigma_3$ (outer)'),
     ax.add_patch(plt.Circle((c, 0), r, fill=False, color=color, label=lbl))
 ax.plot(sn_vals, tau_vals, '.', ms=3, color='C0', alpha=0.6, label='random planes (S2.cauchy(n))')
 ax.set_xlim(s3 - 1, s1 + 1)
-ax.set_ylim(-0.5, (s1 - s3) / 2 + 1)
+ax.set_ylim(0, (s1 - s3) / 2 + 1)
 ax.set_xlabel(r'$\sigma_n$')
 ax.set_ylabel(r'$\tau$')
 ax.set_aspect(1)

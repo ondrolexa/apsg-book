@@ -11,14 +11,14 @@ kernelspec:
   name: python3
 ---
 
+# Stress tensor
+
 ```{code-cell} ipython3
 :tags: [remove-input]
 import numpy as np
 import matplotlib.pyplot as plt
 from apsg import *
 ```
-
-# Stress tensor
 
 The Cauchy tetrahedron derivation and stress tensor notation used here follow {cite}`allmendinger2012structural`.
 

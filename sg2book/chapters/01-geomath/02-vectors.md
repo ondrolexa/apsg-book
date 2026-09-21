@@ -11,12 +11,12 @@ kernelspec:
   name: python3
 ---
 
+# Vectors
+
 ```{code-cell} ipython3
 :tags: [remove-input]
 from apsg import *
 ```
-
-# Vectors
 
 Most structural geology students have learned the basics of vectors in their math courses.
 We’ll first review those basic concepts and then put that knowledge to work because, as

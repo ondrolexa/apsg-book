@@ -11,13 +11,13 @@ kernelspec:
   name: python3
 ---
 
+# Kinematics of continuum body
+
 ```{code-cell} ipython3
 :tags: [remove-input]
 import numpy as np
 import matplotlib.pyplot as plt
 ```
-
-# Kinematics of continuum body
 
 The motion of a continuum body is a **continuous** time sequence of displacements. Thus, the material body will occupy **different configurations** at different times so that a particle occupies a series of points in space which describe a **pathline**. There is **continuity** during deformation or motion of a continuum body in the sense that:
 

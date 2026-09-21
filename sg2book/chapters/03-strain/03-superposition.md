@@ -11,6 +11,8 @@ kernelspec:
   name: python3
 ---
 
+# Superposition of deformation
+
 ```{code-cell} ipython3
 :tags: [remove-input]
 import numpy as np
@@ -18,8 +20,6 @@ import matplotlib.pyplot as plt
 from apsg import *
 from strain2d import plot_defgrad
 ```
-
-# Superposition of deformation
 
 $\boldsymbol{F}$ maps any undeformed vector into its deformed state. This vector can also be a position vector of a point. Therefore $\boldsymbol{F}$ also maps any point into its new position after deformation. Considering two successive deformations $\boldsymbol{F_1}$ and $\boldsymbol{F_2}$ write transformation equation....
 

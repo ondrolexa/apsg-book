@@ -11,12 +11,12 @@ kernelspec:
   name: python3
 ---
 
+# Matrices
+
 ```{code-cell} ipython3
 :tags: [remove-input]
 from apsg import *
 ```
-
-# Matrices
 
 A matrix, like a vector, is also a collection of numbers. The difference is that a matrix is a table of numbers rather than a list. Many of the same rules we just outlined for vectors above apply equally well to matrices. In fact, you can think of vectors as matrices that happen to only have one column or one row.
 

@@ -11,6 +11,8 @@ kernelspec:
   name: python3
 ---
 
+# Progressive deformation
+
 ```{code-cell} ipython3
 :tags: [remove-input]
 import numpy as np
@@ -19,8 +21,6 @@ from scipy.linalg import expm, logm
 from apsg import *
 from strain2d import plot_defgrad
 ```
-
-# Progressive deformation
 
 Everything so far has compared a single **reference** configuration to a single **deformed** configuration through one deformation gradient $\boldsymbol{F}$. Real geological deformation, however, accumulates continuously over time. This chapter follows {cite}`means1976` and {cite}`ramsayhuber1983` in describing that continuous accumulation, and revisits **coaxial** vs. **non-coaxial** deformation (introduced in *Superposition of deformation*) and **pure shear** vs. **simple shear** (introduced in *Deformation gradient decompositions*) as end-members of a single continuous quantity: the **kinematic vorticity number**.
 

@@ -11,6 +11,8 @@ kernelspec:
   name: python3
 ---
 
+# Introduction to kinematic analysis
+
 ```{code-cell} ipython3
 :tags: [remove-input]
 import numpy as np
@@ -18,8 +20,6 @@ import matplotlib.pyplot as plt
 from apsg import *
 from strain2d import plot_defgrad
 ```
-
-# Introduction to kinematic analysis
 
 The continuum-mechanics treatment of deformation and strain in this and the following chapters follows {cite}`malvern1969` and {cite}`means1976`, with structural-geology applications drawn from {cite}`ramsayhuber1983`.
 

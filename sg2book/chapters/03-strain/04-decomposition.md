@@ -11,6 +11,8 @@ kernelspec:
   name: python3
 ---
 
+# Deformation gradient decompositions
+
 ```{code-cell} ipython3
 :tags: [remove-input]
 import numpy as np
@@ -18,8 +20,6 @@ import matplotlib.pyplot as plt
 from apsg import *
 from strain2d import plot_defgrad
 ```
-
-# Deformation gradient decompositions
 
 As we noted earlier, the deformation gradient tensor includes both rigid body and deformation modes. Therefore, we should be able to decompose the deformation gradient into rigid body and deformation components. Since translation does not change any vector or its components, we can therefore conclude that the deformation gradient tensor will only contain the rigid body mode of rotation in addition to stretch.
 

@@ -11,14 +11,14 @@ kernelspec:
   name: python3
 ---
 
+# Stress tensor properties
+
 ```{code-cell} ipython3
 :tags: [remove-input]
 import numpy as np
 import matplotlib.pyplot as plt
 from apsg import *
 ```
-
-# Stress tensor properties
 
 ## Transformation rule of the stress tensor
 
@@ -76,8 +76,9 @@ Note three orientations with zero shear stress in following example. Their posit
 p = pair(150, 60, 90, 41)
 S2 = S.transform(rotation.from_pair(p))
 s = StereoNet()
-s.grid.apply_func(S2.shear_stress)
-s.contour(levels=10)
+g = StereoGrid()
+g.apply_func(S2.shear_stress)
+s.contour(g, levels=10)
 s.show()
 ```
 

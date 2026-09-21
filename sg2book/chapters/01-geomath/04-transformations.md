@@ -11,12 +11,12 @@ kernelspec:
   name: python3
 ---
 
+# Transformations
+
 ```{code-cell} ipython3
 :tags: [remove-input]
 from apsg import *
 ```
-
-# Transformations
 
 Informally, *function* is a rule that accepts inputs and produces outputs. For instance, $f(x)=x^2$ is a function that accepts one number $x$ as its input, and outputs the square of that number: $f(2)=4$.
 

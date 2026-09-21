@@ -11,12 +11,12 @@ kernelspec:
   name: python3
 ---
 
+# Stress vector
+
 ```{code-cell} ipython3
 :tags: [remove-input]
 from apsg import *
 ```
-
-# Stress vector
 
 Consider two blocks of different cross-sections. Intuitively, the blocks whose cross-section is smaller is going to deform a lot
 more than the other. While in rigid body mechanics, the concept of force is sufficient to describe or predict the motion of the body, in deformable bodies it is not. This chapter's treatment of stress follows {cite}`twissmoores2007` and {cite}`means1976`.

@@ -11,6 +11,8 @@ kernelspec:
   name: python3
 ---
 
+# Finite strain
+
 ```{code-cell} ipython3
 :tags: [remove-input]
 import numpy as np
@@ -18,8 +20,6 @@ import matplotlib.pyplot as plt
 from apsg import *
 from strain2d import plot_defgrad
 ```
-
-# Finite strain
 
 The strain-ellipse treatment in this chapter follows the classic structural-geology presentation of {cite}`ramsayhuber1983`.
 
